@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Roman Popov](https://up.htmlacademy.ru/adaptive/25/user/1997457).
-* Наставник: `Неизвестно`.
+* Наставник: [Михаил Данюшин](https://htmlacademy.ru/profile/id225742). ``.
 
 ---
 
