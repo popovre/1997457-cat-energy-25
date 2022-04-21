@@ -1,0 +1,16 @@
+.page {
+  // background-color: $background-page; //почему не работаешь?
+  margin: 0;
+  font-family: "Oswald", "sans-serif", "Big Caslon";
+  min-height: 100%;
+  .page__wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+}
+
+

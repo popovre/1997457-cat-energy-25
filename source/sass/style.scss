@@ -1,2 +1,20 @@
-// Начните писать стили здесь
-body { background: rgb(0, 51, 128); }
+// global
+@use "hidden";
+@use "fonts";
+@use "img.scss";
+
+//mixins
+@use "mixins.scss";
+
+//var
+@use "variables.scss";
+
+// blocks
+@use "index/page.scss";
+@use "index/main-header.scss";
+@use "index/main-container.scss";
+
+
+
+
+
