@@ -1,20 +1,16 @@
 // global
-@use "hidden";
 @use "fonts";
-@use "img.scss";
+@use "reboot";
 
 //mixins
-@use "mixins.scss";
+@use "mixins";
 
 //var
-@use "variables.scss";
+@use "variables";
 
 // blocks
-@use "index/page.scss";
-@use "index/main-header.scss";
-@use "index/main-container.scss";
-
-
-
-
+//index
+@use "index/page";
+@use "index/main-header";
+@use "index/main-container";
 

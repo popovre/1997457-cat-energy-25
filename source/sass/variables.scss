@@ -1,4 +1,7 @@
-//colors
-$default-black: #000;
-$default-white: #fff;
-$background-page: #E5E5E5;
+:root {
+  //colors
+  --main-font: "Oswald", "Big Caslon", "sans-serif";
+  --default-black: #000000;
+  --default-white: #ffffff;
+  --background-page: #e5e5e5;
+}
