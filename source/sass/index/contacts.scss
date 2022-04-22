@@ -1,0 +1,16 @@
+@use "../mixins.scss";
+
+.contacts {
+  @include mixins.listres;
+  display: flex;
+  min-height: 63px;
+  width: 132px;
+  align-items: center;
+
+  .contacts__vk {
+    margin-right: 24px;
+  }
+  .youtube-link {
+    margin-right: 24px;
+  }
+}

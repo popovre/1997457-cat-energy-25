@@ -1,0 +1,33 @@
+@use "../mixins.scss";
+
+.specification {
+  width: 100%;
+  padding: 0 20.5px;
+  min-height: 380px;
+
+  .specification__title {
+    font-size: 36px;
+    line-height: 40px;
+    text-align: center;
+    color: var(--default-black);
+  }
+
+  .specification__list {
+    @include mixins.listres;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .specification__item {
+    padding-left: 80px;
+  }
+
+  .specification__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .specification__description {
+    margin: 0;
+  }
+}

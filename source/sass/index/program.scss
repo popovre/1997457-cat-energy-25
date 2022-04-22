@@ -1,0 +1,50 @@
+@use "../mixins.scss";
+
+.program {
+  width: 100%;
+  padding: 0 20px;
+
+  .program__list {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 20px;
+
+    @include mixins.listres();
+  }
+
+  .program__list-item {
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 266px;
+    min-height: 280px;
+  }
+
+  .program__list-title {
+    margin: 0;
+    font-size: 24px;
+    line-height: 37px;
+    text-transform: uppercase;
+    color: var(--default-black);
+    margin-bottom: 30px;
+  }
+
+  .program__list-text {
+    display: block;
+    margin: 0;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: lowercase;
+    color: var(--black1);
+    margin-bottom: 38px;
+  }
+
+  .program__list-link {
+    display: block;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: left;
+    text-transform: uppercase;
+    color: var(--default-black);
+  }
+}

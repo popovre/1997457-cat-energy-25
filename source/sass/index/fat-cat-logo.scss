@@ -1,0 +1,7 @@
+@use "../mixins.scss";
+
+.fat-cat-logo {
+  @include mixins.listres;
+  width: 280px;
+  height: 232px;
+}

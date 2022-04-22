@@ -1,3 +1,5 @@
+@use "../mixins.scss";
+
 .main-header {
   display: flex;
   align-items: center;
@@ -20,7 +22,9 @@
 
   .main-header__menu-opener {
     width: 24px;
-    height: 16px;
-    background-color: var(--default-white);
+    min-height: 16px;
+    box-shadow: inset 0 0 0 3px #83b3d3;
+
+    @include mixins.btnres();
   }
 }

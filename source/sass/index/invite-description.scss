@@ -1,0 +1,22 @@
+.invite-description {
+  display: flex;
+  padding: 26px 20px;
+
+  .invite-description__info {
+    display: block;
+    margin: 0;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: var(--black2);
+  }
+
+  .invite-description__address {
+    font-family: "Arial";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--black4);
+  }
+}
