@@ -29,3 +29,9 @@
   background: none;
   border: 0;
 }
+
+@mixin fieldres {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
