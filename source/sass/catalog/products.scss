@@ -1,0 +1,103 @@
+@use "../mixins.scss";
+
+.products {
+  padding-top: 27px;
+  width: 100%;
+  min-height: 1775px;
+  display: grid;
+  grid-template-columns: auto;
+  row-gap: 19px;
+  padding: 0 20px;
+
+  .products__title {
+    color: var(--default-black);
+    margin: 0;
+    width: 258px;
+    margin-left: 20px;
+    margin-bottom: 50px;
+  }
+
+  .products__table {
+    width: 100%;
+    min-height: 190px;
+    padding-top: 11px;
+    padding-bottom: 14px;
+    display: grid;
+    grid-template-columns: 140px 142px;
+    // grid-template-rows: repeat(3, 1fr);
+    row-gap: 10px;
+  }
+
+  .products__image-wrapper {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  .products__parameters {
+    margin: 0;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .products__button {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    justify-self: center;
+    display: block;
+    box-sizing: content-box;
+    width: 62px;
+    height: 20px;
+    padding: 10px 109px;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .products__product-more {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 158px;
+    width: 279px;
+    padding-top: 53px;
+  }
+
+  .products__product-text {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--black2);
+    margin: 0;
+    margin-bottom: 8px;
+  }
+
+  .products__product-small-talk {
+    font-family: "Arial";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    color: var(--black1);
+    margin: 0;
+    margin-bottom: 21px;
+  }
+
+  .products__more-button {
+    width: 280px;
+    height: 40px;
+
+    @include mixins.btnres;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--black1);
+  }
+}
