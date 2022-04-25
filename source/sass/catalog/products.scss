@@ -5,14 +5,14 @@
   width: 100%;
   min-height: 1775px;
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: repeat(auto-fill, minmax(245px, 324px));
   row-gap: 19px;
   padding: 0 20px;
 
   .products__title {
     color: var(--default-black);
     margin: 0;
-    width: 258px;
+    width: 258px;//переполнение
     margin-left: 20px;
     margin-bottom: 50px;
   }
@@ -78,7 +78,7 @@
   }
 
   .products__product-small-talk {
-    font-family: "Arial";
+    font-family: var(--arial);
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
