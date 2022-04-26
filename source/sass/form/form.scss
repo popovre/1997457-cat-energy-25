@@ -1,0 +1,58 @@
+@use "../mixins.scss";
+
+.form {
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  .form__fieldset {
+    @include mixins.fieldres;
+  }
+
+  .form__characteristics {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 13px;
+    color: var(--black1);
+    padding-bottom: 24px;
+  }
+
+  .form__name {
+    justify-self: end;
+    min-width: 230px;
+    min-height: 45px;
+  }
+
+  .form__weight {
+    justify-self: end;
+    min-width: 204px;
+    min-height: 45px;
+  }
+
+  .form__age {
+    justify-self: end;
+    min-width: 172px;
+    min-height: 45px;
+  }
+
+  .form__goal {
+    margin: 0;
+    padding: 0;
+    min-width: 320px;
+    min-height: 157px;
+    padding-top: 22px;
+    padding-bottom: 19px;
+    color: var(--black2);
+  }
+
+  .form__goal-wrapper {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    row-gap: 13px;
+    min-width: 277px;
+    min-height: 115px;
+  }
+
+}

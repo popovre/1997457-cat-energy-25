@@ -1,0 +1,112 @@
+@use "../mixins.scss";
+
+.products {
+  padding-top: 27px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(245px, 324px));
+  padding: 0 20px;
+
+  .products__title {
+    color: var(--default-black);
+    margin: 0;
+    min-width: 258px;
+    margin-top: 27px;
+    margin-bottom: 40px;
+  }
+
+  .products__product-cell {
+    padding-top: 8px;
+    padding-bottom: 11px;
+  }
+
+  .products__table {
+    width: 100%;
+    padding-top: 11px;
+    padding-bottom: 14px;
+    display: grid;
+    grid-template-columns: 140px 142px;
+    // grid-template-rows: repeat(3, 1fr);
+    row-gap: 10px;
+  }
+
+  .products__image-wrapper {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  .product__name {
+    margin: 0;
+    margin-top: 19px;
+    margin-bottom: 8px;
+  }
+
+  .products__parameters {
+    margin: 0;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 12px;
+  }
+
+  .products__button {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    justify-self: center;
+    display: block;
+    box-sizing: content-box;
+    width: 62px;
+    height: 20px;
+    padding: 10px 109px;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .products__product-more {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 279px;
+    padding-top: 78px;
+  }
+
+  .products__product-text {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--black2);
+    margin: 0;
+    margin-bottom: 8px;
+  }
+
+  .products__product-small-talk {
+    font-family: var(--arial);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    color: var(--black1);
+    margin: 0;
+    margin-bottom: 18px;
+  }
+
+  .products__more-button {
+    min-width: 280px;
+    min-height: 40px;
+    margin-bottom: 25px;
+
+    @include mixins.btnres;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--black1);
+  }
+}

@@ -1,0 +1,30 @@
+@use "../mixins.scss";
+
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 auto;
+  width: 100%;
+  flex-wrap: wrap;
+  min-height: 65px;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  .main-header__logo-link {
+    margin-right: 56px;
+  }
+
+  .main-header__title-link {
+    margin-right: auto;
+  }
+
+  .main-header__menu-opener {
+    width: 24px;
+    min-height: 16px;
+    box-shadow: inset 0 0 0 3px #83b3d3;
+
+    @include mixins.btnres();
+  }
+}

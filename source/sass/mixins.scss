@@ -1,0 +1,35 @@
+//helpers
+
+@mixin listres {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin inputres {
+  margin: 0;
+  padding: 0;
+
+  font: inherit;
+  color: inherit;
+
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+
+  -webkit-tap-highlight-color: transparent;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+@mixin btnres {
+  padding: 0;
+  background: none;
+  border: 0;
+}
+
+@mixin fieldres {
+  border: 0;
+}

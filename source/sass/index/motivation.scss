@@ -1,0 +1,59 @@
+
+.motivation {
+  position: relative;
+  width: 100%;
+  background-image: url("../../img/mobile/index/motivation_background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 302px;
+  z-index: 0;
+  padding-top: 27px;
+
+  .motivation__title {
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 36px;
+    text-align: center;
+    color: var(--default-white);
+    margin-bottom: 25px;
+  }
+
+  .motivation__text {
+    display: block;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    font-size: 14px;
+    line-height: 14px;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--default-white);
+    margin-bottom: 302px;
+  }
+
+  .motivation__choose-button {
+    box-sizing: content-box;
+    width: 192px;
+    display: block;
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+    padding: 7px 44px;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}
+
+.motivation::before {
+  content: "";
+  position: absolute;
+  background-color: var(--green1);
+  width: 320px;
+  height: 302px;
+  inset: 0;
+  z-index: 0;
+}

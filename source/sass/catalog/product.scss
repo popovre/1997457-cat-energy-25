@@ -1,0 +1,20 @@
+.product {
+
+  .product__name {
+    font-size: 16px;
+    line-height: 20px;
+    align-items: center;
+    text-transform: uppercase;
+    color: var(--black3);
+  }
+
+  .products__parameters {
+    font-family: var(--arial);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    color: var(--black1);
+  }
+}
