@@ -3,18 +3,21 @@
 .products {
   padding-top: 27px;
   width: 100%;
-  min-height: 1775px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(245px, 324px));
-  row-gap: 19px;
   padding: 0 20px;
 
   .products__title {
     color: var(--default-black);
     margin: 0;
-    width: 258px;//переполнение
-    margin-left: 20px;
-    margin-bottom: 50px;
+    min-width: 258px;
+    margin-top: 27px;
+    margin-bottom: 40px;
+  }
+
+  .products__product-cell {
+    padding-top: 8px;
+    padding-bottom: 11px;
   }
 
   .products__table {
