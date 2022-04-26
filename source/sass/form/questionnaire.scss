@@ -30,15 +30,16 @@
   }
 
   .form__contacts {
-    width: 300px;
-    min-height: 241px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
     padding-top: 26px;
     padding-bottom: 23px;
   }
 
   .form__contacts-title {
     display: block;
-    width: 300px;
+    width: 100%;
     font-size: 24px;
     line-height: 26px;
     color: var(--default-black);
@@ -47,7 +48,7 @@
 
   .form__email-text {
     display: flex;
-    width: 300px;
+    width: 100%;
     font-size: 16px;
     line-height: 18px;
     text-transform: uppercase;
@@ -57,7 +58,7 @@
 
   .form__tel-text {
     display: flex;
-    width: 300px;
+    width: 100%;
     font-size: 16px;
     line-height: 18px;
     text-transform: uppercase;
@@ -65,9 +66,11 @@
   }
 
   .form__comments {
-    min-height: 237px;
-    width: 300px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
     padding-bottom: 23px;
+
   }
 
   .form__comments-title {
@@ -78,12 +81,14 @@
   }
 
   .form__comments-text {
-    width: 280px;
+    width: 100%;
     min-height: 150px;
   }
 
   .form__additional {
-    width: 300px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
   }
 
   .form__additional-title {
@@ -94,7 +99,7 @@
   }
 
   .form__additional-wrapper {
-    width: 280px;
+    width: 100%;
     display: grid;
     grid-template-columns: auto 1fr;
     row-gap: 13px;
@@ -107,14 +112,14 @@
 
   .form__submit-button {
     min-height: 109px;
-    width: 280px;
+    min-width: 280px;
     padding-bottom: 32px;
   }
 
   .form__button {
     @include mixins.btnres;
     background-color: var(--green2);
-    width: 280px;
+    min-width: 280px;
     min-height: 40px;
     font-size: 16px;
     line-height: 20px;

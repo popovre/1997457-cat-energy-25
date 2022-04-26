@@ -14,10 +14,9 @@
 
   .program__list-item {
     padding-top: 30px;
-    padding-left: 20px;
-    padding-right: 20px;
     width: 266px;
-    min-height: 280px;
+    padding-left: 20px;
+    padding-right: 33px;
   }
 
   .program__list-title {
@@ -42,9 +41,10 @@
   .program__list-link {
     display: block;
     font-size: 16px;
-    line-height: 16px;
+    line-height: 1;
     text-align: left;
     text-transform: uppercase;
     color: var(--default-black);
+    margin-bottom: 18px;
   }
 }
