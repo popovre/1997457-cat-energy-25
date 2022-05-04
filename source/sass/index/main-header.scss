@@ -27,4 +27,61 @@
 
     @include mixins.btnres();
   }
+
+  .main-header__index-link {
+    display: none;
+    font-size: 18px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: var(--default-black);
+  }
+
+  .main-header__catalog-link {
+    display: none;
+    font-size: 18px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: var(--default-black);
+  }
+
+  .main-header__form-link {
+    display: none;
+    font-size: 18px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: var(--default-black);
+  }
+
+  @include mixins.tablet-w () {
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    min-height: 76px;
+
+    .main-header__logo-link {
+      margin-right: 19px;
+    }
+
+    .main-header__title-link {
+      margin-right: 93px;
+    }
+
+    .main-header__menu-opener {
+      display: none;
+    }
+
+    .main-header__index-link {
+      display: block;
+      margin-right: 33px;
+    }
+
+    .main-header__catalog-link {
+      display: block;
+      margin-right: 36px;
+    }
+
+    .main-header__form-link {
+      display: block;
+    }
+  }
 }

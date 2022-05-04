@@ -1,8 +1,9 @@
+@use "../mixins";
 
 .motivation {
   position: relative;
   width: 100%;
-  background-image: url("../../img/mobile/index/motivation_background.jpg");
+  background-image: url("../../img/mobile/index/motivation-background.jpg");
   background-repeat: no-repeat;
   background-size: 100% 302px;
   z-index: 0;
@@ -46,6 +47,11 @@
     text-transform: uppercase;
     text-align: center;
   }
+
+  @include mixins.tablet-w () {
+    padding-top: 62px;
+    background-image: none;
+  }
 }
 
 .motivation::before {
@@ -57,3 +63,19 @@
   inset: 0;
   z-index: 0;
 }
+
+.motivation::after {
+  content: "";
+  position: absolute;
+  background-image: url("../../img/mobile/index/motivation-background-food.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 280px;
+  height: 270px;
+  bottom: 43px;
+  left: var(--mobile-padding);
+  z-index: 1;
+}
+
+
+

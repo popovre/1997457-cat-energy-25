@@ -1,3 +1,5 @@
+@use "../mixins";
+
 .page {
   .page__wrapper {
     display: flex;
@@ -7,18 +9,14 @@
     max-width: 320px;
     margin: 0 auto;
     background-color: var(--default-white);
-  }
 
-  @media (min-width: var(--tablet-width)) {
-    .page__wrapper {
+    @include mixins.tablet-w () {
+      max-width: var(--tablet-width);
+    }
+
+    @include mixins.desktop-w () {
       max-width: var(--desktop-width);
-      background-color: var(--default-black);
     }
   }
 
-  @media (min-width: var(--desktop-width)) {
-    .page__wrapper {
-      max-width: 100%;
-    }
-  }
 }
