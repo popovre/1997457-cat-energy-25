@@ -8,4 +8,17 @@
     margin: 0 auto;
     background-color: var(--default-white);
   }
+
+  @media (min-width: var(--tablet-width)) {
+    .page__wrapper {
+      max-width: var(--desktop-width);
+      background-color: var(--default-black);
+    }
+  }
+
+  @media (min-width: var(--desktop-width)) {
+    .page__wrapper {
+      max-width: 100%;
+    }
+  }
 }
