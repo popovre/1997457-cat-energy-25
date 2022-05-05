@@ -84,4 +84,46 @@
       display: block;
     }
   }
+
+  @include mixins.desktop-w () {
+    padding-top: 20px;
+    padding-left: var(--desktop-padding);
+    padding-right: var(--desktop-padding);
+    min-height: 76px;
+
+    .main-header__logo-link {
+      margin-right: 14px;
+    }
+
+    .main-header__title-link {
+      margin-right: 540px;
+    }
+
+    .main-header__menu-opener {
+      display: none;
+    }
+
+    .main-header__index-link {
+      display: block;
+      margin-right: 35px;
+      font-size: 20px;
+      line-height: 30px;
+      color: var(--default-white);
+    }
+
+    .main-header__catalog-link {
+      display: block;
+      margin-right: 32px;
+      font-size: 20px;
+      line-height: 30px;
+      color: var(--default-white);
+    }
+
+    .main-header__form-link {
+      display: block;
+      font-size: 20px;
+      line-height: 30px;
+      color: var(--default-white);
+    }
+  }
 }
