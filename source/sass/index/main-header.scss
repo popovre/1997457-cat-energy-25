@@ -104,14 +104,19 @@
     }
 
     .main-header__index-link {
+      position: relative;
+      z-index: 1;
       display: block;
       margin-right: 35px;
       font-size: 20px;
       line-height: 30px;
       color: var(--default-white);
+
     }
 
     .main-header__catalog-link {
+      position: relative;
+      z-index: 1;
       display: block;
       margin-right: 32px;
       font-size: 20px;
@@ -120,6 +125,8 @@
     }
 
     .main-header__form-link {
+      position: relative;
+      z-index: 1;
       display: block;
       font-size: 20px;
       line-height: 30px;
