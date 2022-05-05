@@ -43,7 +43,7 @@
     margin: 0 auto;
     padding: 7px 44px;
     font-size: 14px;
-    line-height: 18px;
+    line-height: 26px;
     text-transform: uppercase;
     text-align: center;
   }
@@ -51,6 +51,39 @@
   @include mixins.tablet-w () {
     padding-top: 62px;
     background-image: none;
+    padding-left: var(--tablet-padding);
+    padding-right: var(--tablet-padding);
+
+    .motivation__title {
+      position: relative;
+      z-index: 1;
+      font-weight: 400;
+      font-size: 60px;
+      line-height: 1;
+      color: var(--default-black);
+      margin-bottom: 41px;
+      width: 414px;
+      margin-left: 97px;
+      min-height: 120px;
+      text-align: left;
+    }
+
+    .motivation__text {
+      font-size: 20px;
+      line-height: 1;
+      text-transform: uppercase;
+      color: var(--default-black);
+      text-align: start;
+      margin-left: 97px;
+      margin-bottom: 49px;
+    }
+
+    .motivation__choose-button {
+      padding: 14px 26px;
+      margin: 0;
+      margin-left: 91px;
+      margin-bottom: 526px;
+    }
   }
 }
 
@@ -62,6 +95,10 @@
   height: 302px;
   inset: 0;
   z-index: 0;
+
+  @include mixins.tablet-w () {
+    content: none;
+  }
 }
 
 .motivation::after {
@@ -74,7 +111,16 @@
   height: 270px;
   bottom: 43px;
   left: var(--mobile-padding);
-  z-index: 1;
+  z-index: 0;
+
+  @include mixins.tablet-w () {
+    background-image: url("../../img/tablet/index/motivation-food-background.png");
+    width: 709px;
+    height: 609px;
+    bottom: 0px;
+    left: var(--tablet-padding);
+    z-index: 0;
+  }
 }
 
 
