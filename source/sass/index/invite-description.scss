@@ -1,6 +1,10 @@
+@use "../mixins";
+
 .invite-description {
   display: flex;
   padding: 26px 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
 
   .invite-description__info {
     display: block;
@@ -9,6 +13,7 @@
     line-height: 20px;
     text-transform: uppercase;
     color: var(--black2);
+    width: 140px;
   }
 
   .invite-description__address {
@@ -18,5 +23,30 @@
     font-size: 14px;
     line-height: 20px;
     color: var(--black4);
+    width: 140px;
+  }
+
+  @include mixins.tablet-w () {
+    padding: 56px 70px;
+
+    .invite-description__info {
+      width: 172px;
+      font-size: 20px;
+      line-height: 26px;
+    }
+
+    .invite-description__address {
+      width: 160px;
+      font-size: 16px;
+      line-height: 20px;
+      text-align: right;
+    }
+
+  }
+
+  @include mixins.tablet-w () {
+    padding: 56px 80px;
+    width: 565px;
+    min-height: 198px;
   }
 }

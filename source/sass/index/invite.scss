@@ -1,6 +1,19 @@
+@use "../mixins";
+
 .invite {
   width: 100%;
   display: flex;
   flex-direction: column;
+
+  @include mixins.desktop-w () {
+    position: relative;
+
+    .invite__description {
+      position: absolute;
+      left: var(--desktop-padding);
+      top: 95px;
+      background-color: var(--default-white);
+    }
+  }
 
 }
