@@ -5,8 +5,11 @@
   padding: 0 20px;
   padding-top: 25px;
   padding-bottom: 40px;
+  display: grid;
+  grid-template-columns: auto;
 
   .example__title {
+    font-weight: 400;
     font-size: 36px;
     line-height: 40px;
     text-align: left;
@@ -24,8 +27,12 @@
 
   .example__statistic {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .example__statistic-weight {
+    margin-right: auto;
   }
 
   .weight__number {
@@ -56,12 +63,13 @@
     color: var(--black1);
   }
 
-  .example__cost {
+  .example__statistic-cost {
     font-size: 14px;
     line-height: 20px;
     text-align: center;
     text-transform: uppercase;
     color: var(--default-black);
+    margin-top: 20px;
     margin-bottom: 40px;
   }
 
@@ -69,5 +77,131 @@
     padding: 0;
     margin: 0 auto;
   }
+
+  @include mixins.tablet-w () {
+    padding: 0 var(--tablet-padding);
+    padding-top:43px;
+    padding-bottom: 55px;
+
+    .example__title {
+      font-weight: 400;
+      font-size: 60px;
+      line-height: 60px;
+      text-align: left;
+    }
+
+    .example__text {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 54px;
+    }
+
+    .example__statistic {
+      margin-bottom: 80px;
+    }
+
+    .example__statistic-weight {
+      margin-right: 42px;
+    }
+
+    .example__statistic-time {
+      margin-right: auto;
+    }
+
+    .weight__title {
+      font-size: 14px;
+      line-height: 14px;
+    }
+
+    .weight__number {
+      display: block;
+      font-size: 30px;
+      line-height: 37px;
+    }
+
+    .time__title {
+      font-size: 14px;
+      line-height: 14px;
+    }
+
+    .time__number {
+      display: block;
+      font-size: 30px;
+      line-height: 37px;
+    }
+
+    .example__statistic-cost {
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    .example__slider-list {
+      padding: 0;
+      margin: 0 auto;
+    }
+
+    .slider-list {
+      min-height: 576px;
+      margin-bottom: 55px;
+    }
+  }
+
+  @include mixins.desktop-w () {
+    padding: 0 var(--desktop-padding);
+    padding-top: 43px;
+    padding-bottom: 65px;
+    grid-template-columns: 1fr auto;
+
+    .example__text {
+      margin-bottom: 69px;
+    }
+
+    .example__statistic {
+      margin-bottom: 55px;
+    }
+
+    .example__statistic-weight {
+      margin-right: auto;
+    }
+
+    .weight__title {
+      font-size: 14px;
+      line-height: 14px;
+    }
+
+    .weight__number {
+      display: block;
+      font-size: 30px;
+      line-height: 37px;
+    }
+
+    .time__title {
+      font-size: 14px;
+      line-height: 14px;
+    }
+
+    .time__number {
+      display: block;
+      font-size: 30px;
+      line-height: 37px;
+    }
+
+    .example__statistic-cost {
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    .example__slider-list {
+      grid-column: 2 / 3;
+      grid-row: 1 / 4;
+      padding: 0;
+      margin: 0 auto;
+      min-height: 576px;
+      margin-bottom: 55px;
+    }
+
+  }
+
+
 
 }

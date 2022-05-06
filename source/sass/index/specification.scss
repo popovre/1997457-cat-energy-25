@@ -79,4 +79,54 @@
       margin-top: 37px;
     }
   }
+
+  @include mixins.desktop-w () {
+    padding: 0 var(--desktop-padding);
+
+    .specification__title {
+      font-size: 60px;
+      line-height: 60px;
+      text-align: left;
+    }
+
+    .specification__list {
+      flex-direction: row;
+      justify-content: flex-start;
+      margin-bottom: 26px;
+    }
+
+    .specification__item {
+      padding: 0;
+      min-height: 280px;
+    }
+
+    .specification__item:not(:last-child) {
+      margin-bottom: 0;
+    }
+
+    .specification__item-function {
+      order: 0;
+      width: 230px;
+      margin-right: 94px;
+    }
+
+    .specification__item-structure {
+      order: 1;
+      width: 246px;
+      margin-right: 80px;
+    }
+
+    .specification__item-replace {
+      order: 2;
+      width: 248px;
+      margin: 0;
+      margin-right: auto;
+    }
+
+    .specification__item-time {
+      order: 3;
+      width: 250px;
+      margin: 0;
+    }
+  }
 }
