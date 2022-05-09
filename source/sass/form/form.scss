@@ -55,4 +55,57 @@
     min-height: 115px;
   }
 
+  @include mixins.tablet-w () {
+    .form__characteristics {
+      grid-template-columns: auto auto;
+      row-gap: 20px;
+      width: 100%;
+      padding-bottom: 0;
+      margin-bottom: 72px;
+      font-size: 20px;
+      line-height: 30px;
+    }
+    // как убрать выпадание не знаю, столбцы раздвигаются друг от друга и дети выпадают
+
+    .form__name-text {
+      width: 53px;
+    }
+
+    .form__name {
+      width: 567px;
+    }
+
+    .form__weight-text {
+      width: 84px;
+    }
+
+    .form__weight {
+      width: 536px;
+    }
+
+    .form__age-text {
+      width: 120px;
+    }
+
+    .form__age {
+      width: 497px;
+    }
+
+    .form__goal {
+      padding: 0;
+      font-size: 20px;
+      line-height: 30px;
+      padding-top: 25px;
+      padding-left: 27px;
+    }
+
+    .form__goal-wrapper {
+      align-items: center;
+      column-gap: 20px;
+      row-gap: 13px;
+      padding-bottom: 25px;
+      margin-bottom: 75px;
+    }
+
+  }
 }

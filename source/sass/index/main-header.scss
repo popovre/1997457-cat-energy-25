@@ -83,6 +83,18 @@
     .main-header__form-link {
       display: block;
     }
+
+    .main-header__index-black {
+      color: var(--default-black);
+    }
+
+    .main-header__catalog-black {
+      color: var(--default-black);
+    }
+
+    .main-header__form-black {
+      color: var(--default-black);
+    }
   }
 
   @include mixins.desktop-w () {
@@ -131,6 +143,18 @@
       font-size: 20px;
       line-height: 30px;
       color: var(--default-white);
+    }
+
+    .main-header__index-black {
+      color: var(--default-black);
+    }
+
+    .main-header__catalog-black {
+      color: var(--default-black);
+    }
+
+    .main-header__form-black {
+      color: var(--default-black);
     }
   }
 }

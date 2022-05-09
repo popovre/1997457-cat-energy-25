@@ -70,7 +70,6 @@
     padding: 0;
     width: 100%;
     padding-bottom: 23px;
-
   }
 
   .form__comments-title {
@@ -134,5 +133,30 @@
     text-align: center;
     text-transform: lowercase;
     color: var(--default-black);
+  }
+
+  @include mixins.tablet-w () {
+    padding-top: 65px;
+    padding-left: var(--tablet-form-l-padding);
+    padding-right: var(--tablet-form-r-padding);
+
+    .questionnaire__title {
+      font-size: 60px;
+      line-height: 60px;
+      color: var(--default-black);
+      margin-bottom: 54px;
+    }
+
+    .questionnaire__text {
+      font-size: 20px;
+      line-height: 30px;
+      margin-bottom: 66px;
+      width: 323px;
+    }
+
+
+
+
+
   }
 }
