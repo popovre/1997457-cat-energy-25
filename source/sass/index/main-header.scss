@@ -11,6 +11,7 @@
   padding-top: 10px;
   padding-left: var(--mobile-padding);
   padding-right: var(--mobile-padding);
+  color: var(--default-black);
   font-size: 18px;
   line-height: 1;
 
@@ -33,19 +34,17 @@
   .main-header__index-link {
     display: none;
     text-transform: uppercase;
-    color: var(--default-black);
+
   }
 
   .main-header__catalog-link {
     display: none;
     text-transform: uppercase;
-    color: var(--default-black);
   }
 
   .main-header__form-link {
     display: none;
     text-transform: uppercase;
-    color: var(--default-black);
   }
 
   @include mixins.tablet-w () {

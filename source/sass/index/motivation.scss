@@ -3,11 +3,9 @@
 .motivation {
   position: relative;
   width: 100%;
-  background-image: url("../../img/mobile/index/motivation-background.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 302px;
-  z-index: 0;
   padding-top: 27px;
+  text-align: center;
+  color: var(--default-white);
 
 
   .motivation__title {
@@ -17,8 +15,6 @@
     font-weight: 400;
     font-size: 36px;
     line-height: 36px;
-    text-align: center;
-    color: var(--default-white);
     margin-bottom: 25px;
   }
 
@@ -30,8 +26,6 @@
     font-size: 14px;
     line-height: 14px;
     text-transform: uppercase;
-    text-align: center;
-    color: var(--default-white);
     margin-bottom: 302px;
   }
 
@@ -49,11 +43,31 @@
     text-align: center;
   }
 
+  .motivation__decor {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 302px;
+    background-image: url("../../img/mobile/index/motivation-background.jpg");
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: var(--green1);
+    }
+  }
+
   @include mixins.tablet-w () {
     padding-top: 62px;
     background-image: none;
     padding-left: var(--tablet-padding);
     padding-right: var(--tablet-padding);
+    color: var(--default-black);
+    text-align: start;
 
     .motivation__title {
       position: relative;
@@ -61,12 +75,10 @@
       font-weight: 400;
       font-size: 60px;
       line-height: 1;
-      color: var(--default-black);
       margin-bottom: 41px;
       width: 414px;
       margin-left: 97px;
       min-height: 120px;
-      text-align: left;
     }
 
     .motivation__text {
@@ -74,8 +86,6 @@
       font-size: 20px;
       line-height: 1;
       text-transform: uppercase;
-      color: var(--default-black);
-      text-align: start;
       margin-left: 97px;
       margin-bottom: 49px;
     }
@@ -86,52 +96,33 @@
       margin-left: 91px;
       margin-bottom: 526px;
     }
-  }
 
-  @include mixins.desktop-w () {
-    // background-image: url("../../img/tablet/index/motivation-background.png");
-    // background-position-x: right;
-    // background-position-y: top -76px;
-    // background-size: 720px 696px;
-
-    .motivation__text::before {
-      content: "";
-      position: absolute;
-      background-image: url("../../img/desktop/index/motivation-background.png");
-      background-repeat: no-repeat;
-      background-size: cover;
-      width: 1044px;
-      height: 694px;
-      z-index: 0;
-      top: -76px;
-      right: calc(720px - 1044px);
-      left: auto;
+    .motivation__decor {
+      display: none;
     }
   }
 
-}
-
-.motivation::before {
-  content: "";
-  position: absolute;
-  background-color: var(--green1);
-  width: 320px;
-  height: 302px;
-  inset: 0;
-  z-index: 0;
-
-  @include mixins.tablet-w () {
-    content: none;
-  }
-
   @include mixins.desktop-w () {
-    content: "";
-    top: -76px;
-    right: 0;
-    left: auto;
-    width: 720px;
-    height: 694px;
-    z-index: 1;
+    .motivation__decor {
+      display: block;
+      position: absolute;
+      top: -76px;
+      right: 0;
+      left: auto;
+      width: 720px;
+      height: 694px;
+      background-image: url("../../img/desktop/index/motivation-background.png");
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--green1);
+      }
+    }
   }
 }
 
@@ -165,8 +156,4 @@
     left: auto;
     z-index: 1;
   }
-
 }
-
-
-

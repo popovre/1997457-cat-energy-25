@@ -42,6 +42,7 @@
             <span class="visually-hidden">подобрать программу.</span>
             подобрать программу
           </a>
+          <div class="motivation__decor"></div>
         </section>
         <section class="program">
           <ul class="program__list">
@@ -100,47 +101,51 @@
           <h2 class="example__title title-low">
             Живой пример
           </h2>
-          <p class="example__text">
-            Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
-          </p>
-          <div class="example__statistic example-statistic">
-            <fieldset class="example__statistic-weight weight">
-              <legend class="weight__title">снижение веса</legend>
-              <span class="weight__number">5 кг</span>
-            </fieldset>
-            <fieldset class="example__statistic-time time">
-              <legend class="time__title">затрачено времени</legend>
-              <span class="time__number">60 дней</span>
-            </fieldset>
-            <p class="example__statistic-cost">
-              Затраты на питание: <span class="example__cost-number">15 000 РУБ.</span>
-            </p>
+          <div class="example__content">
+            <div class="example__abstract">
+              <p class="example__text">
+                Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+              </p>
+              <div class="example__statistic example-statistic">
+                <fieldset class="example__statistic-weight weight">
+                  <legend class="weight__title">снижение веса</legend>
+                  <span class="weight__number">5 кг</span>
+                </fieldset>
+                <fieldset class="example__statistic-time time">
+                  <legend class="time__title">затрачено времени</legend>
+                  <span class="time__number">60 дней</span>
+                </fieldset>
+                <p class="example__statistic-cost">
+                  Затраты на питание: <span class="example__cost-number">15 000 РУБ.</span>
+                </p>
+              </div>
+            </div>
+            <!-- Здесь надо делать так?
+              <picture>
+                <source media="(max-width: 799px)" srcset="elva-480w-close-portrait.jpg">
+                <source media="(min-width: 800px)" srcset="elva-800w.jpg">
+                <img src="elva-800w.jpg" alt="Chris standing up holding his daughter Elva">
+              </picture>
+            -->
+            <ul class="example__slider-list slider-list">
+              <li class="slider-list__logo fat-cat-logo">
+                <img class="fat-cat-img" src="img/mobile/index/example-slider-cat-fat.jpg" width="280" height="232" alt="толстый котик.">
+              </li>
+              <li class="slider-list__logo skinny-cat-logo visually-hidden">
+                <img class="skinny-cat-img" src="img/mobile/index/example-slider-cat-skinny.jpg" width="280" height="232" alt="похудевший котик.">
+              </li>
+              <li class="example__toggle slider-toggles">
+                <button class="slider__toggle-first slider__toggle--current" type="button">
+                  <span class="visually-hidden">Было.</span>
+                  <span class="slider__toggle-first-text">было</span>
+                </button>
+                <button class="slider__toggle-second slider__toggle" type="button">
+                  <span class="visually-hidden">Стало.</span>
+                  <span class="slider__toggle-second-text">стало</span>
+                </button>
+              </li>
+            </ul>
           </div>
-          <!-- Здесь надо делать так?
-            <picture>
-              <source media="(max-width: 799px)" srcset="elva-480w-close-portrait.jpg">
-              <source media="(min-width: 800px)" srcset="elva-800w.jpg">
-              <img src="elva-800w.jpg" alt="Chris standing up holding his daughter Elva">
-            </picture>
-           -->
-          <ul class="example__slider-list slider-list">
-            <li class="slider-list__logo fat-cat-logo">
-              <img class="fat-cat-img" src="img/mobile/index/example-slider-cat-fat.jpg" width="280" height="232" alt="толстый котик.">
-            </li>
-            <li class="slider-list__logo skinny-cat-logo visually-hidden">
-              <img class="skinny-cat-img" src="img/mobile/index/example-slider-cat-skinny.jpg" width="280" height="232" alt="похудевший котик.">
-            </li>
-            <p class="example__toggle slider-toggles">
-              <button class="slider__toggle-first slider__toggle--current" type="button">
-                <span class="visually-hidden">Было.</span>
-                <span class="slider__toggle-first-text">было</span>
-              </button>
-              <button class="slider__toggle-second slider__toggle" type="button">
-                <span class="visually-hidden">Стало.</span>
-                <span class="slider__toggle-second-text">стало</span>
-              </button>
-            </p>
-          </ul>
         </section>
         <section class="invite">
           <div class="invite__description invite-description">
