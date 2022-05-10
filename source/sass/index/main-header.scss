@@ -11,6 +11,8 @@
   padding-top: 10px;
   padding-left: var(--mobile-padding);
   padding-right: var(--mobile-padding);
+  font-size: 18px;
+  line-height: 1;
 
   .main-header__logo-link {
     margin-right: 56px;
@@ -30,24 +32,18 @@
 
   .main-header__index-link {
     display: none;
-    font-size: 18px;
-    line-height: 1;
     text-transform: uppercase;
     color: var(--default-black);
   }
 
   .main-header__catalog-link {
     display: none;
-    font-size: 18px;
-    line-height: 1;
     text-transform: uppercase;
     color: var(--default-black);
   }
 
   .main-header__form-link {
     display: none;
-    font-size: 18px;
-    line-height: 1;
     text-transform: uppercase;
     color: var(--default-black);
   }
@@ -84,15 +80,7 @@
       display: block;
     }
 
-    .main-header__index-black {
-      color: var(--default-black);
-    }
-
-    .main-header__catalog-black {
-      color: var(--default-black);
-    }
-
-    .main-header__form-black {
+    .header-black {
       color: var(--default-black);
     }
   }
@@ -102,6 +90,9 @@
     padding-left: var(--desktop-padding);
     padding-right: var(--desktop-padding);
     min-height: 76px;
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--default-white);
 
     .main-header__logo-link {
       margin-right: 14px;
@@ -120,10 +111,6 @@
       z-index: 1;
       display: block;
       margin-right: 35px;
-      font-size: 20px;
-      line-height: 30px;
-      color: var(--default-white);
-
     }
 
     .main-header__catalog-link {
@@ -131,30 +118,12 @@
       z-index: 1;
       display: block;
       margin-right: 32px;
-      font-size: 20px;
-      line-height: 30px;
-      color: var(--default-white);
     }
 
     .main-header__form-link {
       position: relative;
       z-index: 1;
       display: block;
-      font-size: 20px;
-      line-height: 30px;
-      color: var(--default-white);
-    }
-
-    .main-header__index-black {
-      color: var(--default-black);
-    }
-
-    .main-header__catalog-black {
-      color: var(--default-black);
-    }
-
-    .main-header__form-black {
-      color: var(--default-black);
     }
   }
 }
