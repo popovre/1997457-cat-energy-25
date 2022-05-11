@@ -1,12 +1,14 @@
+@use "../mixins.scss";
+
 .additional {
   width: 100%;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 0 var(--tablet-padding);
   display: flex;
   flex-direction: column;
   padding-top: 26px;
 
   .additional__title {
+    font-weight: 400;
     font-size: 24px;
     line-height: 1;
     text-align: center;
@@ -67,22 +69,20 @@
     padding-top: 187px;
     margin-top: 35px;
     margin-bottom: 35px;
+  }
 
-    .additional__gift-title {
-      width: 100%;
-      position: relative;
-      margin: 0;
-      margin: 0 auto;
-      z-index: 1;
-      font-family: var(--arial);
-      font-style: normal;
-      font-weight: 400;
-      font-size: 16px;
-      width: 160px;
-      line-height: 1;
-      text-align: center;
-      color: var(--default-white);
-    }
+  .additional__gift-title {
+    position: relative;
+    margin: 0 auto;
+    z-index: 1;
+    font-family: var(--arial);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    width: 160px;
+    line-height: 1;
+    text-align: center;
+    color: var(--default-white);
   }
 
   .additional__gift::before {
@@ -91,5 +91,131 @@
     background-color: var(--green1);
     inset: 0;
     z-index: 0;
+  }
+
+  @include mixins.tablet-w () {
+    margin: 0;
+    padding: 0 var(--tablet-padding);
+
+    .additional__title {
+      font-size: 36px;
+      line-height: 36px;
+      text-align: left;
+      margin-bottom: 80px;
+    }
+
+    .additional__content {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+
+    .additional__content-card {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      margin-bottom: 69px;
+    }
+
+    .additional__card {
+      min-width: 282px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .additional__name {
+      font-size: 20px;
+      line-height: 20px;
+      margin-bottom: 0;
+      margin-right: auto;
+    }
+
+    .additional__composition {
+      justify-content: flex-start;
+      font-size: 16px;
+      line-height: 20px;
+      margin-bottom: 0;
+    }
+    //здесь надо кучу стилей писать
+    .additional-button {
+      min-width: 192px;
+      min-height: 26px;
+      padding: 7px 220px;
+      margin: 0 auto;
+      margin-top: 22px;
+      margin-bottom: 19px;
+    }
+
+    .additional__gift {
+      margin: 0;
+      width: 100%;
+      padding-top: 71px;
+      margin-bottom: 35px;
+    }
+
+    .additional__gift-title {
+      margin-bottom: 69px;
+      line-height: 20px;
+      width: 161px;
+    }
+  }
+
+  @include mixins.desktop-w () {
+    margin: 0;
+    padding: 0 var(--desktop-padding);
+    margin-bottom: 86px;
+
+    .additional__title {
+      margin-bottom: 81px;
+    }
+
+    .additional__content {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .additional__content-card {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      width: 896px;
+      margin-bottom: 0;
+    }
+
+    .additional__card {
+      width: 100%;
+      min-height: 72px;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .additional__name {
+      margin-bottom: 0;
+    }
+
+    .additional__composition {
+      margin: 0;
+    }
+
+    .additional-button {
+      padding: 7px 26px;
+      margin: 0;
+    }
+
+    .additional__gift {
+      margin: 0;
+      width: 245px;
+      padding-top: 184px;
+      margin-bottom: 0;
+    }
+
+    .additional__gift-title {
+      width: 161px;
+      margin-bottom: 42px;
+    }
   }
 }
