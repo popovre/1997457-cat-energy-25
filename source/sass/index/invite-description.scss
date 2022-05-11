@@ -4,6 +4,7 @@
   display: flex;
   padding: 26px 20px;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
 
   .invite-description__info {
@@ -41,10 +42,15 @@
       line-height: 20px;
       text-align: right;
     }
-
   }
 
   @include mixins.tablet-w () {
+    padding: 0 var(--tablet-form-l-padding);
+    width: 100%;
+    min-height: 198px;
+  }
+
+  @include mixins.desktop-w () {
     padding: 56px 80px;
     width: 565px;
     min-height: 198px;

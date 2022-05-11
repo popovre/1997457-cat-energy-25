@@ -5,6 +5,16 @@
   display: flex;
   flex-direction: column;
 
+  .invite__map-grey {
+    background-color: var(--grey1);
+  }
+
+  @include mixins.tablet-w () {
+    .invite__description-grey {
+      background-color: var(--grey1);
+    }
+  }
+
   @include mixins.desktop-w () {
     position: relative;
 
@@ -14,6 +24,9 @@
       top: 95px;
       background-color: var(--default-white);
     }
-  }
 
+    .invite__map-grey {
+      background-color: var(--default-white);
+    }
+  }
 }
