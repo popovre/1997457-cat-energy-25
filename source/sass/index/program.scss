@@ -14,13 +14,15 @@
 
   .program__list-item {
     padding-top: 30px;
-    width: 266px;
+    width: 100%;
     padding-left: 20px;
     padding-right: 33px;
+    background-color: var(--grey1);
   }
 
   .program__list-title {
     margin: 0;
+    font-weight: 400;
     font-size: 24px;
     line-height: 37px;
     text-transform: uppercase;
@@ -31,6 +33,7 @@
   .program__list-text {
     display: block;
     margin: 0;
+    font-family: var(--arial);
     font-size: 14px;
     line-height: 18px;
     text-transform: lowercase;
@@ -46,5 +49,79 @@
     text-transform: uppercase;
     color: var(--default-black);
     margin-bottom: 18px;
+  }
+
+  @include mixins.tablet-w () {
+    padding: 0 var(--tablet-padding);
+
+    .program__list {
+      display: grid;
+      grid-template-columns: auto;
+      gap: 30px;
+    }
+
+    .program__list-item {
+      padding-top: 77px;
+      padding-left: 52px;
+      padding-right: 62px;
+    }
+
+    .program__list-title {
+      font-size: 36px;
+      line-height: 36px;
+    }
+
+    .program__list-text {
+      font-size: 14px;
+      line-height: 18px;
+      width: 227px;
+      height: 90px;
+    }
+
+    .program__list-link {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 30px;
+      margin-bottom: 57px;
+    }
+  }
+
+  @include mixins.desktop-w () {
+    padding: 0 var(--desktop-padding);
+    padding-top: 82px;
+
+    .program__list {
+      display: grid;
+      grid-template-columns: (repeat(auto-fit, minmax(570px, 1fr)));
+      gap: 80px;
+    }
+
+    .program__list-item {
+      padding-top: 77px;
+      padding-left: 52px;
+      padding-right: 61px;
+    }
+
+    .program__list-title {
+      font-size: 36px;
+      line-height: 36px;
+      text-align: center;
+      margin-bottom: 73px;
+    }
+
+    .program__list-text {
+      font-size: 14px;
+      line-height: 18px;
+      width: 227px;
+      height: 90px;
+      margin-bottom: 23px;
+    }
+
+    .program__list-link {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 30px;
+      margin-bottom: 55px;
+    }
   }
 }

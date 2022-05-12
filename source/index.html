@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body class="page">
     <div class="page__wrapper">
@@ -19,7 +20,15 @@
         <button class="main-header__menu-opener" type="button">
           <span class="visually-hidden">Открывает меню сайта.</span>
         </button>
-        <a href="catalog.html">в каталог, временно</a>
+        <a class="main-header__index-link" href="#">
+          Главная
+        </a>
+        <a class="main-header__catalog-link" href="catalog.html">
+          Каталог продукции
+        </a>
+        <a class="main-header__form-link" href="form.html">
+          Подбор программы
+        </a>
       </header>
       <main class="main-container">
         <section class="motivation">
@@ -33,6 +42,7 @@
             <span class="visually-hidden">подобрать программу.</span>
             подобрать программу
           </a>
+          <div class="motivation__decor"></div>
         </section>
         <section class="program">
           <ul class="program__list">
@@ -65,22 +75,22 @@
             Как это работает
           </h2>
           <ul class="specification__list">
-            <li class="specification__item specification__item--function">
+            <li class="specification__item specification__item-function">
               <p class="specification__description">
                 Функциональное питание содержит только полезные питательные вещества.
               </p>
             </li>
-            <li class="specification__item specification__item--structure">
+            <li class="specification__item specification__item-structure">
               <p class="specification__description">
                 Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
               </p>
             </li>
-            <li class="specification__item specification__item--replace">
+            <li class="specification__item specification__item-replace">
               <p class="specification__description">
                 Замените один-два приема обычной еды на наше функциональное питание.
               </p>
             </li>
-            <li class="specification__item specification__item--time">
+            <li class="specification__item specification__item-time">
               <p class="specification__description">
                 Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
               </p>
@@ -91,40 +101,51 @@
           <h2 class="example__title title-low">
             Живой пример
           </h2>
-          <p class="example__text">
-            Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
-          </p>
-          <div class="example__statistic example-statistic">
-            <fieldset class="example-statistic__weight weight">
-              <legend class="weight__title">снижение веса</legend>
-              <span class="weight__number">5 кг</span>
-            </fieldset>
-            <fieldset class="example-statistic__time time">
-              <legend class="time__title">затрачено времени</legend>
-              <span class="time__number">60 дней</span>
-            </fieldset>
+          <div class="example__content">
+            <div class="example__abstract">
+              <p class="example__text">
+                Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+              </p>
+              <div class="example__statistic example-statistic">
+                <fieldset class="example__statistic-weight weight">
+                  <legend class="weight__title">снижение веса</legend>
+                  <span class="weight__number">5 кг</span>
+                </fieldset>
+                <fieldset class="example__statistic-time time">
+                  <legend class="time__title">затрачено времени</legend>
+                  <span class="time__number">60 дней</span>
+                </fieldset>
+                <p class="example__statistic-cost">
+                  Затраты на питание: <span class="example__cost-number">15 000 РУБ.</span>
+                </p>
+              </div>
+            </div>
+            <!-- Здесь надо делать так?
+              <picture>
+                <source media="(max-width: 799px)" srcset="elva-480w-close-portrait.jpg">
+                <source media="(min-width: 800px)" srcset="elva-800w.jpg">
+                <img src="elva-800w.jpg" alt="Chris standing up holding his daughter Elva">
+              </picture>
+            -->
+            <ul class="example__slider-list slider-list">
+              <li class="slider-list__logo fat-cat-logo">
+                <img class="fat-cat-img" src="img/mobile/index/example-slider-cat-fat.jpg" width="280" height="232" alt="толстый котик.">
+              </li>
+              <li class="slider-list__logo skinny-cat-logo visually-hidden">
+                <img class="skinny-cat-img" src="img/mobile/index/example-slider-cat-skinny.jpg" width="280" height="232" alt="похудевший котик.">
+              </li>
+              <li class="example__toggle slider-toggles">
+                <button class="slider__toggle-first slider__toggle--current" type="button">
+                  <span class="visually-hidden">Было.</span>
+                  <span class="slider__toggle-first-text">было</span>
+                </button>
+                <button class="slider__toggle-second slider__toggle" type="button">
+                  <span class="visually-hidden">Стало.</span>
+                  <span class="slider__toggle-second-text">стало</span>
+                </button>
+              </li>
+            </ul>
           </div>
-          <p class="example__cost">
-            Затраты на питание: <span class="example__cost-number">15 000 РУБ.</span>
-          </p>
-          <ul class="example__slider-list slider-list">
-            <li class="slider-list__logo fat-cat-logo">
-              <img class="fat-cat-img" src="img/mobile/index/example-slider-cat-fat.jpg" width="280" height="232" alt="толстый котик.">
-            </li>
-            <li class="slider-list__logo skinny-cat-logo visually-hidden">
-              <img class="skinny-cat-img" src="img/mobile/index/example-slider-cat-skinny.jpg" width="280" height="232" alt="похудевший котик.">
-            </li>
-          </ul>
-          <p class="example__toggle slider-toggles">
-            <button class="slider__toggle-first slider__toggle--current" type="button">
-              <span class="visually-hidden">Было.</span>
-              <span class="slider__toggle-first-text">было</span>
-            </button>
-            <button class="slider__toggle-second slider__toggle" type="button">
-              <span class="visually-hidden">Стало.</span>
-              <span class="slider__toggle-second-text">стало</span>
-            </button>
-          </p>
         </section>
         <section class="invite">
           <div class="invite__description invite-description">

@@ -1,7 +1,42 @@
+@use "../mixins";
+
 .main-footer {
   width: 100%;
   min-height: 236px;//переполнение
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @include mixins.tablet-w () {
+    flex-direction: row;
+    padding: 0 var(--tablet-padding);
+
+    .main-footer__logo {
+      margin: 0;
+      margin-right: 155px;
+    }
+
+    .main-footer__contacts {
+      margin: 0;
+      margin-right: auto;
+    }
+
+    .main-footer__references {
+      width: 163px;
+    }
+  }
+
+  @include mixins.desktop-w () {
+    padding: 0 var(--desktop-padding);
+
+    .main-footer__logo {
+      margin: 0;
+      margin-right: 414px;
+    }
+
+    .main-footer__contacts {
+      margin: 0;
+      margin-right: auto;
+    }
+  }
 }
