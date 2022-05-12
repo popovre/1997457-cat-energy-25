@@ -10,7 +10,7 @@
     margin: 0;
     min-width: 258px;
     margin-top: 27px;
-    margin-bottom: 40px;
+    padding-bottom: 40px;
   }
 
   .products__content {
@@ -119,7 +119,7 @@
   @include mixins.tablet-w () {
     padding: 0 var(--tablet-padding);
     padding-top: 65px;
-    margin-bottom: 68px;
+    padding-bottom: 68px;
 
     .products__title {
       font-size: 60px;
@@ -142,6 +142,7 @@
     }
 
     .products__table {
+      padding: 0;
       width: 100%;
       display: grid;
       grid-template-columns: 252px;
@@ -208,7 +209,7 @@
   @include mixins.desktop-w () {
     padding: 0 var(--desktop-padding);
     padding-top: 74px;
-    margin-bottom: 75px;
+    padding-bottom: 75px;
 
     .products__title {
       margin-bottom: 84px;
@@ -223,13 +224,19 @@
     .products__product-cell {
       padding: 0;
       padding-bottom: 40px;
+      min-height: 511px;
     }
 
     .products__table {
+      padding: 0;
       width: 180px;
-      grid-template-columns: auto;
-      justify-content: center;
+      row-gap: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       margin: 0 auto;
+      justify-content: flex-start;
+      min-height: 100%;
     }
 
     .products__name {
@@ -241,12 +248,11 @@
     .products__parameters {
       width: 169px;
       margin: 0 auto;
-      margin-bottom: 33px;
+      margin-bottom: auto;
       justify-content: space-between;
     }
 
     .products__button {
-      justify-self: center;
       padding: 10px 53px;
     }
 
