@@ -1,0 +1,167 @@
+@use "../mixins.scss";
+
+.main-nav {
+  width: 100%;
+  position: relative;
+  min-height: 36px;
+  outline: 2px solid #0000ff;
+
+  .main-nav__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--default-white);
+  }
+
+  .main-nav__menu-opener {
+    @include mixins.btnres();
+
+    position: absolute;
+    top: 8px;
+    right: 0;
+    z-index: 3;
+    display: block;
+    width: 24px;
+    min-height: 16px;
+    cursor: pointer;
+    background-color: #ffffff;
+
+    &:hover,
+    &:active {
+      background-color: #624530;
+    }
+  }
+
+  &--closed .main-nav__menu-opener::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    box-shadow:
+      0 2px 0 0 #000000 inset,
+      0 7px 0 0 #000000,
+      0 14px 0 0 #000000;
+  }
+
+  &--closed .main-nav__menu-opener:active::before {
+    box-shadow:
+      0 2px 0 0 #ff0000 inset,
+      0 7px 0 0 #ff0000,
+      0 14px 0 0 #ff0000;
+  }
+
+  &--opened .main-nav__menu-opener {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: calc(16px / 2 - 2px / 2);
+      left: 0;
+      width: 24px;
+      height: 2px;
+      background-color: #000000;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+      box-shadow: none;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+
+    &:active::before,
+    &:active::after {
+      background-color: #ff0000;
+    }
+  }
+
+  .main-nav__link {
+    position: relative;
+    z-index: 1;
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--default-black);
+    text-transform: uppercase;
+    text-align: center;
+
+    &:hover {
+      color: rgb(0, 0, 0, 0.6);
+    }
+
+    &:active::after {
+      content: "";
+      position: absolute;
+      top: auto;
+      left: 1.5px;
+      right: 1.5px;
+      bottom: -6px;
+      height: 2px;
+      background-color: var(--green2);
+    }
+  }
+
+  .main-nav__index-link {
+  }
+
+  .main-nav__catalog-link {
+  }
+
+  .main-nav__form-link {
+  }
+
+
+
+  @include mixins.tablet-w () {
+    .main-nav__menu-opener {
+      display: none;
+    }
+
+    .main-nav__wrapper {
+      flex-direction: row;
+    }
+
+    .main-nav__index-link {
+      margin-right: 33px;
+    }
+
+    .main-nav__catalog-link {
+      margin-right: 36px;
+    }
+  }
+
+  @include mixins.desktop-w () {
+    .main-nav__index-link {
+      margin-right: 35px;
+    }
+
+    .main-nav__catalog-link {
+      margin-right: 32px;
+    }
+  }
+}
+
+@include mixins.mobile-w-only () {
+  .main-nav--closed .main-nav__link {
+    display: none;
+  }
+
+  .main-nav--closed .main-nav__link--active {
+    display: block;
+  }
+
+  .main-nav--opened .main-nav__wrapper {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    min-height: 198px;
+  }
+
+}

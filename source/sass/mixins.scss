@@ -39,9 +39,16 @@
 $tablet-width: 768px;
 $desktop-width: 1440px;
 $mobile-width: 320px;
+$mobile-width-only: 767px;
 
 @mixin mobile-w {
   @media (min-width: $mobile-width) {
+    @content;
+  }
+}
+
+@mixin mobile-w-only {
+  @media (max-width: $mobile-width-only) {
     @content;
   }
 }
