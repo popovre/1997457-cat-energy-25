@@ -9,13 +9,14 @@
   flex-wrap: wrap;
   min-height: 65px;
   padding-top: 10px;
-  padding-left: var(--mobile-padding);
-  padding-right: var(--mobile-padding);
+  // padding-left: var(--mobile-padding);
+  // padding-right: var(--mobile-padding);
   color: var(--default-black);
   font-size: 18px;
   line-height: 1;
 
   .main-header__logo-link {
+    margin-left: 20px;
     margin-right: 56px;
   }
 

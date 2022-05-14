@@ -3,15 +3,13 @@
 .main-nav {
   width: 100%;
   position: relative;
-  min-height: 36px;
-  outline: 2px solid #0000ff;
+  min-height: 65px;
 
   .main-nav__wrapper {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     width: 100%;
     background-color: var(--default-white);
   }
@@ -20,8 +18,8 @@
     @include mixins.btnres();
 
     position: absolute;
-    top: 8px;
-    right: 0;
+    top: -27px;
+    right: 20px;
     z-index: 3;
     display: block;
     width: 24px;
@@ -35,24 +33,26 @@
     }
   }
 
-  &--closed .main-nav__menu-opener::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 24px;
-    height: 2px;
-    box-shadow:
-      0 2px 0 0 #000000 inset,
-      0 7px 0 0 #000000,
-      0 14px 0 0 #000000;
-  }
+  &--closed .main-nav__menu-opener {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 24px;
+      height: 2px;
+      box-shadow:
+        0 2px 0 0 #000000 inset,
+        0 7px 0 0 #000000,
+        0 14px 0 0 #000000;
+    }
 
-  &--closed .main-nav__menu-opener:active::before {
-    box-shadow:
-      0 2px 0 0 #ff0000 inset,
-      0 7px 0 0 #ff0000,
-      0 14px 0 0 #ff0000;
+    &:active::before {
+      box-shadow:
+        0 2px 0 0 #ff0000 inset,
+        0 7px 0 0 #ff0000,
+        0 14px 0 0 #ff0000;
+    }
   }
 
   &--opened .main-nav__menu-opener {
@@ -87,6 +87,8 @@
     z-index: 1;
     font-size: 20px;
     line-height: 30px;
+    padding-top: 23px;
+    padding-bottom: 23px;
     color: var(--default-black);
     text-transform: uppercase;
     text-align: center;
@@ -95,7 +97,11 @@
       color: rgb(0, 0, 0, 0.6);
     }
 
-    &:active::after {
+    &:active .main-nav__name {
+      position: relative;
+    }
+
+    &:active .main-nav__name::after {
       content: "";
       position: absolute;
       top: auto;
@@ -115,8 +121,6 @@
 
   .main-nav__form-link {
   }
-
-
 
   @include mixins.tablet-w () {
     .main-nav__menu-opener {
@@ -164,4 +168,27 @@
     min-height: 198px;
   }
 
+  .main-nav--nojs .main-nav__menu-opener {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__wrapper {
+    position: static;
+    min-height: 0;
+  }
+
+  .main-nav--nojs .main-nav__link {
+    display: block;
+  }
+
+  .main-nav--nojs .main-nav__link--active {
+    padding-left: 105px;
+    padding-right: 105px;
+    text-align: center;
+  }
+
+  .main-nav--nojs .user-list__item {
+    display: block;
+    background-color: #6a4d38;
+  }
 }
