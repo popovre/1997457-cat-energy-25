@@ -2,7 +2,8 @@
 
 .main-nav {
   width: 100%;
-  position: relative;
+  position: absolute;
+  top: 65px;
   min-height: 65px;
 
   .main-nav__wrapper {
@@ -18,7 +19,7 @@
     @include mixins.btnres();
 
     position: absolute;
-    top: -27px;
+    top: -37px;
     right: 20px;
     z-index: 3;
     display: block;
@@ -34,6 +35,7 @@
   }
 
   &--closed .main-nav__menu-opener {
+
     &::before {
       content: "";
       position: absolute;
@@ -113,22 +115,47 @@
     }
   }
 
-  .main-nav__index-link {
-  }
-
-  .main-nav__catalog-link {
-  }
-
-  .main-nav__form-link {
-  }
-
   @include mixins.tablet-w () {
+    min-height: auto;
+    position: relative;
+    top: auto;
+    width: auto;
+    font-size: 18px;
+    line-height: 24px;
+
     .main-nav__menu-opener {
       display: none;
     }
 
     .main-nav__wrapper {
       flex-direction: row;
+      align-items: center;
+    }
+
+    .main-nav__link {
+      padding: 0;
+
+      &:active .main-nav__name::after {
+        content: "";
+        position: absolute;
+        top: auto;
+        left: 1.5px;
+        right: 1.5px;
+        bottom: -8px;
+        height: 2px;
+        background-color: var(--green2);
+      }
+
+      &--active .main-nav__name::after {
+        content: "";
+        position: absolute;
+        top: auto;
+        left: 1.5px;
+        right: 1.5px;
+        bottom: -8px;
+        height: 2px;
+        background-color: var(--green2);
+      }
     }
 
     .main-nav__index-link {
@@ -141,6 +168,10 @@
   }
 
   @include mixins.desktop-w () {
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--default-white);
+
     .main-nav__index-link {
       margin-right: 35px;
     }
@@ -148,16 +179,38 @@
     .main-nav__catalog-link {
       margin-right: 32px;
     }
+
+    .main-nav__link {
+      padding: 0;
+
+      &:active .main-nav__name::after {
+        content: "";
+        position: absolute;
+        top: auto;
+        left: 1.5px;
+        right: 1.5px;
+        bottom: -8px;
+        height: 2px;
+        background-color: var(--default-white);
+      }
+
+      &--active .main-nav__name::after {
+        content: "";
+        position: absolute;
+        top: auto;
+        left: 1.5px;
+        right: 1.5px;
+        bottom: -8px;
+        height: 2px;
+        background-color: var(--default-white);
+      }
+    }
   }
 }
 
 @include mixins.mobile-w-only () {
   .main-nav--closed .main-nav__link {
     display: none;
-  }
-
-  .main-nav--closed .main-nav__link--active {
-    display: block;
   }
 
   .main-nav--opened .main-nav__wrapper {

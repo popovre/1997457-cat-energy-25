@@ -1,6 +1,7 @@
 @use "../mixins.scss";
 
 .main-header {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -16,7 +17,7 @@
   line-height: 1;
 
   .main-header__logo-link {
-    margin-left: 20px;
+    margin-left: var(--tablet-padding);
     margin-right: 56px;
   }
 
@@ -31,11 +32,12 @@
     min-height: 76px;
 
     .main-header__logo-link {
+      margin-left: 0;
       margin-right: 19px;
     }
 
     .main-header__title-link {
-      margin-right: 93px;
+      margin-right: auto;
     }
 
     .header-black {
@@ -48,16 +50,13 @@
     padding-left: var(--desktop-padding);
     padding-right: var(--desktop-padding);
     min-height: 76px;
-    font-size: 20px;
-    line-height: 30px;
-    color: var(--default-white);
 
     .main-header__logo-link {
       margin-right: 14px;
     }
 
     .main-header__title-link {
-      margin-right: 540px;
+      margin-right: auto;
     }
   }
 }
