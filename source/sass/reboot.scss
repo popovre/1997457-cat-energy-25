@@ -1,3 +1,13 @@
+// временно
+section {
+  outline: 1px dotted purple;
+}
+
+li {
+  outline: 1px dotted red;
+}
+//
+
 *,
 ::after,
 ::before {
@@ -47,3 +57,4 @@ body {
   border: 0;
   clip: rect(0, 0, 0, 0);
 }
+
