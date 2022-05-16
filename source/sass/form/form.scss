@@ -22,6 +22,11 @@
     padding-bottom: 24px;
   }
 
+  .form__characteristics-input {
+    border: none;
+    outline: 2px solid var(--grey6);
+  }
+
   .form__name {
     justify-self: end;
     width: calc(229 / 280) * 100%;
@@ -47,7 +52,6 @@
     min-height: 157px;
     padding-top: 22px;
     padding-bottom: 19px;
-    padding-left: 45px;
     color: var(--black2);
   }
 
@@ -58,6 +62,7 @@
     row-gap: 26px;
     width: 100%;
     justify-content: start;
+    padding-left: 45px;
   }
 
   .form__radio-label {
@@ -100,11 +105,21 @@
   }
 
   .form__contacts {
+    position: relative;
     margin: 0;
     padding: 0;
     width: 100%;
     padding-top: 26px;
-    padding-bottom: 23px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 99px;
+      height: 2px;
+      background-color: var(--green2);
+      top: 44px;
+      right: -20px;
+    }
   }
 
   .form__contacts-title {
@@ -125,7 +140,23 @@
     flex-wrap: wrap;
   }
 
-  .form__email-text {
+  .form__contacts-input {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 19px;
+      height: 13px;
+      right: 0;
+      left: auto;
+      top: 0;
+    }
+  }
+
+  .form__contacts-text {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -136,7 +167,6 @@
   }
 
   .form__email {
-    position: relative;
     font-size: 16px;
     line-height: 18px;
     padding-left: 15px;
@@ -144,29 +174,10 @@
     text-transform: uppercase;
     width: calc((219 / 280) * 100%);
     min-height: 45px;
-
+// не работает
     &::after {
-      content: "";
-      position: absolute;
       background-image: url("data:image/svg+xml,%3Csvg width='19' height='14' viewBox='0 0 19 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23222' stroke-width='1.3' d='M.65 5.848v8M17.65 5.848v8M0 13.198h18M0 1.198h18M17.35 3.03 9 9.524.65 3.03V1.498h16.7V3.03Z'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: center;
-      width: 19px;
-      height: 13px;
-      right: 0;
-      top: 0;
     }
-  }
-
-  .form__tel-text {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    font-size: 16px;
-    line-height: 18px;
-    text-transform: uppercase;
-    color: var(--black1);
   }
 
   .form__tel {
@@ -175,13 +186,28 @@
     text-transform: uppercase;
     width: calc((204 / 280) * 100%);
     min-height: 45px;
+// не работает
+    &::after {
+      background-image: url("data:image/svg+xml,%3Csvg width='20' height='21' viewBox='0 0 20 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23a)' fill='%23000'%3E%3Cpath d='M17.9 9.753H9.4v1.204h8.5l-2.1 2.107.9.903 3.1-3.11a.754.754 0 0 0 0-.904l-3.1-3.11-.9.903 2.1 2.007ZM8.1 19.787v-6.221a.653.653 0 0 0-.6-.602H3.1a1.226 1.226 0 0 0 1.2 1.204h2.5v5.017H3.1a1.784 1.784 0 0 1-1.728-1.02 1.801 1.801 0 0 1-.172-.686V3.431a1.78 1.78 0 0 1 .483-1.25A1.767 1.767 0 0 1 2.9 1.624h3.9v5.017H4.4a1.218 1.218 0 0 0-1.2 1.204h4.4a.649.649 0 0 0 .6-.602V.923A.863.863 0 0 0 7.5.32H3.1a2.99 2.99 0 0 0-2.151.81A3.01 3.01 0 0 0 0 3.23v13.948a2.91 2.91 0 0 0 .772 2.192 2.89 2.89 0 0 0 2.128.919h4.6a.499.499 0 0 0 .6-.502Z'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%23fff' transform='translate(0 .32)' d='M0 0h20v20.069H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+    }
   }
 
   .form__comments {
+    position: relative;
     margin: 0;
     padding: 0;
     width: 100%;
-    padding-bottom: 23px;
+    padding-top: 23.5px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 158px;
+      height: 2px;
+      background-color: var(--green2);
+      top: 40px;
+      right: -20px;
+    }
   }
 
   .form__comments-title {
@@ -190,26 +216,46 @@
     font-size: 24px;
     line-height: 26px;
     color: var(--default-black);
+    margin: 0;
     margin-bottom: 37px;
   }
 
   .form__comments-text {
     width: 100%;
     min-height: 150px;
-  }
-
-  .form__additional {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    padding-left: 45px;
-  }
-
-  .form__additional-title {
     font-size: 24px;
     line-height: 26px;
     color: var(--default-black);
+// не работает
+  }
+
+  .form__additional {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    padding-top: 23px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 136px;
+      height: 2px;
+      background-color: var(--green2);
+      top: 40px;
+      right: -20px;
+    }
+  }
+
+  .form__additional-title {
+    text-align: left;
+    font-size: 24px;
+    line-height: 26px;
+    font-weight: 400;
+    color: var(--default-black);
+    margin: 0;
     margin-bottom: 34px;
+    text-transform: none;
   }
 
   .form__additional-wrapper {
@@ -220,6 +266,7 @@
     line-height: 18px;
     text-transform: uppercase;
     color: var(--default-black);
+    padding-left: 45px;
     margin-bottom: 34px;
   }
 
@@ -261,6 +308,26 @@
     box-shadow: 0 0 0 1px var(--grey3);
   }
 
+  .form__submit-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .form__button {
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    border: none;
+    min-height: 40px;
+    width: 100%;
+    margin-bottom: 21px;
+  }
+
+  .form__note {
+    text-transform: none;
+    margin: 0;
+  }
+
   @include mixins.tablet-w () {
     .form__characteristics {
       display: flex;
@@ -282,8 +349,6 @@
     .form__name {
       width: 567px;
       min-height: 52px;
-      border: none;
-      outline: 2px solid var(--black1);
     }
 
     .form__weight-text {
@@ -294,8 +359,6 @@
     .form__weight {
       width: 536px;
       min-height: 52px;
-      border: none;
-      outline: 2px solid var(--black1);
     }
 
     .form__age-text {
@@ -306,36 +369,56 @@
     .form__age {
       width: 497px;
       min-height: 52px;
-      border: none;
-      outline: 2px solid var(--black1);
     }
 
     .form__goal {
       padding: 0;
       font-size: 20px;
       line-height: 30px;
-      padding-top: 25px;
+      padding-top: 36px;
       padding-left: 27px;
-      padding-bottom: 25px;
+      padding-bottom: 36px;
       border: none;
-      outline: 2px solid var(--black1);
-      width: 100%;
+      outline: 2px solid var(--grey6);
       color: var(--black3);
       margin-bottom: 75px;
     }
 
     .form__goal-wrapper {
+      padding-left: 87px;
       align-items: center;
       column-gap: 20px;
-      row-gap: 13px;
-      padding-bottom: 25px;
+      row-gap: 26px;
+    }
+
+    .radio {
+      width: 40px;
+      height: 40px;
+      top: -12.5px;
+      left: -60px;
+      box-shadow: 0 0 0 1px var(--grey3) inset;
     }
 
     .form__contacts {
       font-size: 20px;
       line-height: 30px;
       padding: 0;
-      margin-bottom: 65px;
+
+      &::after {
+        width: 145px;
+        right: -65px;
+        top: 24px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 2px;
+        background-color: var(--green2);
+        left: -70px;
+        top: 24px;
+      }
     }
 
     .form__contacts-title {
@@ -343,7 +426,11 @@
       line-height: 36px;
       margin-bottom: 76px;
       color: var(--default-black);
-      text-transform: lowercase;
+      text-transform: none;
+    }
+
+    .form__contacts-content {
+      row-gap: 20px;
     }
 
     .form__email-text {
@@ -370,14 +457,30 @@
 
     .form__comments {
       padding: 0;
-      margin-bottom: 65px;
+      padding-top: 65px;
+
+      &::after {
+        width: 145px;
+        right: -65px;
+        top: 89px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 2px;
+        background-color: var(--green2);
+        left: -70px;
+        top: 89px;
+      }
     }
 
     .form__comments-title {
       font-size: 36px;
       line-height: 36px;
       margin-bottom: 76px;
-      text-transform: lowercase;
+      text-transform: none;
     }
 
     .form__comments-text {
@@ -386,7 +489,24 @@
     }
 
     .form__additional {
-      margin-bottom: 54px;
+      padding-top: 65px;
+      padding-bottom: 54px;
+
+      &::after {
+        width: 145px;
+        right: -65px;
+        top: 89px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 2px;
+        background-color: var(--green2);
+        left: -70px;
+        top: 89px;
+      }
     }
 
     .form__additional-title {
@@ -396,29 +516,34 @@
     }
 
     .form__additional-wrapper {
-      width: 565px;
+      width: calc((565 / 628) * 100%);
       display: grid;
       grid-template-columns: 221px 221px;
-      grid-template-rows: 40px 40px;
       row-gap: 32px;
       column-gap: 124px;
       font-size: 20px;
       line-height: 30px;
+      padding-left: 59px;
+    }
+
+    .checkbox {
+      width: 40px;
+      height: 40px;
+      top: -5px;
+      left: -59px;
     }
 
     .form__submit-button {
-      width: 565px;
+      width: calc((565 / 628) * 100%);
       display: flex;
       flex-wrap: wrap;
     }
 
     .form__button {
-      min-width: 282px;
+      width: calc((282 / 565) * 100%);
       min-height: 52px;
       font-size: 20px;
       line-height: 1;
-      text-align: center;
-      text-transform: uppercase;
       margin-right: 61px;
     }
 
@@ -429,12 +554,12 @@
   }
 
   @include mixins.desktop-w () {
+
     .form__characteristics {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 82px;
-      width: 569px;
+      row-gap: 20px;
+      width: calc((569 / 1218) * 100%);
+      min-height: 200px;
+      margin-bottom: 0;
     }
 
     .form__name-text {
@@ -462,32 +587,30 @@
     }
 
     .form__goal {
-      padding: 0;
-      padding-top: 30px;
-      padding-left: 28px;
-      padding-bottom: 25px;
-      width: 568px;
-      margin-bottom: 69px;
-    }
-
-    .form__goal-wrapper {
-      align-items: center;
-      column-gap: 20px;
-      row-gap: 13px;
-      padding-bottom: 25px;
+      min-height: 200px;
+      width: calc((569 / 1218) * 100%);
+      margin-bottom: 0;
     }
 
     .form__contacts {
-      margin-bottom: 69px;
+      padding-top: 69px;
+
+      &::before {
+        width: 70px;
+        left: -110px;
+        top: 93px;
+      }
+
+      &::after {
+        width: 778px;
+        right: -110px;
+        top: 93px;
+      }
     }
 
     .form__contacts-content {
-      display: flex;
+      flex-direction: row;
       justify-content: space-between;
-      font-size: 20px;
-      line-height: 30px;
-      text-transform: uppercase;
-      margin-bottom: 69px;
     }
 
     .form__email-text {
@@ -511,12 +634,25 @@
 
     .form__comments {
       padding: 0;
-      margin-bottom: 67px;
+      padding-top: 69px;
+
+      &::before {
+        width: 70px;
+        background-color: var(--green2);
+        left: -110px;
+        top: 93px;
+      }
+
+      &::after {
+        width: 1108px;
+        background-color: var(--green2);
+        right: -110px;
+        top: 93px;
+      }
     }
 
     .form__comments-title {
       margin-bottom: 76px;
-      text-transform: lowercase;
     }
 
     .form__comments-text {
@@ -525,7 +661,20 @@
     }
 
     .form__additional {
-      margin-bottom: 61px;
+      padding-top: 67px;
+      padding-bottom: 61px;
+
+      &::before {
+        width: 70px;
+        left: -110px;
+        top: 91px;
+      }
+
+      &::after {
+        width: 1078px;
+        right: -110px;
+        top: 91px;
+      }
     }
 
     .form__additional-title {
@@ -538,24 +687,18 @@
       grid-template-rows: 40px;
       row-gap: 32px;
       column-gap: 104px;
-      font-size: 20px;
-      line-height: 30px;
       margin-bottom: 0;
     }
 
     .form__submit-button {
-      width: 565px;
       display: flex;
       flex-wrap: wrap;
+      align-items: center;
     }
 
     .form__button {
-      min-width: 282px;
       min-height: 52px;
-      font-size: 20px;
-      line-height: 1;
-      text-align: center;
-      text-transform: uppercase;
+      margin: 0;
       margin-right: 82px;
     }
 

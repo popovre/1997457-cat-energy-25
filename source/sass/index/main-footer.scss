@@ -6,14 +6,75 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 var(--mobile-padding);
+
+  .main-footer__logo {
+    padding-top: 39px;
+    width: 100%;
+    min-height: 95px;
+    position: relative;
+    text-align: center;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: var(--grey5);
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  .main-footer__references {
+    display: flex;
+    justify-content: space-between;
+    min-height: 78px; //переполнение
+    width: 100%;
+    align-items: center;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: var(--grey5);
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .main-footer__contacts {
+    @include mixins.listres;
+
+    display: flex;
+    min-height: 63px;
+    width: 132px;
+    align-items: center;
+
+    .contacts__vk {
+      margin-right: 24px;
+    }
+
+    .contacts__youtube {
+      margin-right: 24px;
+    }
+  }
 
   @include mixins.tablet-w () {
     flex-direction: row;
     padding: 0 var(--tablet-padding);
 
     .main-footer__logo {
+      &::after {
+        content: none;
+      }
+
+      width: 128px;
       margin: 0;
       margin-right: 155px;
+      text-align: left;
     }
 
     .main-footer__contacts {
@@ -22,6 +83,9 @@
     }
 
     .main-footer__references {
+      &::after {
+        content: none;
+      }
       width: 163px;
     }
   }
