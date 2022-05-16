@@ -103,10 +103,13 @@
   }
 
   @include mixins.desktop-w () {
+    padding-top: 111px;
+    min-height: calc(694px - 91px);
+
     .motivation__decor {
       display: block;
       position: absolute;
-      top: -76px;
+      top: -91px;
       right: 0;
       left: auto;
       width: 720px;
@@ -122,6 +125,18 @@
         bottom: 0;
         background-color: var(--green1);
       }
+    }
+
+    .motivation__title {
+
+    }
+
+    .motivation__text {
+
+    }
+
+    .motivation__choose-button {
+      margin-bottom: 0;
     }
   }
 }

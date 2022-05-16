@@ -3,6 +3,7 @@
 .specification {
   width: 100%;
   padding: 0 20.5px;
+  padding-bottom: 49px;
 
   .specification__title {
     font-weight: 400;
@@ -10,6 +11,7 @@
     line-height: 40px;
     text-align: center;
     color: var(--default-black);
+    margin-top: 0;
   }
 
   .specification__list {
@@ -21,7 +23,33 @@
   }
 
   .specification__item {
+    position: relative;
     padding-left: 80px;
+    &::before {
+      content: "";
+      position: absolute;
+      background-repeat: no-repeat;
+      width: 60px;
+      height: 60px;
+      top: -3px;
+      left: 0;
+    }
+
+    &-function::before {
+      background-image: url("../../img/mobile/index/specification-function-img.png");
+    }
+
+    &-structure::before {
+      background-image: url("../../img/mobile/index/specification-structure-img.png");
+    }
+
+    &-replace::before {
+      background-image: url("../../img/mobile/index/specification-replace-img.png");
+    }
+
+    &-time::before {
+      background-image: url("../../img/mobile/index/specification-time-img.png");
+    }
   }
 
   .specification__item:not(:last-child) {
@@ -34,6 +62,9 @@
 
   @include mixins.tablet-w () {
     padding: 0 var(--tablet-padding);
+    padding-top: 45px;
+    padding-bottom: 47px;
+
 
     .specification__title {
       font-size: 60px;
@@ -44,44 +75,100 @@
     .specification__list {
       flex-direction: row;
       justify-content: flex-start;
+      row-gap: 37px;
     }
 
     .specification__item {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
       padding: 0;
+      padding-bottom: 57px;
       min-height: 280px;
+
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+
+      &:nth-child(odd) {
+        margin-right: auto;
+      }
+
+      &::before {
+        width: 80px;
+        height: 80px;
+        top: 40px;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        background-repeat: no-repeat;
+        width: 112px;
+        height: 280px;
+        top: 0px;
+        right: 0;
+      }
+
+      &-function {
+        &::before {
+          background-image: url("../../img/tablet/index/specification-function.png");
+        }
+
+        &::after {
+          background-image: url("../../img/tablet/index/specification-1.png");
+        }
+        order: 0;
+        width: 230px;
+      }
+
+      &-structure {
+        &::before {
+          background-image: url("../../img/tablet/index/specification-structure.png");
+        }
+
+        &::after {
+          background-image: url("../../img/tablet/index/specification-2.png");
+        }
+        order: 1;
+        width: 246px;
+      }
+
+      &-replace {
+        &::before {
+          background-image: url("../../img/tablet/index/specification-replace.png");
+        }
+
+        &::after {
+          background-image: url("../../img/tablet/index/specification-3.png");
+        }
+        order: 2;
+        width: 247px;
+      }
+
+      &-time {
+        &::before {
+          background-image: url("../../img/tablet/index/specification-time.png");
+        }
+
+        &::after {
+          background-image: url("../../img/tablet/index/specification-4.png");
+        }
+        order: 3;
+        width: 249px;
+      }
     }
 
-    .specification__item:not(:last-child) {
-      margin-bottom: 0;
-    }
-
-    .specification__item-function {
-      order: 0;
-      width: 230px;
-      margin-right: auto;
-    }
-
-    .specification__item-structure {
-      order: 1;
-      width: 246px;
-    }
-
-    .specification__item-replace {
-      order: 2;
-      width: 247px;
-      margin-right: auto;
-      margin-top: 37px;
-    }
-
-    .specification__item-time {
-      order: 3;
-      width: 249px;
-      margin-top: 37px;
+    .specification__description {
+      position: relative;
+      z-index: 2;
     }
   }
 
   @include mixins.desktop-w () {
     padding: 0 var(--desktop-padding);
+    padding-top: 71px;
+    padding-bottom: 26px;
 
     .specification__title {
       font-size: 60px;
@@ -96,7 +183,6 @@
     }
 
     .specification__item {
-      padding: 0;
       min-height: 280px;
     }
 

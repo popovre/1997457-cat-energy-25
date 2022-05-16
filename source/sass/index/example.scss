@@ -7,6 +7,7 @@
   padding-bottom: 40px;
   display: flex;
   flex-direction: column;
+  background-color: var(--grey2);
 
   .example__title {
     font-weight: 400;
@@ -94,12 +95,15 @@
     padding: 0 var(--tablet-padding);
     padding-top: 43px;
     padding-bottom: 55px;
+    background-color: var(--default-white);
 
     .example__title {
       font-weight: 400;
       font-size: 60px;
       line-height: 60px;
       text-align: left;
+      margin-top: 0;
+      margin-bottom: 63px;
     }
 
     .example__text {
@@ -154,21 +158,26 @@
 
     .slider-list {
       min-height: 576px;
-      margin-bottom: 55px;
+      margin-bottom: 0;
     }
   }
 
   @include mixins.desktop-w () {
-    padding: 0 var(--desktop-padding);
-    padding-top: 43px;
-    padding-bottom: 65px;
+    padding: 0;
+    padding-top: 45px;
     grid-template-columns: 1fr auto;
+
+    .example__title {
+      margin-left: var(--desktop-padding);
+    }
 
     .example__text {
       margin-bottom: 69px;
     }
 
     .example__content {
+      padding: 0 var(--desktop-padding);
+      background-color: var(--grey1);
       flex-direction: row;
     }
 
@@ -179,7 +188,9 @@
     }
 
     .example__statistic {
-      margin-bottom: 55px;
+      margin-bottom: 0;
+      row-gap: 55px;
+      padding-bottom: 65px;
     }
 
     .example__statistic-weight {
@@ -209,6 +220,7 @@
     }
 
     .example__statistic-cost {
+      margin: 0;
       font-size: 20px;
       line-height: 20px;
     }
@@ -216,7 +228,6 @@
     .example__slider-list {
       padding: 0;
       min-height: 576px;
-      margin-bottom: 55px;
     }
   }
 }

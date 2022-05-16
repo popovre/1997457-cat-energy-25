@@ -2,7 +2,8 @@
 
 .program {
   width: 100%;
-  padding: 0 20px;
+  padding: 0 var(--mobile-padding);
+  padding-top: 20px;
 
   .program__list {
     display: grid;
@@ -13,12 +14,40 @@
   }
 
   .program__list-item {
+    position: relative;
     padding-top: 30px;
     width: 100%;
     padding-left: 20px;
-    padding-right: 33px;
+    padding-right: 20px;
     background-color: var(--grey1);
   }
+
+  .program__item-small {
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url("../../img/mobile/index/program-small-cat.png");
+      background-repeat: no-repeat;
+      width: 50px;
+      height: 53px;
+      top: 21px;
+      left: 22px;
+    }
+  }
+
+  .program__item-big {
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url("../../img/mobile/index/program-big-cat.png");
+      background-repeat: no-repeat;
+      width: 67px;
+      height: 50px;
+      top: 24px;
+      left: 13px;
+    }
+  }
+
 
   .program__list-title {
     margin: 0;
@@ -28,10 +57,12 @@
     text-transform: uppercase;
     color: var(--default-black);
     margin-bottom: 30px;
+    margin-left: 91px;
   }
 
   .program__list-text {
     display: block;
+    width: calc((227 / 280) * 100%);
     margin: 0;
     font-family: var(--arial);
     font-size: 14px;
@@ -42,6 +73,8 @@
   }
 
   .program__list-link {
+    position: relative;
+    width: 134px;
     display: block;
     font-size: 16px;
     line-height: 1;
@@ -49,6 +82,17 @@
     text-transform: uppercase;
     color: var(--default-black);
     margin-bottom: 18px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("../../img/mobile/index/program-arrow.png");
+      background-repeat: no-repeat;
+      width: 24px;
+      height: 12px;
+      top: 3px;
+      right: 8px;
+    }
   }
 
   @include mixins.tablet-w () {
@@ -63,18 +107,37 @@
     .program__list-item {
       padding-top: 77px;
       padding-left: 52px;
-      padding-right: 62px;
+      padding-right: 52px;
+    }
+
+    .program__item-small {
+      &::before {
+        left: auto;
+        top: 81px;
+        right: 62px;
+      }
+    }
+
+    .program__item-big {
+      &::before {
+        left: auto;
+        top: 91px;
+        right: 28px;
+      }
     }
 
     .program__list-title {
       font-size: 36px;
       line-height: 36px;
+      text-align: left;
+      margin-left: 0;
+      margin-bottom: 34px;
     }
 
     .program__list-text {
       font-size: 14px;
       line-height: 18px;
-      width: 227px;
+      width: 340px;
       height: 90px;
     }
 
@@ -83,12 +146,27 @@
       font-size: 20px;
       line-height: 30px;
       margin-bottom: 57px;
+      padding-top: 4px;
+      padding-bottom: 4px;
+      width: 165px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        background-image: url("../../img/mobile/index/program-arrow.png");
+        background-repeat: no-repeat;
+        width: 24px;
+        height: 12px;
+        top: 12px;
+        right: 0;
+      }
     }
   }
 
   @include mixins.desktop-w () {
     padding: 0 var(--desktop-padding);
-    padding-top: 82px;
+    padding-top: 80px;
+
 
     .program__list {
       display: grid;
@@ -99,7 +177,25 @@
     .program__list-item {
       padding-top: 77px;
       padding-left: 52px;
-      padding-right: 61px;
+      padding-right: 51px;
+      padding-bottom: 55px;
+
+    }
+
+    .program__item-small {
+      &::before {
+        left: 51px;
+        top: 41px;
+        right: auto;
+      }
+    }
+
+    .program__item-big {
+      &::before {
+        left: 33px;
+        top: 47px;
+        right: auto;
+      }
     }
 
     .program__list-title {
@@ -112,7 +208,7 @@
     .program__list-text {
       font-size: 14px;
       line-height: 18px;
-      width: 227px;
+      width: 100%;
       height: 90px;
       margin-bottom: 23px;
     }
@@ -121,7 +217,6 @@
       font-weight: 400;
       font-size: 20px;
       line-height: 30px;
-      margin-bottom: 55px;
     }
   }
 }

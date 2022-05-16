@@ -12,6 +12,7 @@
 //index
 @use "index/page";
 @use "index/main-header";
+@use "index/main-nav";
 @use "index/main-container";
 @use "index/motivation";
 @use "button";
@@ -23,11 +24,8 @@
 @use "index/slider-toggles";
 @use "index/invite";
 @use "index/invite-description";
-@use "index/invite-map";
+@use "index/map";
 @use "index/main-footer";
-@use "index/footer-logo";
-@use "index/contacts";
-@use "index/footer-references";
 @use "index/main-footer-grey.scss";
 @use "catalog/products";
 @use "catalog/title";
