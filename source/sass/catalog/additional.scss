@@ -90,7 +90,7 @@
     z-index: 0;
     background-image: url("../../img/mobile/catalog/additional-background.jpg");
     background-repeat: no-repeat;
-    min-width: 280px;
+    width: 280px;
     padding-top: 187px;
     padding-bottom: 35px;
 
@@ -128,8 +128,6 @@
     text-align: center;
     color: var(--default-white);
   }
-
-
 
   @include mixins.tablet-w () {
     margin: 0;
@@ -170,6 +168,8 @@
       flex-direction: column;
       flex-wrap: wrap;
       padding-bottom: 69px;
+      box-shadow:
+      1px var(--grey3) inset;
     }
 
     .additional__card {
@@ -210,7 +210,6 @@
     }
 
     .additional__gift {
-
       &::before {
         width: 707px;
         height: 200px;
@@ -240,7 +239,18 @@
   @include mixins.desktop-w () {
     margin: 0;
     padding: 0 var(--desktop-padding);
+    padding-top: 76px;
     padding-bottom: 86px;
+
+    &::before {
+      width: 957px;
+      top: 100px;
+    }
+
+    &::after {
+      width: 70px;
+      top: 100px;
+    }
 
     .additional__title {
       margin-bottom: 81px;
@@ -251,21 +261,27 @@
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
+      align-items: flex-start;
     }
 
     .additional__content-card {
+      padding-bottom: 0;
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
-      width: 896px;
+      width: calc((869 / 1220) * 100%);
       margin-bottom: 0;
+      box-shadow: none;
     }
 
     .additional__card {
+      padding: 0;
+      padding-top: 15px;
+      padding-bottom: 17px;
       width: 100%;
-      min-height: 72px;
-      justify-content: space-between;
+      justify-content: flex-start;
       align-items: center;
+      flex-wrap: wrap;
     }
 
     .additional__name {
@@ -274,6 +290,7 @@
 
     .additional__composition {
       margin: 0;
+      margin-right: 38px;
     }
 
     .additional-button {
@@ -282,10 +299,18 @@
     }
 
     .additional__gift {
+      padding: 0;
       margin: 0;
-      width: 245px;
+      width: calc((245 / 1220) * 100%);
       padding-top: 184px;
       margin-bottom: 0;
+      background-image: url("../../img/desktop/catalog/gift-background.png");
+      background-size: 245px 289px;
+
+      &::before {
+        width: 100%;
+        height: auto;
+      }
     }
 
     .additional__gift-title {
