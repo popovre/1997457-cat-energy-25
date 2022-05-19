@@ -91,6 +91,30 @@
     margin: 0 auto;
   }
 
+  .slider__toggle-first {
+    @include mixins.btnres;
+
+    text-transform: uppercase;
+  }
+
+  .slider__toggle-swap {
+    @include mixins.btnres;
+
+    width: 85px;
+    height: 14px;
+    background-image: url("../../img/mobile/index/example-toogle.png");
+    background-size: 85px 14px;
+    margin: 0 13px;
+  }
+
+  .slider__toggle-second {
+    @include mixins.btnres;
+
+    text-transform: uppercase;
+  }
+
+
+
   @include mixins.tablet-w () {
     padding: 0 var(--tablet-padding);
     padding-top: 43px;
