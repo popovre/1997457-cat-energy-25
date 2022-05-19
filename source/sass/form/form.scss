@@ -25,6 +25,18 @@
   .form__characteristics-input {
     border: none;
     outline: 2px solid var(--grey6);
+
+    &:hover{
+      outline: 2px solid var(--grey3);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--black1);
+    }
+
+    &:invalid {
+      outline: 2px solid var(--red1);
+    }
   }
 
   .form__name {
@@ -141,6 +153,19 @@
   }
 
   .form__contacts-input {
+    border: none;
+
+    &:hover{
+      outline: 2px solid var(--grey3);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--black1);
+    }
+
+    &:invalid {
+      outline: 2px solid var(--red1);
+    }
   }
 
   .form__contacts-text {

@@ -15,6 +15,14 @@
     position: relative;
     text-align: center;
 
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+
     &::after {
       content: "";
       position: absolute;
@@ -26,6 +34,17 @@
     }
   }
 
+  .contacts__icon {
+    &:hover .contacts__icon-svg {
+      fill: var(--green2);
+    }
+
+    &:active .contacts__icon-svg {
+      fill: var(--green2);
+      opacity: 0.3;
+    }
+  }
+
   .main-footer__references {
     display: flex;
     justify-content: space-between;
@@ -33,6 +52,15 @@
     width: 100%;
     align-items: center;
     position: relative;
+
+    &:hover .main-footer__references-svg {
+      fill: var(--green2);
+    }
+
+    &:active .main-footer__references-svg {
+      fill: var(--green2);
+      opacity: 0.3;
+    }
 
     &::after {
       content: "";
