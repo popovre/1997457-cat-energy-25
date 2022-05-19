@@ -216,11 +216,29 @@
       }
     }
 
+    .slider__toggle-wrapper {
+      position: relative;
+      margin: 0 auto;
+
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        width: 426px;
+        height: 6px;
+        border-radius: 6px;
+        background-color: #dcdcdc;
+        inset: 0;
+        left: -196px;
+        top: calc(50% - 4px);
+      }
+    }
+
     .slider__toggle-swap {
       background-color: #ffffff;
       background-image: none;
       background-size: 85px 14px;
-      margin: 0 auto;
+      margin: 0;
       position: relative;
       width: 34px;
       height: 34px;
@@ -239,19 +257,6 @@
         margin: 0 auto;
         top: calc(50% - 4px);
         z-index: 2;
-      }
-
-      &::before {
-        content: "";
-        position: absolute;
-        z-index: 1;
-        width: 426px;
-        height: 6px;
-        border-radius: 6px;
-        background-color: #dcdcdc;
-        inset: 0;
-        left: -196px;
-        top: calc(50% - 4px);
       }
 
       &:hover {

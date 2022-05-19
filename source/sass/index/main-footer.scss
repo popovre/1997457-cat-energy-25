@@ -35,6 +35,11 @@
   }
 
   .contacts__icon {
+
+    &-svg {
+      fill: var(--grey9);
+    }
+
     &:hover .contacts__icon-svg {
       fill: var(--green2);
     }
@@ -53,12 +58,20 @@
     align-items: center;
     position: relative;
 
+    &-svg {
+      fill: var(--grey9);
+    }
+
     &:hover .main-footer__references-svg {
       fill: var(--green2);
     }
 
     &:active .main-footer__references-svg {
       fill: var(--green2);
+      opacity: 0.3;
+    }
+
+    &:active .main-footer__references-text {
       opacity: 0.3;
     }
 
