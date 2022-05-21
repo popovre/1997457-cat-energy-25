@@ -102,26 +102,47 @@
     width: 100%;
   }
 
+  .example__toggle {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+  }
+
   .slider__toggle-first {
     @include mixins.btnres;
-
-    text-transform: uppercase;
+    min-height: 30px;
+  }
+// почему он больше содержимого??? я полтора часа туплю))
+  .slider__toggle-wrapper {
+    margin: 0 13px;
+    position: relative;
   }
 
   .slider__toggle-swap {
     @include mixins.btnres;
-
+    position: relative;
     width: 85px;
     height: 14px;
-    background-image: url("../../img/mobile/index/example-toogle.png");
-    background-size: 85px 14px;
-    margin: 0 13px;
+    background-color: var(--default-white);
+    border: 1px solid var(--grey3);
+    border-radius: 6px;
+  }
+
+  .slider__toggle-swap--left.slider__toggle-swap::before {
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 6px;
+    border-radius: 6px;
+    background-color: var(--green2);
+    left: 6px;
+    top: 3px;
   }
 
   .slider__toggle-second {
     @include mixins.btnres;
-
-    text-transform: uppercase;
+    min-height: 30px;
   }
 
   @include mixins.tablet-w () {
@@ -280,6 +301,10 @@
         0 2px 3px 1px var(--grey3),
         0 0 0 1px var(--green2) inset;
       }
+    }
+
+    .slider__toggle-swap--left.slider__toggle-swap::before {
+      content: none;
     }
 
     .slider__toggle-second {
