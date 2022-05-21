@@ -58,18 +58,66 @@
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 3;
+    justify-self: center;
+  }
+
+  .products__chicken-500 {
+    width: 68px;
+    height: 78px;
+    margin-top: 13px;
+  }
+
+  .products__chicken-1000 {
+    width: 84px;
+    height: 100px;
+    margin-top: 11px;
+  }
+
+  .products__fish-500 {
+    width: 68px;
+    height: 78px;
+    margin-top: 27px;
+  }
+
+  .products__fish-1000 {
+    width: 84px;
+    height: 100px;
+    margin-top: 11px;
+  }
+
+  .products__buckwheat-500 {
+    width: 68px;
+    height: 78px;
+    margin-top: 30px;
+  }
+
+  .products__buckwheat-1000 {
+    width: 84px;
+    height: 100px;
+    margin-top: 12px;
+  }
+
+  .products__rice-500 {
+    width: 72px;
+    height: 84px;
+    margin-top: 24px;
   }
 
   .products__name {
     display: block;
     margin: 0;
     margin-top: 0;
-    margin-bottom: 5px;
     width: calc((76 / 140) * 100%);
+  }
+
+  .products__image {
+    object-fit: contain;
   }
 
   .products__parameters {
     margin: 0;
+    margin-top: 5px;
+    margin-bottom: 9px;
     grid-column-start: 2;
     grid-column-end: 3;
     display: grid;
@@ -260,9 +308,57 @@
     }
 
     .products__image-wrapper {
+      align-self: auto;
+      justify-self: auto;
       position: relative;
       z-index: 1;
       margin-bottom: auto;
+    }
+
+    .products__image {
+      width: 100%;
+    }
+
+    .products__chicken-500 {
+      width: 161px;
+      height: 172px;
+      margin-top: 36px;
+    }
+
+    .products__chicken-1000 {
+      width: 168px;
+      height: 206px;
+      margin-top: 8px;
+    }
+
+    .products__fish-500 {
+      width: 163px;
+      height: 174px;
+      margin-top: 34px;
+    }
+
+    .products__fish-1000 {
+      width: 168px;
+      height: 200px;
+      margin-top: 8px;
+    }
+
+    .products__buckwheat-500 {
+      width: 161px;
+      height: 171px;
+      margin-top: 37px;
+    }
+
+    .products__buckwheat-1000 {
+      width: 168px;
+      height: 200px;
+      margin-top: 8px;
+    }
+
+    .products__rice-500 {
+      width: 163px;
+      height: 174px;
+      margin-top: 34px;
     }
 
     .products__name {
@@ -392,6 +488,48 @@
       margin: 0 auto;
       justify-content: flex-start;
       min-height: 100%;
+    }
+
+    .products__chicken-500 {
+      width: 161px;
+      height: 172px;
+      margin-top: 28px;
+    }
+
+    .products__chicken-1000 {
+      width: 172px;
+      height: 202px;
+      margin-top: 0px;
+    }
+
+    .products__fish-500 {
+      width: 163px;
+      height: 174px;
+      margin-top: 26px;
+    }
+
+    .products__fish-1000 {
+      width: 172px;
+      height: 196px;
+      margin-top: 0px;
+    }
+
+    .products__buckwheat-500 {
+      width: 161px;
+      height: 171px;
+      margin-top: 29px;
+    }
+
+    .products__buckwheat-1000 {
+      width: 172px;
+      height: 196px;
+      margin-top: 0px;
+    }
+
+    .products__rice-500 {
+      width: 163px;
+      height: 174px;
+      margin-top: 26px;
     }
 
     .products__name {

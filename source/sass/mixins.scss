@@ -64,3 +64,10 @@ $mobile-width-only: 767px;
     @content;
   }
 }
+
+@mixin retina {
+  @media (min-resolution: 2dppx) {
+    @content;
+    background-repeat: no-repeat;
+  }
+}

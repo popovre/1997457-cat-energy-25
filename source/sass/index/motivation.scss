@@ -58,6 +58,11 @@
     height: 302px;
     background-image: url("../../img/mobile/index/motivation-background.jpg");
 
+    @include mixins.retina () {
+      background-image: url("../../img/mobile/index/motivation-background2x.jpg");
+      background-size: 100% auto;
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -112,17 +117,23 @@
 
   @include mixins.desktop-w () {
     padding-top: 111px;
-    min-height: calc(694px - 91px);
+    min-height: calc(694px - 114px);
 
     .motivation__decor {
       display: block;
       position: absolute;
-      top: -91px;
+      top: -114px;
       right: 0;
       left: auto;
       width: 720px;
       height: 694px;
-      background-image: url("../../img/desktop/index/motivation-background.png");
+      background-image: url("../../img/desktop/index/motivation-background-desktop.jpg");
+
+      @include mixins.retina () {
+        background-image: url("../../img/desktop/index/motivation-background-desktop2x.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
 
       &::before {
         content: "";
@@ -161,22 +172,38 @@
   left: var(--mobile-padding);
   z-index: 0;
 
+  @include mixins.retina () {
+    background-image: url("../../img/mobile/index/motivation-background-food2x.png");
+    background-size: 100% auto;
+  }
+
+
   @include mixins.tablet-w () {
-    background-image: url("../../img/tablet/index/motivation-food-background.png");
+    background-image: url("../../img/tablet/index/motivation-food-background-tablet.png");
     width: 709px;
     height: 609px;
     bottom: 0;
     left: var(--tablet-padding);
     z-index: 0;
+
+    @include mixins.retina () {
+      background-image: url("../../img/tablet/index/motivation-food-background-tablet2x.png");
+      background-size: 100% auto;
+    }
   }
 
   @include mixins.desktop-w () {
-    background-image: url("../../img/desktop/index/motivation-food-background.png");
+    background-image: url("../../img/desktop/index/motivation-food-background-desktop.png");
     width: 552px;
     height: 499px;
     top: 32px;
     right: 330px;
     left: auto;
     z-index: 1;
+  }
+
+  @include mixins.retina () {
+    background-image: url("../../img/desktop/index/motivation-food-background-desktop2x.png");
+    background-size: 100% auto;
   }
 }
