@@ -124,6 +124,7 @@
         content: "";
         position: absolute;
         background-repeat: no-repeat;
+        background-size: contain;
         height: 280px;
         top: 0;
         right: 0;
@@ -141,11 +142,11 @@
 
         &::after {
           background-image: url("../../img/tablet/index/specification-1.png");
+          width: 112px;
+
 
           @include mixins.retina () {
             background-image: url("../../img/tablet/index/specification-1-2x.png");
-            background-size: cover;
-            width: 112px;
           }
         }
         order: 0;
@@ -164,11 +165,10 @@
 
         &::after {
           background-image: url("../../img/tablet/index/specification-2.png");
+          width: 134px;
 
           @include mixins.retina () {
             background-image: url("../../img/tablet/index/specification-2-2x.png");
-            background-size: cover;
-            width: 134px;
           }
         }
         order: 1;
@@ -187,11 +187,10 @@
 
         &::after {
           background-image: url("../../img/tablet/index/specification-3.png");
+          width: 134px;
 
           @include mixins.retina () {
             background-image: url("../../img/tablet/index/specification-3-2x.png");
-            background-size: cover;
-            width: 134px;
           }
         }
         order: 2;
@@ -210,11 +209,10 @@
 
         &::after {
           background-image: url("../../img/tablet/index/specification-4.png");
+          width: 136px;
 
           @include mixins.retina () {
             background-image: url("../../img/tablet/index/specification-4-2x.png");
-            background-size: cover;
-            width: 136px;
           }
         }
         order: 3;

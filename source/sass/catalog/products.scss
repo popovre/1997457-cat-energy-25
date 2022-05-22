@@ -167,6 +167,14 @@
     line-height: 20px;
     text-align: center;
     text-transform: uppercase;
+
+    &:hover {
+      background-color: var(--green3);
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
 
   .products__product-more {
@@ -248,6 +256,14 @@
     text-align: center;
     text-transform: uppercase;
     color: var(--black1);
+
+    &:hover {
+      background-color: var(--grey8);
+    }
+
+    &:active {
+      color: rgba(68, 68, 68, 0.3);
+    }
   }
 
   @include mixins.tablet-w () {

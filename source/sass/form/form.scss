@@ -25,6 +25,12 @@
   .form__characteristics-input {
     border: none;
     outline: 2px solid var(--grey6);
+    font-size: 16px;
+    text-transform: uppercase;
+    color: var(--black1);
+    font-family: var(--main-font);
+    padding-left: 15px;
+    padding-right: 15px;
 
     &:hover{
       outline: 2px solid var(--grey3);
@@ -49,12 +55,18 @@
     justify-self: end;
     width: calc(204 / 280) * 100%;
     min-height: 45px;
+    -webkit-appearance: none;
+    appearance: none;
+    -moz-appearance: textfield;
   }
 
   .form__age {
     justify-self: end;
     width: calc(172 / 280) * 100%;
     min-height: 45px;
+    -webkit-appearance: none;
+    appearance: none;
+    -moz-appearance: textfield;
   }
 
   .form__goal {
@@ -69,6 +81,7 @@
 
   .form__goal-wrapper {
     display: grid;
+    color: var(--black3);
     font-size: 16px;
     line-height: 18px;
     row-gap: 26px;
@@ -154,6 +167,10 @@
 
   .form__contacts-input {
     border: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: var(--black1);
+    font-family: var(--main-font);
 
     &:hover{
       outline: 2px solid var(--grey3);
@@ -183,7 +200,6 @@
       position: absolute;
       background-repeat: no-repeat;
       background-position: center;
-
     }
   }
 
@@ -214,6 +230,8 @@
     text-transform: uppercase;
     width: calc((204 / 280) * 100%);
     min-height: 45px;
+    padding-left: 16px;
+    padding-right: 50px;
   }
 
   .form__tel-text {
@@ -258,10 +276,18 @@
   .form__comments-text {
     width: 100%;
     min-height: 150px;
-    font-size: 24px;
-    line-height: 26px;
-    color: var(--default-black);
-// не работает
+    font-size: 16px;
+    line-height: 18px;
+    color: var(--black1);
+    border: 1px solid var(--grey6);
+    padding-top: 9px;
+    padding-left: 15px;
+    padding-right: 12px;
+    padding-bottom: 9px;
+    letter-spacing: 0;
+    word-spacing: 0;
+    font-family: var(--main-font);
+    // хз как убавить интервал между словами
   }
 
   .form__additional {
@@ -375,6 +401,14 @@
       line-height: 30px;
     }
 
+    .form__characteristics-input {
+      font-size: 20px;
+      line-height: 30px;
+      color: var(--black1);
+      padding-left: 19px;
+      padding-right: 19px;
+    }
+
     // как убрать выпадание не знаю, столбцы раздвигаются друг от друга и дети выпадают
     .form__name-text {
       width: 53px;
@@ -420,6 +454,8 @@
     }
 
     .form__goal-wrapper {
+      font-size: 20px;
+      line-height: 30px;
       padding-left: 87px;
       align-items: center;
       column-gap: 20px;
@@ -429,7 +465,7 @@
     .radio {
       width: 40px;
       height: 40px;
-      top: -12.5px;
+      top: -5px;
       left: -60px;
       box-shadow: 0 0 0 1px var(--grey3) inset;
     }
@@ -466,6 +502,13 @@
 
     .form__contacts-content {
       row-gap: 20px;
+    }
+
+    .form__contacts-input {
+      font-size: 20px;
+      line-height: 30px;
+      color: var(--black1);
+      padding-left: 21px;
     }
 
     .form__email-text {
@@ -519,8 +562,15 @@
     }
 
     .form__comments-text {
+      font-size: 20px;
+      line-height: 30px;
+      color: var(--black1);
       width: 100%;
       min-height: 174px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 19px;
+      padding-right: 19px;
     }
 
     .form__additional {
@@ -601,7 +651,15 @@
       width: 50px;
     }
 
+    .form__characteristics-input {
+      font-size: 20px;
+      line-height: 30px;
+      color: var(--black1);
+    }
+
     .form__name {
+      padding-left: 20px;
+      padding-right: 20px;
       width: 506px;
     }
 
@@ -610,6 +668,8 @@
     }
 
     .form__weight {
+      padding-left: 19px;
+      padding-right: 19px;
       width: 475px;
     }
 
@@ -618,6 +678,8 @@
     }
 
     .form__age {
+      padding-left: 18px;
+      padding-right: 18px;
       width: 436px;
     }
 
@@ -650,6 +712,13 @@
 
     .form__email-text {
       justify-content: flex-start;
+    }
+
+    .form__contacts-input {
+      font-size: 20px;
+      line-height: 30px;
+      color: var(--black1);
+      padding-left: 18px;
     }
 
     .form__email {
@@ -691,6 +760,9 @@
     }
 
     .form__comments-text {
+      font-size: 20px;
+      line-height: 30px;
+      color: var(--black1);
       width: 100%;
       min-height: 174px;
     }
