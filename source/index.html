@@ -30,13 +30,13 @@
             <span class="visually-hidden">Открывает меню сайта.</span>
           </button>
           <div class="main-nav__wrapper">
-            <a class="main-nav__index-link main-nav__link main-nav__link--active" href="#">
+            <a class="main-nav__index-link main-nav__link main-nav__link--active main-nav__link-white" href="#">
             <span class="main-nav__name">Главная</span>
             </a>
-            <a class="main-nav__catalog-link main-nav__link" href="catalog.html">
+            <a class="main-nav__catalog-link main-nav__link main-nav__link-white" href="catalog.html">
               <span class="main-nav__name">Каталог продукции</span>
             </a>
-            <a class="main-nav__form-link main-nav__link" href="form.html">
+            <a class="main-nav__form-link main-nav__link main-nav__link-white" href="form.html">
               <span class="main-nav__name">Подбор программы</span>
             </a>
           </div>
@@ -118,18 +118,19 @@
               <p class="example__text">
                 Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
               </p>
-              <div class="example__statistic example-statistic">
-                <fieldset class="example__statistic-weight weight">
-                  <legend class="weight__title">снижение веса</legend>
-                  <span class="weight__number">5 кг</span>
-                </fieldset>
-                <fieldset class="example__statistic-time time">
-                  <legend class="time__title">затрачено времени</legend>
-                  <span class="time__number">60 дней</span>
-                </fieldset>
-                <p class="example__statistic-cost">
-                  Затраты на питание: <span class="example__cost-number">15 000 РУБ.</span>
-                </p>
+              <div class="example__statistic-wrapper">
+                <div class="example__statistic">
+                  <span class="example__statistic-text">5 кг</span>
+                  <span class="example__statistic-legend">снижение веса</span>
+                </div>
+                <div class="example__statistic">
+                  <span class="example__statistic-text">60 дней</span>
+                  <span class="example__statistic-legend">затрачено времени</span>
+                </div>
+              </div>
+              <div class="example__statistic-cost">
+                <p>Затраты на питание:</p>
+                <span class="example__cost-number">15 000 РУБ.</span>
               </div>
             </div>
             <ul class="example__slider-list slider-list">
@@ -142,19 +143,16 @@
               <li class="slider-list__logo slider-list__small visually-hidden">
                 <img class="skinny-cat-img" src="img/mobile/index/example-slider-cat-small.png" srcset="img/mobile/index/example-slider-cat-small2x.png 2x" width="280" height="232" alt="похудевший котик.">
               </li>
-              <li class="example__toggle slider-toggles">
-                <button class="slider__toggle-first slider__toggle--current" type="button">
+              <li class="example__toggle-wrapper">
+                <button class="slider__toggle" type="button">
                   <span class="visually-hidden">Было.</span>
-                  <span class="slider__toggle-first-text">было</span>
+                  <span>было</span>
                 </button>
-                <div class="slider__toggle-wrapper">
-                  <button class="slider__toggle-swap slider__toggle-swap--left" type="button">
-                    <span class="visually-hidden">Ползунок.</span>
-                  </button>
-                 </div>
-                <button class="slider__toggle-second slider__toggle" type="button">
+                <div class="slider__toggle-swap"></div>
+                <div class="slider__toggle-range"></div>
+                <button class="slider__toggle" type="button">
                   <span class="visually-hidden">Стало.</span>
-                  <span class="slider__toggle-second-text">стало</span>
+                  <span>стало</span>
                 </button>
               </li>
             </ul>

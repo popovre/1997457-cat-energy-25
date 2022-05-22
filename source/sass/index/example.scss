@@ -25,7 +25,6 @@
   .example__abstract {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
   }
 
   .example__text {
@@ -38,41 +37,43 @@
     margin-bottom: 20px;
   }
 
+  .example__statistic-wrapper {
+    display: inline-flex;
+    justify-content: space-between;
+    margin-bottom: 34px;
+    width: 100%;
+  }
+
   .example__statistic {
+    position: relative;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 124px;
+    min-height: 56px;
+    border: 1px solid var(--grey3);
+    border-radius: 3px;
   }
 
-  .example__statistic-weight {
-    margin-right: auto;
-  }
-
-  .weight__number {
-    display: block;
+  .example__statistic-text {
+    font-family: 'Oswald';
+    font-weight: 400;
     font-size: 24px;
     line-height: 24px;
-    text-align: center;
-    color: var(--default-black);
   }
 
-  .weight__title {
+  .example__statistic-legend {
+    position: absolute;
+    max-width: 87px;
+    text-align: center;
+    background: var(--grey2);
+    color: var(--black1);
+    bottom: -14px;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 12px;
     line-height: 100%;
-    color: var(--black1);
-  }
-
-  .time__number {
-    display: block;
-    font-size: 24px;
-    line-height: 24px;
-    text-align: center;
-    color: var(--default-black);
-  }
-
-  .time__title {
-    font-size: 12px;
-    line-height: 100%;
-    color: var(--black1);
+    font-family: var(--arial);
   }
 
   .example__statistic-cost {
@@ -81,8 +82,13 @@
     text-align: center;
     text-transform: uppercase;
     color: var(--default-black);
-    margin-top: 20px;
+    margin-top: 0;
     margin-bottom: 40px;
+    text-align: center;
+    width: 100%;
+    p {
+      display: inline-block;
+    }
   }
 
   .example__slider-list {
@@ -102,21 +108,24 @@
     width: 100%;
   }
 
-  .example__toggle {
+  .example__toggle-wrapper {
     display: flex;
     justify-content: center;
     width: 100%;
     align-items: center;
+    margin-top: 15px;
+    span {
+      font-family: 'Oswald';
+      text-transform: uppercase;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+    }
   }
 
-  .slider__toggle-first {
+  .slider__toggle {
     @include mixins.btnres;
-    min-height: 30px;
-  }
-// почему он больше содержимого??? я полтора часа туплю))
-  .slider__toggle-wrapper {
-    margin: 0 13px;
-    position: relative;
+    cursor: pointer;
   }
 
   .slider__toggle-swap {
@@ -127,22 +136,21 @@
     background-color: var(--default-white);
     border: 1px solid var(--grey3);
     border-radius: 6px;
+    margin: 0 13px;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 35px;
+      height: 6px;
+      border-radius: 6px;
+      background-color: var(--green2);
+      left: 6px;
+      top: 3px;
+    }
   }
 
-  .slider__toggle-swap--left.slider__toggle-swap::before {
-    content: "";
-    position: absolute;
-    width: 35px;
-    height: 6px;
-    border-radius: 6px;
-    background-color: var(--green2);
-    left: 6px;
-    top: 3px;
-  }
-
-  .slider__toggle-second {
-    @include mixins.btnres;
-    min-height: 30px;
+  .slider__toggle-range {
+    display: none;
   }
 
   @include mixins.tablet-w () {
@@ -166,43 +174,42 @@
       margin-bottom: 54px;
     }
 
+    .example__abstract {
+      justify-content: space-between;
+      margin-bottom: 85px;
+    }
+
+    .example__statistic-wrapper {
+      justify-content: flex-start;
+      gap: 42px;
+      width: auto;
+      margin: 0;
+    }
+
     .example__statistic {
-      margin-bottom: 80px;
+      width: 162px;
+      min-height: 72px;
     }
 
-    .example__statistic-weight {
-      margin-right: 42px;
-    }
-
-    .example__statistic-time {
-      margin-right: auto;
-    }
-
-    .weight__title {
+    .example__statistic-legend {
+      bottom: -5px;
+      max-width: 142px;
+      white-space: nowrap;
+      background: var(--default-white);
+      padding: 0 8px;
       font-size: 14px;
-      line-height: 14px;
-    }
-
-    .weight__number {
-      display: block;
-      font-size: 30px;
-      line-height: 37px;
-    }
-
-    .time__title {
-      font-size: 14px;
-      line-height: 14px;
-    }
-
-    .time__number {
-      display: block;
-      font-size: 30px;
-      line-height: 37px;
     }
 
     .example__statistic-cost {
+      width: auto;
+      margin: 0;
+      text-align: right;
       font-size: 20px;
       line-height: 20px;
+      & p {
+        display: block;
+        margin: 0;
+      }
     }
 
     .example__slider-list {
@@ -224,61 +231,46 @@
       height: 511px;
     }
 
-    .slider__toggle-first {
-      position: relative;
-
-      &::after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 1px;
-        background-image: linear-gradient(to right, rgba(0,0,0,0.4) 50%, transparent 50%);
-        background-repeat: repeat-x;
-        background-size: 6px 3px;
-        bottom: 3px;
-        left: 0;
-      }
-
-      &:hover::after {
-        background-image: none;
-        background-color: rgba(0,0,0,0.4);
-      }
-
-      &:active::after {
-        content: none;
-      }
-    }
-
-    .slider__toggle-wrapper {
-      position: relative;
-      margin: 0 auto;
-
-      &::before {
-        content: "";
-        position: absolute;
-        z-index: 1;
-        width: 426px;
-        height: 6px;
-        border-radius: 6px;
-        background-color: #dcdcdc;
-        inset: 0;
-        left: -196px;
-        top: calc(50% - 4px);
-      }
+    .example__toggle-wrapper {
+      margin-top: 25px;
     }
 
     .slider__toggle-swap {
-      background-color: #ffffff;
-      background-image: none;
-      background-size: 85px 14px;
-      margin: 0;
-      position: relative;
-      width: 34px;
-      height: 34px;
-      border-radius: 50%;
-      box-shadow: 0 0.5px 1px 1px var(--grey3);
-      z-index: 2;
+      display: none;
+    }
 
+    .slider__toggle span {
+      border-bottom: 1px dashed rgba(0,0,0,0.2);
+      &:hover {
+        border-bottom: 1px solid rgba(0,0,0,0.4);
+      }
+      &:active {
+        border-bottom: none;
+      }
+    }
+
+    .slider__toggle-range {
+      position: relative;
+      display: block;
+      width: 426px;
+      height: 6px;
+      margin: 0 13px;
+      border-radius: 6px;
+      background-color: var(--grey11);
+      cursor: pointer;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background-color: var(--default-white);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        box-shadow: 0 0.5px 1px 1px var(--grey3);
+      }
       &::after {
         content: "";
         position: absolute;
@@ -291,58 +283,21 @@
         top: calc(50% - 4px);
         z-index: 2;
       }
-
-      &:hover {
-        box-shadow: 0 2px 3px 1px var(--grey3);
-      }
-
-      &:active {
-        box-shadow:
-        0 2px 3px 1px var(--grey3),
-        0 0 0 1px var(--green2) inset;
-      }
-    }
-
-    .slider__toggle-swap--left.slider__toggle-swap::before {
-      content: none;
-    }
-
-    .slider__toggle-second {
-      position: relative;
-
-      &::after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 1px;
-        background-image: linear-gradient(to right, rgba(0,0,0,0.4) 50%, transparent 50%);
-        background-repeat: repeat-x;
-        background-size: 6px 3px;
-        bottom: 3px;
-        left: 0;
-      }
-
-      &:hover::after {
-        background-image: none;
-        background-color: rgba(0,0,0,0.4);
-      }
-
-      &:active::after {
-        content: none;
-      }
     }
   }
 
   @include mixins.desktop-w () {
     padding: 0;
-    padding-top: 45px;
+    padding-top: 43px;
     grid-template-columns: 1fr auto;
 
     .example__title {
       margin-left: var(--desktop-padding);
+      margin-bottom: 76px;
     }
 
     .example__text {
+      margin: 0;
       margin-bottom: 69px;
     }
 
@@ -350,47 +305,35 @@
       padding: 0 var(--desktop-padding);
       background-color: var(--grey1);
       flex-direction: row;
+      align-items: flex-start;
     }
 
     .example__abstract {
-      flex-direction: column;
+      margin: 0;
       width: 436px;
+      flex-direction: column;
       margin-right: auto;
+    }
+
+    .example__statistic-wrapper {
+      width: auto;
+      margin: 0;
+      margin-bottom: 60px;
     }
 
     .example__statistic {
       margin-bottom: 0;
       row-gap: 55px;
-      padding-bottom: 65px;
     }
 
-    .example__statistic-weight {
-      margin-right: auto;
-    }
-
-    .weight__title {
-      font-size: 14px;
-      line-height: 14px;
-    }
-
-    .weight__number {
-      display: block;
-      font-size: 30px;
-      line-height: 37px;
-    }
-
-    .time__title {
-      font-size: 14px;
-      line-height: 14px;
-    }
-
-    .time__number {
-      display: block;
-      font-size: 30px;
-      line-height: 37px;
+    .example__statistic-legend {
+      background-color: var(--grey1);
     }
 
     .example__statistic-cost {
+      display: flex;
+      justify-content: flex-start;
+      gap: 63px;
       margin: 0;
       font-size: 20px;
       line-height: 20px;
@@ -400,6 +343,7 @@
       margin: 0;
       padding: 0;
       min-height: 576px;
+      margin-top: -179px;
     }
   }
 }
