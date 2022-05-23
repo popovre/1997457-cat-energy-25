@@ -70,13 +70,33 @@
   }
 
   .form__goal {
+    position: relative;
     margin: 0;
     padding: 0;
     width: 100%;
-    min-height: 157px;
-    padding-top: 22px;
-    padding-bottom: 19px;
+    padding-top: 28px;
+    padding-bottom: 25px;
     color: var(--black2);
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 320px;
+      height: 1px;
+      background-color: var(--grey5);
+      top: 0;
+      left: -20px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 320px;
+      height: 1px;
+      background-color: var(--grey5);
+      bottom: 0;
+      left: -20px;
+    }
   }
 
   .form__goal-wrapper {
@@ -124,7 +144,7 @@
     height: 30px;
     background: #ffffff;
     border-radius: 50%;
-    top: -7.5px;
+    top: -6px;
     left: -45px;
     box-shadow: 0 0 0 1px var(--grey3) inset;
   }
@@ -287,7 +307,6 @@
     letter-spacing: 0;
     word-spacing: 0;
     font-family: var(--main-font);
-    // хз как убавить интервал между словами
   }
 
   .form__additional {
@@ -387,6 +406,10 @@
   .form__note {
     text-transform: none;
     margin: 0;
+    font-size: 14px;
+    line-height: 16px;
+    font-family: var(--arial);
+    color: var(--default-black);
   }
 
   @include mixins.tablet-w () {
@@ -444,13 +467,17 @@
       padding: 0;
       font-size: 20px;
       line-height: 30px;
-      padding-top: 36px;
+      padding-top: 30px;
       padding-left: 27px;
-      padding-bottom: 36px;
+      padding-bottom: 30px;
       border: none;
       outline: 2px solid var(--grey6);
       color: var(--black3);
       margin-bottom: 75px;
+
+      &::before, &::after {
+        content: none;
+      }
     }
 
     .form__goal-wrapper {
@@ -502,6 +529,11 @@
 
     .form__contacts-content {
       row-gap: 20px;
+    }
+
+    .form__contacts-text {
+      font-size: 20px;
+      line-height: 30px;
     }
 
     .form__contacts-input {
@@ -625,6 +657,7 @@
     }
 
     .form__button {
+      margin: 0;
       width: calc((282 / 565) * 100%);
       min-height: 52px;
       font-size: 20px;
@@ -633,6 +666,7 @@
     }
 
     .form__note {
+      align-self: center;
       font-size: 16px;
       line-height: 16px;
     }

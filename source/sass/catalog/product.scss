@@ -10,20 +10,11 @@
     word-wrap: break-word;
   }
 
-  .products__parameters {
-    font-family: var(--arial);
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 16px;
-    text-align: center;
-    color: var(--black1);
-  }
-
   @include mixins.tablet-w () {
     .product__name {
       font-size: 20px;
       line-height: 24px;
+      text-align: center;
     }
   }
 

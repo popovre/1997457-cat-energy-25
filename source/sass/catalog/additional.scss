@@ -220,8 +220,8 @@
     .additional-button {
       margin: 0 auto;
       text-align: center;
+      line-height: 26px;
       min-width: 192px;
-      min-height: 26px;
       padding: 7px 220px;
     }
 
@@ -251,9 +251,11 @@
     }
 
     .additional__gift-title {
+      margin: 0;
       margin-bottom: 69px;
       line-height: 20px;
       width: 161px;
+      text-align: left;
     }
   }
 
@@ -355,8 +357,10 @@
     }
 
     .additional__gift-title {
+      margin: 0 auto;
       width: 161px;
       margin-bottom: 42px;
+      text-align: center;
     }
   }
 }

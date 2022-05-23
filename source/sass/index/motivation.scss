@@ -118,6 +118,7 @@
   }
 
   @include mixins.desktop-w () {
+    padding: 0 var(--desktop-padding);
     padding-top: 111px;
     min-height: calc(694px - 114px);
 
@@ -149,15 +150,17 @@
     }
 
     .motivation__title {
-
+      margin-left: 80px;
     }
 
     .motivation__text {
-
+      margin-bottom: 52px;
+      margin-left: 80px;
     }
 
     .motivation__choose-button {
       margin-bottom: 0;
+      margin-left: 80px;
     }
   }
 }
