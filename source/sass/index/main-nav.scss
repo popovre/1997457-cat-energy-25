@@ -13,6 +13,10 @@
     align-items: center;
     width: 100%;
     background-color: var(--default-white);
+    font-size: 20px;
+    line-height: 20px;
+    color: var(--default-black);
+    font-weight: 500;
   }
 
   .main-nav__menu-opener {
@@ -78,12 +82,9 @@
   .main-nav__link {
     position: relative;
     z-index: 1;
-    font-size: 20px;
-    line-height: 20px;
     width: 100%;
     padding-top: 23px;
     padding-bottom: 23px;
-    color: var(--default-black);
     text-transform: uppercase;
     text-align: center;
 
@@ -117,8 +118,7 @@
     position: relative;
     top: auto;
     width: auto;
-    font-size: 18px;
-    line-height: 24px;
+
 
     .main-nav__menu-opener {
       display: none;
@@ -127,6 +127,9 @@
     .main-nav__wrapper {
       flex-direction: row;
       align-items: center;
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 400;
     }
 
     .main-nav__link {
@@ -148,8 +151,17 @@
   }
 
   @include mixins.desktop-w () {
-    font-size: 20px;
-    line-height: 30px;
+
+    .main-nav__wrapper {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 30px;
+      color: var(--black2);
+
+      & .main-nav__link {
+        color: var(--default-white);
+      }
+    }
 
     .main-nav__index-link {
       margin-right: 35px;

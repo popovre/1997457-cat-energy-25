@@ -10,10 +10,12 @@
   background-color: var(--grey2);
 
   .example__title {
+    margin: 0;
     font-weight: 400;
     font-size: 36px;
     line-height: 40px;
     text-align: left;
+    margin-bottom: 40px;
   }
 
   .example__content {
@@ -28,6 +30,7 @@
   }
 
   .example__text {
+    margin: 0;
     font-family: var(--arial);
     font-style: normal;
     font-weight: 400;
@@ -87,6 +90,7 @@
     text-align: center;
     width: 100%;
     p {
+      margin: 0;
       display: inline-block;
     }
   }
@@ -166,6 +170,7 @@
       text-align: left;
       margin-top: 0;
       margin-bottom: 63px;
+      color: var(--default-black);
     }
 
     .example__text {
@@ -189,6 +194,11 @@
     .example__statistic {
       width: 162px;
       min-height: 72px;
+    }
+
+    .example__statistic-text {
+      font-size: 30px;
+      line-height: 37px;
     }
 
     .example__statistic-legend {
@@ -233,6 +243,11 @@
 
     .example__toggle-wrapper {
       margin-top: 25px;
+      span {
+        font-size: 20px;
+        line-height: 30px;
+        color: var(--default-black);
+      }
     }
 
     .slider__toggle-swap {

@@ -3,13 +3,14 @@
 .specification {
   width: 100%;
   padding: 0 20.5px;
+  padding-top: 20px;
   padding-bottom: 49px;
 
   .specification__title {
     font-weight: 400;
     font-size: 36px;
     line-height: 40px;
-    text-align: center;
+    text-align: left;
     color: var(--default-black);
     margin-top: 0;
   }
@@ -25,6 +26,12 @@
   .specification__item {
     position: relative;
     padding-left: 80px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--black1);
+    font-family: var(--arial);
+
     &::before {
       content: "";
       position: absolute;
@@ -105,6 +112,8 @@
       padding: 0;
       padding-bottom: 57px;
       min-height: 280px;
+      font-size: 16px;
+      line-height: 24px;
 
       &:not(:last-child) {
         margin-bottom: 0;
