@@ -26,7 +26,7 @@
     &::before {
       content: "";
       position: absolute;
-      background-image: url("../../img/mobile/index/program-small-cat.png");
+      background-image: url("../img/mobile/index/program-small-cat.png");
       background-repeat: no-repeat;
       width: 50px;
       height: 53px;
@@ -34,7 +34,7 @@
       left: 22px;
 
       @include mixins.retina () {
-        background-image: url("../../img/mobile/index/program-small-cat2x.png");
+        background-image: url("../img/mobile/index/program-small-cat2x.png");
         background-size: cover;
       }
     }
@@ -45,7 +45,7 @@
     &::before {
       content: "";
       position: absolute;
-      background-image: url("../../img/mobile/index/program-big-cat.png");
+      background-image: url("../img/mobile/index/program-big-cat.png");
       background-repeat: no-repeat;
       width: 67px;
       height: 50px;
@@ -53,7 +53,7 @@
       left: 13px;
 
       @include mixins.retina () {
-        background-image: url("../../img/mobile/index/program-big-cat2x.png");
+        background-image: url("../img/mobile/index/program-big-cat2x.png");
         background-size: cover;
       }
     }
@@ -145,12 +145,12 @@
         left: auto;
         top: 81px;
         right: 62px;
-        background-image: url("../../img/tablet/index/program-small-cat-tablet.png");
+        background-image: url("../img/tablet/index/program-small-cat-tablet.png");
         width: 200px;
         height: 211px;
 
         @include mixins.retina () {
-          background-image: url("../../img/tablet/index/program-small-cat-tablet2x.png");
+          background-image: url("../img/tablet/index/program-small-cat-tablet2x.png");
           background-size: cover;
         }
       }
@@ -161,12 +161,12 @@
         left: auto;
         top: 91px;
         right: 28px;
-        background-image: url("../../img/tablet/index/program-big-cat-tablet.png");
+        background-image: url("../img/tablet/index/program-big-cat-tablet.png");
         width: 268px;
         height: 200px;
 
         @include mixins.retina () {
-          background-image: url("../../img/tablet/index/program-big-cat-tablet2x.png");
+          background-image: url("../img/tablet/index/program-big-cat-tablet2x.png");
           background-size: cover;
         }
       }
@@ -204,7 +204,7 @@
       &::after {
         content: "";
         position: absolute;
-        background-image: url("../../img/mobile/index/program-arrow.png");
+        background-image: url("../img/mobile/index/program-arrow.png");
         background-repeat: no-repeat;
         width: 24px;
         height: 12px;
@@ -238,12 +238,12 @@
         left: 51px;
         top: 41px;
         right: auto;
-        background-image: url("../../img/desktop/index/program-small-cat-desktop.png");
+        background-image: url("../img/desktop/index/program-small-cat-desktop.png");
         width: 100px;
         height: 106px;
 
         @include mixins.retina () {
-          background-image: url("../../img/desktop/index/program-small-cat-desktop2x.png");
+          background-image: url("../img/desktop/index/program-small-cat-desktop2x.png");
           background-size: cover;
         }
       }
@@ -254,12 +254,12 @@
         left: 33px;
         top: 47px;
         right: auto;
-        background-image: url("../../img/desktop/index/program-big-cat-desktop.png");
+        background-image: url("../img/desktop/index/program-big-cat-desktop.png");
         width: 134px;
         height: 100px;
 
         @include mixins.retina () {
-          background-image: url("../../img/desktop/index/program-big-cat-desktop2x.png");
+          background-image: url("../img/desktop/index/program-big-cat-desktop2x.png");
           background-size: cover;
         }
       }
