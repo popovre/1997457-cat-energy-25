@@ -60,6 +60,7 @@
 
   .additional__composition {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     font-family: var(--arial);
     font-style: normal;
@@ -216,7 +217,7 @@
     .additional__quantity {
       margin-right: 50px;
     }
-    //здесь надо кучу стилей писать
+
     .additional-button {
       margin: 0 auto;
       text-align: center;

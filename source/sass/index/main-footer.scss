@@ -2,7 +2,7 @@
 
 .main-footer {
   width: 100%;
-  min-height: 236px;//переполнение
+  min-height: 236px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,7 +52,7 @@
   .main-footer__references {
     display: flex;
     justify-content: space-between;
-    min-height: 78px; //переполнение
+    min-height: 78px;
     width: 100%;
     align-items: center;
     position: relative;
@@ -104,6 +104,7 @@
 
   @include mixins.tablet-w () {
     flex-direction: row;
+    flex-wrap: wrap;
     padding: 0 var(--tablet-padding);
 
     .main-footer__logo {
