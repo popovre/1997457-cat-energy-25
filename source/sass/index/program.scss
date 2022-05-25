@@ -18,7 +18,7 @@
     padding-top: 30px;
     width: 100%;
     padding-left: 20px;
-    padding-right: 20px;
+    padding-right: 33px;
     background-color: var(--grey1);
   }
 
@@ -26,7 +26,7 @@
     &::before {
       content: "";
       position: absolute;
-      background-image: url("../../img/mobile/index/program-small-cat.png");
+      background-image: url("../img/mobile/index/program-small-cat.png");
       background-repeat: no-repeat;
       width: 50px;
       height: 53px;
@@ -34,7 +34,7 @@
       left: 22px;
 
       @include mixins.retina () {
-        background-image: url("../../img/mobile/index/program-small-cat2x.png");
+        background-image: url("../img/mobile/index/program-small-cat2x.png");
         background-size: cover;
       }
     }
@@ -45,7 +45,7 @@
     &::before {
       content: "";
       position: absolute;
-      background-image: url("../../img/mobile/index/program-big-cat.png");
+      background-image: url("../img/mobile/index/program-big-cat.png");
       background-repeat: no-repeat;
       width: 67px;
       height: 50px;
@@ -53,7 +53,7 @@
       left: 13px;
 
       @include mixins.retina () {
-        background-image: url("../../img/mobile/index/program-big-cat2x.png");
+        background-image: url("../img/mobile/index/program-big-cat2x.png");
         background-size: cover;
       }
     }
@@ -68,17 +68,16 @@
     text-transform: uppercase;
     color: var(--default-black);
     margin-bottom: 30px;
-    margin-left: 91px;
+    margin-left: 71px;
   }
 
   .program__list-text {
     display: block;
-    width: calc((227 / 280) * 100%);
+    width: 100%;
     margin: 0;
     font-family: var(--arial);
     font-size: 14px;
     line-height: 18px;
-    text-transform: lowercase;
     color: var(--black1);
     margin-bottom: 38px;
   }
@@ -94,6 +93,16 @@
     color: var(--default-black);
     margin-bottom: 18px;
 
+    &::before {
+      content: "";
+      position: absolute;
+      width: 240px;
+      height: 1px;
+      background-color: var(--grey5);
+      top: -19px;
+      left: 0;
+    }
+
     &::after {
       content: "";
       position: absolute;
@@ -104,9 +113,9 @@
       top: 3px;
       right: 8px;
     }
-// не работает
+
     &:hover::after {
-      background-image: url("data:image/svg+xml,%3Csvg width='32' height='12' viewBox='0 0 32 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23000' stroke-width='2' d='M0 6h18'/%3E%3Cpath d='m24 6-6.75 5.196V.804L24 6Z' fill='%23000'/%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg width='32' height='12' viewBox='0 0 32 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline y1='6' x2='26' y2='6' stroke='black' stroke-width='2'/%3E%3Cpath d='M32 6L25.25 11.1962L25.25 0.803848L32 6Z' fill='black'/%3E%3C/svg%3E");
       width: 32px;
       right: 0;
     }
@@ -136,12 +145,12 @@
         left: auto;
         top: 81px;
         right: 62px;
-        background-image: url("../../img/tablet/index/program-small-cat-tablet.png");
+        background-image: url("../img/tablet/index/program-small-cat-tablet.png");
         width: 200px;
         height: 211px;
 
         @include mixins.retina () {
-          background-image: url("../../img/tablet/index/program-small-cat-tablet2x.png");
+          background-image: url("../img/tablet/index/program-small-cat-tablet2x.png");
           background-size: cover;
         }
       }
@@ -152,12 +161,12 @@
         left: auto;
         top: 91px;
         right: 28px;
-        background-image: url("../../img/tablet/index/program-big-cat-tablet.png");
+        background-image: url("../img/tablet/index/program-big-cat-tablet.png");
         width: 268px;
         height: 200px;
 
         @include mixins.retina () {
-          background-image: url("../../img/tablet/index/program-big-cat-tablet2x.png");
+          background-image: url("../img/tablet/index/program-big-cat-tablet2x.png");
           background-size: cover;
         }
       }
@@ -172,10 +181,11 @@
     }
 
     .program__list-text {
-      font-size: 14px;
-      line-height: 18px;
+      font-size: 16px;
+      line-height: 24px;
+      color: var(--default-black);
       width: 340px;
-      height: 90px;
+      min-height: 90px;
     }
 
     .program__list-link {
@@ -187,10 +197,14 @@
       padding-bottom: 4px;
       width: 165px;
 
+      &::before {
+        content: none;
+      }
+
       &::after {
         content: "";
         position: absolute;
-        background-image: url("../../img/mobile/index/program-arrow.png");
+        background-image: url("../img/mobile/index/program-arrow.png");
         background-repeat: no-repeat;
         width: 24px;
         height: 12px;
@@ -224,12 +238,12 @@
         left: 51px;
         top: 41px;
         right: auto;
-        background-image: url("../../img/desktop/index/program-small-cat-desktop.png");
+        background-image: url("../img/desktop/index/program-small-cat-desktop.png");
         width: 100px;
         height: 106px;
 
         @include mixins.retina () {
-          background-image: url("../../img/desktop/index/program-small-cat-desktop2x.png");
+          background-image: url("../img/desktop/index/program-small-cat-desktop2x.png");
           background-size: cover;
         }
       }
@@ -240,12 +254,12 @@
         left: 33px;
         top: 47px;
         right: auto;
-        background-image: url("../../img/desktop/index/program-big-cat-desktop.png");
+        background-image: url("../img/desktop/index/program-big-cat-desktop.png");
         width: 134px;
         height: 100px;
 
         @include mixins.retina () {
-          background-image: url("../../img/desktop/index/program-big-cat-desktop2x.png");
+          background-image: url("../img/desktop/index/program-big-cat-desktop2x.png");
           background-size: cover;
         }
       }
@@ -259,10 +273,9 @@
     }
 
     .program__list-text {
-      font-size: 14px;
-      line-height: 18px;
+      font-size: 16px;
+      line-height: 24px;
       width: 100%;
-      height: 90px;
       margin-bottom: 23px;
     }
 

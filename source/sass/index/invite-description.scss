@@ -41,6 +41,12 @@
       font-size: 16px;
       line-height: 20px;
       text-align: right;
+
+      span {
+
+        display: block;
+        margin-top: 20px;
+      }
     }
   }
 
@@ -54,5 +60,9 @@
     padding: 56px 80px;
     width: 565px;
     min-height: 198px;
+
+    .invite-description__address {
+      text-align: left;
+    }
   }
 }

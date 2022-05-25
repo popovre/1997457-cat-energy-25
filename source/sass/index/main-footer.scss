@@ -2,7 +2,7 @@
 
 .main-footer {
   width: 100%;
-  min-height: 236px;//переполнение
+  min-height: 236px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,17 +34,16 @@
     }
   }
 
-  .contacts__icon {
-
+  .main-footer__icon {
     &-svg {
       fill: var(--grey9);
     }
 
-    &:hover .contacts__icon-svg {
+    &:hover .main-footer__icon-svg {
       fill: var(--green2);
     }
 
-    &:active .contacts__icon-svg {
+    &:active .main-footer__icon-svg {
       fill: var(--green2);
       opacity: 0.3;
     }
@@ -53,7 +52,7 @@
   .main-footer__references {
     display: flex;
     justify-content: space-between;
-    min-height: 78px; //переполнение
+    min-height: 78px;
     width: 100%;
     align-items: center;
     position: relative;
@@ -94,17 +93,18 @@
     width: 132px;
     align-items: center;
 
-    .contacts__vk {
+    .main-footer__vk {
       margin-right: 24px;
     }
 
-    .contacts__youtube {
+    .main-footer__youtube {
       margin-right: 24px;
     }
   }
 
   @include mixins.tablet-w () {
     flex-direction: row;
+    flex-wrap: wrap;
     padding: 0 var(--tablet-padding);
 
     .main-footer__logo {
@@ -124,10 +124,11 @@
     }
 
     .main-footer__references {
+      width: 163px;
+
       &::after {
         content: none;
       }
-      width: 163px;
     }
   }
 
