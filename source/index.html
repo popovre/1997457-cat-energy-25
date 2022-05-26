@@ -134,17 +134,19 @@
               </div>
             </div>
             <ul class="example__slider-list">
-              <li class="example__slider-item example__slider-item-fat">
-                <picture>
-                  <source media="(min-width: 768px)" srcset="img/tablet/index/example-slider-fat-cat-tablet.png 1x, img/tablet/index/example-slider-fat-cat-tablet2x.png 2x">
-                  <img class="example__slider-img example__slider-img-fat" src="img/mobile/index/example-slider-cat-fat.png" srcset="img/mobile/index/example-slider-cat-fat2x.png 2x" width="280" height="232" alt="толстый котик.">
-                </picture>
-              </li>
-              <li class="example__slider-item example__slider-item-skinny example__slider-item--inactive">
-                <picture>
-                  <source media="(min-width: 768px)" srcset="img/tablet/index/example-slider-skinny-cat-tablet.png 1x, img/tablet/index/example-slider-skinny-cat-tablet2x.png 2x">
-                  <img class="example__slider-img example__slider-img-skinny" src="img/mobile/index/example-slider-cat-skinny.png" srcset="img/mobile/index/example-slider-cat-skinny2x.png 2x" width="243" height="232" alt="похудевший котик.">
-                </picture>
+              <li class="example__slider-item">
+                <div class="example__wrapper example__wrapper-fat">
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="img/tablet/index/example-slider-fat-cat-tablet.png 1x, img/tablet/index/example-slider-fat-cat-tablet2x.png 2x">
+                    <img class="example__slider-img example__img-fat" src="img/mobile/index/example-slider-cat-fat.png" srcset="img/mobile/index/example-slider-cat-fat2x.png 2x" width="280" height="232" alt="толстый котик.">
+                  </picture>
+                </div>
+                <div class="example__wrapper example__wrapper-skinny example__wrapper--inactive">
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="img/tablet/index/example-slider-skinny-cat-tablet.png 1x, img/tablet/index/example-slider-skinny-cat-tablet2x.png 2x">
+                    <img class="example__slider-img example__img-skinny" src="img/mobile/index/example-slider-cat-skinny.png" srcset="img/mobile/index/example-slider-cat-skinny2x.png 2x" width="243" height="232" alt="похудевший котик.">
+                  </picture>
+                </div>
               </li>
               <li class="example__toggle-wrapper slider">
                 <button class="slider__toggle" type="button">
@@ -152,7 +154,9 @@
                   <span class="example__toggle-text">было</span>
                 </button>
                 <div class="slider__toggle-swap"></div>
-                <div class="slider__toggle-range"></div>
+                <div class="slider__toggle-range">
+                  <button class="slider__toggle-round" type="button"></button>
+                </div>
                 <button class="slider__toggle" type="button">
                   <span class="visually-hidden">Стало.</span>
                   <span class="example__toggle-text">стало</span>
