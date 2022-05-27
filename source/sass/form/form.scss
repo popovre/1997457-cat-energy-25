@@ -307,6 +307,7 @@
     letter-spacing: 0;
     word-spacing: 0;
     font-family: var(--main-font);
+    text-transform: uppercase;
   }
 
   .form__additional {
@@ -401,6 +402,7 @@
     min-height: 40px;
     width: 100%;
     margin-bottom: 21px;
+    font-family: var(--main-font);
   }
 
   .form__note {
