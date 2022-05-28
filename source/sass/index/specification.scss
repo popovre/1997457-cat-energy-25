@@ -1,5 +1,3 @@
-@use "../mixins.scss";
-
 .specification {
   width: 100%;
   padding: 0 20.5px;
@@ -16,7 +14,7 @@
   }
 
   .specification__list {
-    @include mixins.listres;
+    @include listres;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -45,7 +43,7 @@
     &-function::before {
       background-image: url("../img/mobile/index/specification-function.png");
 
-      @include mixins.retina () {
+      @include retina () {
         background-image: url("../img/mobile/index/specification-function2x.png");
         background-size: cover;
       }
@@ -54,7 +52,7 @@
     &-structure::before {
       background-image: url("../img/mobile/index/specification-structure.png");
 
-      @include mixins.retina () {
+      @include retina () {
         background-image: url("../img/mobile/index/specification-structure2x.png");
         background-size: cover;
       }
@@ -63,7 +61,7 @@
     &-replace::before {
       background-image: url("../img/mobile/index/specification-replace.png");
 
-      @include mixins.retina () {
+      @include retina () {
         background-image: url("../img/mobile/index/specification-replace2x.png");
         background-size: cover;
       }
@@ -72,7 +70,7 @@
     &-time::before {
       background-image: url("../img/mobile/index/specification-time.png");
 
-      @include mixins.retina () {
+      @include retina () {
         background-image: url("../img/mobile/index/specification-time2x.png");
         background-size: cover;
       }
@@ -87,7 +85,7 @@
     margin: 0;
   }
 
-  @include mixins.tablet-w () {
+  @include tablet-w () {
     padding: 0 var(--tablet-padding);
     padding-top: 45px;
     padding-bottom: 47px;
@@ -143,7 +141,7 @@
         &::before {
           background-image: url("../img/tablet/index/specification-function-tablet.png");
 
-          @include mixins.retina () {
+          @include retina () {
             background-image: url("../img/tablet/index/specification-function-tablet2x.png");
             background-size: cover;
           }
@@ -154,7 +152,7 @@
           width: 112px;
 
 
-          @include mixins.retina () {
+          @include retina () {
             background-image: url("../img/tablet/index/specification-1-2x.png");
           }
         }
@@ -166,7 +164,7 @@
         &::before {
           background-image: url("../img/tablet/index/specification-structure-tablet.png");
 
-          @include mixins.retina () {
+          @include retina () {
             background-image: url("../img/tablet/index/specification-structure-tablet2x.png");
             background-size: cover;
           }
@@ -176,7 +174,7 @@
           background-image: url("../img/tablet/index/specification-2.png");
           width: 134px;
 
-          @include mixins.retina () {
+          @include retina () {
             background-image: url("../img/tablet/index/specification-2-2x.png");
           }
         }
@@ -188,7 +186,7 @@
         &::before {
           background-image: url("../img/tablet/index/specification-replace-tablet.png");
 
-          @include mixins.retina () {
+          @include retina () {
             background-image: url("../img/tablet/index/specification-replace-tablet2x.png");
             background-size: cover;
           }
@@ -198,7 +196,7 @@
           background-image: url("../img/tablet/index/specification-3.png");
           width: 134px;
 
-          @include mixins.retina () {
+          @include retina () {
             background-image: url("../img/tablet/index/specification-3-2x.png");
           }
         }
@@ -210,7 +208,7 @@
         &::before {
           background-image: url("../img/tablet/index/specification-time-tablet.png");
 
-          @include mixins.retina () {
+          @include retina () {
             background-image: url("../img/tablet/index/specification-time-tablet2x.png");
             background-size: cover;
           }
@@ -220,7 +218,7 @@
           background-image: url("../img/tablet/index/specification-4.png");
           width: 136px;
 
-          @include mixins.retina () {
+          @include retina () {
             background-image: url("../img/tablet/index/specification-4-2x.png");
           }
         }
@@ -235,7 +233,7 @@
     }
   }
 
-  @include mixins.desktop-w () {
+  @include desktop-w () {
     padding: 0 var(--desktop-padding);
     padding-top: 71px;
     padding-bottom: 26px;

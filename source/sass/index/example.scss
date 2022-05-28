@@ -1,5 +1,3 @@
-@use "../mixins.scss";
-
 .example {
   width: 100%;
   padding: 0 20px;
@@ -97,7 +95,7 @@
 
   .example__slider-list {
     width: 100%;
-    @include mixins.listres;
+    @include listres;
     padding: 0;
     margin: 0 auto;
   }
@@ -140,12 +138,12 @@
   }
 
   .slider__toggle {
-    @include mixins.btnres;
+    @include btnres;
     cursor: pointer;
   }
 
   .slider__toggle-swap {
-    @include mixins.btnres;
+    @include btnres;
     position: relative;
     width: 85px;
     height: 14px;
@@ -169,7 +167,7 @@
     display: none;
   }
 
-  @include mixins.tablet-w () {
+  @include tablet-w () {
     padding: 0 var(--tablet-padding);
     padding-top: 43px;
     padding-bottom: 55px;
@@ -319,7 +317,7 @@
     }
 
     .slider__toggle-round {
-      @include mixins.btnres;
+      @include btnres;
       position: absolute;
       width: 34px;
       height: 34px;
@@ -357,7 +355,7 @@
     }
   }
 
-  @include mixins.desktop-w () {
+  @include desktop-w () {
     padding: 0;
     padding-top: 43px;
     grid-template-columns: 1fr auto;

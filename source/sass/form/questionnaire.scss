@@ -1,5 +1,3 @@
-@use "../mixins.scss";
-
 .questionnaire {
   position: relative;
   width: 100%;
@@ -41,7 +39,7 @@
     align-items: flex-start;
   }
 
-  @include mixins.tablet-w () {
+  @include tablet-w () {
     padding-top: 65px;
     padding-left: var(--tablet-form-l-padding);
     padding-right: var(--tablet-form-r-padding);
@@ -66,7 +64,7 @@
     }
   }
 
-  @include mixins.desktop-w () {
+  @include desktop-w () {
     padding-top: 77px;
     padding-left: var(--desktop-padding);
     padding-right: var(--desktop-padding);

@@ -1,12 +1,10 @@
-@use "../mixins.scss";
-
 .form {
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
 
   .form__fieldset {
-    @include mixins.fieldres;
+    @include fieldres;
   }
 
   .form__characteristics {
@@ -414,7 +412,7 @@
     color: var(--default-black);
   }
 
-  @include mixins.tablet-w () {
+  @include tablet-w () {
     .form__characteristics {
       display: flex;
       justify-content: space-between;
@@ -673,7 +671,7 @@
     }
   }
 
-  @include mixins.desktop-w () {
+  @include desktop-w () {
 
     .form__characteristics {
       row-gap: 20px;

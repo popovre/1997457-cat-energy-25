@@ -1,5 +1,3 @@
-@use "../mixins";
-
 .main-footer {
   width: 100%;
   min-height: 236px;
@@ -86,7 +84,7 @@
   }
 
   .main-footer__contacts {
-    @include mixins.listres;
+    @include listres;
 
     display: flex;
     min-height: 63px;
@@ -102,7 +100,7 @@
     }
   }
 
-  @include mixins.tablet-w () {
+  @include tablet-w () {
     flex-direction: row;
     flex-wrap: wrap;
     padding: 0 var(--tablet-padding);
@@ -132,7 +130,7 @@
     }
   }
 
-  @include mixins.desktop-w () {
+  @include desktop-w () {
     padding: 0 var(--desktop-padding);
 
     .main-footer__logo {

@@ -1,5 +1,3 @@
-@use "../mixins.scss";
-
 .main-nav {
   width: 100%;
   position: absolute;
@@ -20,7 +18,7 @@
   }
 
   .main-nav__menu-opener {
-    @include mixins.btnres();
+    @include btnres();
 
     position: absolute;
     top: -37px;
@@ -113,7 +111,7 @@
     }
   }
 
-  @include mixins.tablet-w () {
+  @include tablet-w () {
     min-height: auto;
     position: relative;
     top: auto;
@@ -150,7 +148,7 @@
     }
   }
 
-  @include mixins.desktop-w () {
+  @include desktop-w () {
     .main-nav__wrapper {
       font-weight: 400;
       font-size: 20px;
@@ -188,7 +186,7 @@
   }
 }
 
-@include mixins.mobile-w-only () {
+@include mobile-w-only () {
   .main-nav--closed .main-nav__link {
     display: none;
   }
