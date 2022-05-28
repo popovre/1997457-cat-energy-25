@@ -1,6 +1,5 @@
 .example {
   width: 100%;
-  padding: 0 20px;
   padding-top: 25px;
   padding-bottom: 40px;
   display: flex;
@@ -168,7 +167,6 @@
   }
 
   @include tablet-w () {
-    padding: 0 var(--tablet-padding);
     padding-top: 43px;
     padding-bottom: 55px;
     background-color: var(--default-white);
@@ -356,16 +354,13 @@
   }
 
   @include desktop-w () {
-    padding: 0;
     padding-top: 43px;
     grid-template-columns: 1fr auto;
 
     &::before {
-      content: none;
     }
 
     .example__title {
-      margin-left: var(--desktop-padding);
       margin-bottom: 76px;
     }
 
@@ -375,13 +370,12 @@
     }
 
     .example__content {
-      padding: 0 var(--desktop-padding);
-      background-color: var(--grey1);
       flex-direction: row;
       align-items: flex-start;
     }
 
     .example__abstract {
+      position: relative;
       margin: 0;
       width: 436px;
       flex-direction: column;

@@ -1,6 +1,5 @@
 .specification {
   width: 100%;
-  padding: 0 20.5px;
   padding-top: 20px;
   padding-bottom: 49px;
 
@@ -86,7 +85,6 @@
   }
 
   @include tablet-w () {
-    padding: 0 var(--tablet-padding);
     padding-top: 45px;
     padding-bottom: 47px;
 
@@ -234,7 +232,6 @@
   }
 
   @include desktop-w () {
-    padding: 0 var(--desktop-padding);
     padding-top: 71px;
     padding-bottom: 26px;
 

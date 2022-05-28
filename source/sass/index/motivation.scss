@@ -11,6 +11,7 @@
     background-image: url("../img/mobile/index/motivation-background.png");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 100% auto;
     width: 100%;
     height: 302px;
     top: 0;
@@ -31,7 +32,8 @@
     width: 280px;
     height: 270px;
     bottom: 43px;
-    left: var(--mobile-padding);
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 0;
 
     @include retina () {
@@ -45,7 +47,6 @@
       width: 709px;
       height: 609px;
       bottom: 0;
-      left: var(--tablet-padding);
       z-index: 0;
 
       @include retina () {
@@ -63,6 +64,7 @@
       right: 330px;
       left: auto;
       z-index: 1;
+      transform: translateX(0);
 
       @include retina () {
         background-image: url("../img/desktop/index/motivation-food-background-desktop2x.png");
@@ -117,8 +119,6 @@
   @include tablet-w () {
     padding-top: 62px;
     background-image: none;
-    padding-left: var(--tablet-padding);
-    padding-right: var(--tablet-padding);
     color: var(--default-black);
     text-align: start;
 
@@ -133,7 +133,7 @@
       font-size: 60px;
       line-height: 1;
       margin-bottom: 41px;
-      width: 414px;
+      width: 420px;
       margin-left: 97px;
       min-height: 120px;
     }
@@ -150,7 +150,7 @@
     .motivation__choose-button {
       padding: 14px 26px;
       margin: 0;
-      margin-left: 91px;
+      margin-left: 97px;
       margin-bottom: 526px;
       font-size: 20px;
       line-height: 26px;
@@ -162,7 +162,6 @@
   }
 
   @include desktop-w () {
-    padding: 0 var(--desktop-padding);
     padding-top: 111px;
     min-height: calc(694px - 114px);
 
@@ -181,7 +180,6 @@
 
       @include retina () {
         background-image: url("../img/desktop/index/motivation-background-desktop2x.png");
-
       }
     }
 
@@ -204,15 +202,6 @@
 
 .motivation__wrapper {
   width: 100%;
-  max-width: 320px;
   margin: 0 auto;
   background-color: var(--default-white);
-
-  @include tablet-w () {
-    max-width: var(--tablet-width);
-  }
-
-  @include desktop-w () {
-    max-width: var(--desktop-width);
-  }
 }
