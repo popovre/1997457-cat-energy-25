@@ -333,14 +333,14 @@
 
       &:hover {
         box-shadow:
-         0 0.5px 1px 1px var(--grey3),
-         0 2px 3px 1px var(--grey3);
+          0 0.5px 1px 1px var(--grey3),
+          0 2px 3px 1px var(--grey3);
       }
 
       &:active {
         box-shadow:
-         0 2px 3px 1px var(--grey3),
-         0 0 0 1px var(--green2) inset;
+          0 2px 3px 1px var(--grey3),
+          0 0 0 1px var(--green2) inset;
       }
 
       &::after {

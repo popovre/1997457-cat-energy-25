@@ -151,7 +151,6 @@
   }
 
   @include mixins.desktop-w () {
-
     .main-nav__wrapper {
       font-weight: 400;
       font-size: 20px;
@@ -226,8 +225,12 @@
     }
   }
 
-  .main-nav--nojs .main-nav__menu-opener {
-    display: none;
+  .main-nav--nojs {
+    position: static;
+    .main-nav__menu-opener {
+      display: none;
+    }
+
   }
 
   .main-nav--nojs .main-nav__wrapper {
