@@ -90,8 +90,8 @@
       color: rgb(0, 0, 0, 0.6);
     }
 
-    &:active .main-nav__name::after {
-      opacity: 1;
+    &:active {
+      color: rgb(0, 0, 0, 0.3);
     }
   }
 
@@ -116,7 +116,6 @@
     position: relative;
     top: auto;
     width: auto;
-
 
     .main-nav__menu-opener {
       display: none;
@@ -173,9 +172,12 @@
     }
 
     .main-nav__link-white.main-nav__link {
-      &:active .main-nav__name::after {
-        opacity: 1;
-        background-color: var(--default-white);
+      &:hover {
+        color: rgb(255, 255, 255, 0.6);
+      }
+
+      &:active {
+        color: rgb(255, 255, 255, 0.3);
       }
 
       &--active .main-nav__name::after {

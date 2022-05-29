@@ -36,7 +36,7 @@
       outline: 2px solid var(--black1);
     }
 
-    &:invalid {
+    &:invalid:not(:placeholder-shown) {
       outline: 2px solid var(--red1);
     }
   }
@@ -195,6 +195,7 @@
     text-transform: uppercase;
     color: var(--black1);
     font-family: var(--main-font);
+    outline: 1px solid var(--grey6);
 
     &:hover{
       outline: 2px solid var(--grey3);
@@ -204,7 +205,7 @@
       outline: 2px solid var(--black1);
     }
 
-    &:invalid {
+    &:invalid:not(:placeholder-shown) {
       outline: 2px solid var(--red1);
     }
   }
