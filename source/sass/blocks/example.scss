@@ -84,8 +84,8 @@
     color: var(--default-black);
     margin-top: 0;
     margin-bottom: 40px;
-    text-align: center;
     width: 100%;
+
     p {
       margin: 0;
       display: inline-block;
@@ -94,6 +94,7 @@
 
   .example__slider-list {
     width: 100%;
+
     @include listres;
     padding: 0;
     margin: 0 auto;
@@ -127,6 +128,7 @@
     width: 100%;
     align-items: center;
     margin-top: 15px;
+
     span {
       font-family: var(--main-font);
       text-transform: uppercase;
@@ -150,6 +152,7 @@
     border: 1px solid var(--grey3);
     border-radius: 6px;
     margin: 0 13px;
+
     &::before {
       content: "";
       position: absolute;
@@ -236,11 +239,13 @@
       text-align: right;
       font-size: 20px;
       line-height: 20px;
-      & p {
+
+      p {
         display: block;
         margin: 0;
       }
     }
+
 
     .example__slider-list {
       display: flex;
@@ -256,6 +261,7 @@
 
     .example__wrapper {
       overflow: hidden;
+
       &--inactive {
         opacity: 1;
       }
@@ -283,6 +289,7 @@
     .example__toggle-wrapper {
       position: relative;
       margin-top: 25px;
+
       span {
         font-size: 20px;
         line-height: 30px;
@@ -296,9 +303,11 @@
 
     .slider__toggle span {
       border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+
       &:hover {
         border-bottom: 1px solid rgba(0, 0, 0, 0.4);
       }
+
       &:active {
         border-bottom: none;
       }
@@ -356,9 +365,6 @@
   @include desktop-w () {
     padding-top: 43px;
     grid-template-columns: 1fr auto;
-
-    &::before {
-    }
 
     .example__title {
       margin-bottom: 76px;

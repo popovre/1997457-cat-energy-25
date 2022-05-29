@@ -154,10 +154,10 @@
       font-size: 20px;
       line-height: 30px;
       color: var(--black2);
+    }
 
-      & .main-nav__link-white {
-        color: var(--default-white);
-      }
+    .main-nav__wrapper .main-nav__link-white {
+      color: var(--default-white);
     }
 
     .main-nav__index-link {
@@ -228,10 +228,10 @@
 
   .main-nav--nojs {
     position: static;
+
     .main-nav__menu-opener {
       display: none;
     }
-
   }
 
   .main-nav--nojs .main-nav__wrapper {

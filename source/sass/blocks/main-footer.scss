@@ -36,11 +36,11 @@
     }
   }
 
-  .main-footer__icon {
-    &-svg {
-      fill: var(--grey9);
-    }
+  .main-footer__icon-svg {
+    fill: var(--grey9);
+  }
 
+  .main-footer__icon {
     &:hover .main-footer__icon-svg {
       fill: var(--green2);
     }
@@ -51,15 +51,15 @@
     }
   }
 
+  .main-footer__references-svg {
+    fill: var(--grey9);
+  }
+
   .main-footer__references {
     position: relative;
     width: 100%;
     display: flex;
     justify-content: center;
-
-    &-svg {
-      fill: var(--grey9);
-    }
 
     &:hover .main-footer__references-svg {
       fill: var(--green2);
