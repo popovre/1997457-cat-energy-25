@@ -1,6 +1,5 @@
 .products {
   width: 100%;
-  padding: 0 var(--mobile-padding);
   padding-top: 29px;
 
   .products__title {
@@ -274,7 +273,6 @@
   }
 
   @include tablet-w () {
-    padding: 0 var(--tablet-padding);
     padding-top: 65px;
 
     .products__title {
@@ -485,7 +483,6 @@
   }
 
   @include desktop-w () {
-    padding: 0 var(--desktop-padding);
     padding-top: 74px;
     padding-bottom: 0;
 
