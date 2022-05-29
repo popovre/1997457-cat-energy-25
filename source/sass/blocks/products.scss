@@ -250,12 +250,11 @@
   }
 
   .products__more-button {
-    width: 100%;
-    min-height: 40px;
+    box-sizing: content-box;
+    width: 91px;
     margin-bottom: 25px;
+    padding: 10px 94px;
     font-family: var(--main-font);
-
-    @include btnres;
     background-color: var(--grey1);
     font-size: 16px;
     line-height: 20px;
@@ -476,8 +475,7 @@
     }
 
     .products__more-button {
-      width: 249px;
-      min-height: 40px;
+      padding: 10px 79px;
       margin-bottom: 0;
     }
   }
@@ -618,8 +616,7 @@
     }
 
     .products__more-button {
-      width: 100%;
-      min-height: 40px;
+      padding: 10px 39px;
     }
   }
 }

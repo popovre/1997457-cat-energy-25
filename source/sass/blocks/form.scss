@@ -428,6 +428,14 @@
     width: 100%;
     margin-bottom: 21px;
     font-family: var(--main-font);
+
+    &:hover {
+      background-color: var(--green3);
+    }
+
+    &:active {
+      color: rgba(255,255,255,0.3);
+    }
   }
 
   .form__note {

@@ -60,6 +60,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 
     &:hover .main-footer__references-svg {
       fill: var(--green2);
@@ -100,6 +101,7 @@
     min-height: 63px;
     width: 132px;
     align-items: center;
+    flex-wrap: wrap;
 
     .main-footer__vk {
       margin-right: 24px;

@@ -18,11 +18,11 @@
             <picture>
               <source media="(min-width: 1440px)" srcset="img/desktop/index/main-header-logo-icon-desktop.svg" width="202" height="59">
               <source media="(min-width: 768px)" srcset="img/tablet/index/main-header-logo-icon-tablet.svg" width="174" height="52">
-              <img class="main-header__logo-img" src="img/mobile/index/main-header-logo-icon.svg" width="34" height="38" alt="Логотип-иконка 'CAT-ENERGY'.">
+              <img class="main-header__logo-img" src="img/mobile/index/main-header-logo-icon.svg" width="34" height="38" alt="Логотип-иконка CAT-ENERGY.">
             </picture>
           </div>
           <div class="main-header__title">
-            <img class="main-header__title-img" src="img/mobile/index/main-header-logo-title.svg" width="101" height="18" alt="Логотип-заголовок 'CAT-ENERGY'.">
+            <img class="main-header__title-img" src="img/mobile/index/main-header-logo-title.svg" width="101" height="18" alt="Логотип-заголовок CAT-ENERGY.">
           </div>
         </a>
         <nav class="main-nav main-nav--closed main-nav--nojs">
@@ -338,9 +338,10 @@
             <p class="products__product-small-talk">
               На самом деле вкусов гораздо больше!
             </p>
-            <button class="products__more-button" type="button">
+            <a class="products__more-button products__more-button--nojs" href="#">
+              <span class="visually-hidden">показать все.</span>
               показать все
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -475,6 +476,7 @@
           </li>
         </ul>
         <a class="main-footer__references" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="visually-hidden">ссылка на сайт курс обучения.</span>
           <div class="main-footer__references-wrapper">
             <svg class="main-footer__references-text" width="113" height="16">
               <use xlink:href="img/icons/sprite.svg#footer-htmlcademy"></use>
