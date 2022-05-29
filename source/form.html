@@ -10,82 +10,84 @@
     <link rel="manifest" href="img/favicon/manifest.webmanifest">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
-  <body class="page">
-    <div class="page__wrapper">
-      <header class="main-header">
-        <a class="main-header__logo-link" href="index.html">
-          <div class="main-header__logo">
-            <picture>
-              <source media="(min-width: 1440px)" srcset="img/desktop/index/main-header-logo-icon-desktop.svg" width="202" height="59">
-              <source media="(min-width: 768px)" srcset="img/tablet/index/main-header-logo-icon-tablet.svg" width="174" height="52">
-              <img class="main-header__logo-img" src="img/mobile/index/main-header-logo-icon.svg" width="34" height="38" alt="Логотип-иконка 'CAT-ENERGY'.">
-            </picture>
-          </div>
-          <div class="main-header__title">
-            <img class="main-header__title-img" src="img/mobile/index/main-header-logo-title.svg" width="101" height="18" alt="Логотип-заголовок 'CAT-ENERGY'.">
-          </div>
-        </a>
-        <nav class="main-nav main-nav--closed main-nav--nojs">
-          <button class="main-nav__menu-opener" type="button">
-            <span class="visually-hidden">Открывает меню сайта.</span>
-          </button>
-          <div class="main-nav__wrapper">
-            <a class="main-nav__index-link main-nav__link" href="index.html">
-              <span class="main-nav__name">Главная</span>
-            </a>
-            <a class="main-nav__catalog-link main-nav__link" href="catalog.html">
-              <span class="main-nav__name">Каталог продукции</span>
-            </a>
-            <a class="main-nav__form-link main-nav__link main-nav__link--active" href="#">
-              <span class="main-nav__name">Подбор программы</span>
-            </a>
-          </div>
-        </nav>
-      </header>
-      <main class="form-main">
-        <section class="questionnaire">
+  <body>
+    <header class="main-header">
+      <a class="main-header__logo-link" href="index.html">
+        <div class="main-header__logo">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/desktop/index/main-header-logo-icon-desktop.svg" width="202" height="59">
+            <source media="(min-width: 768px)" srcset="img/tablet/index/main-header-logo-icon-tablet.svg" width="174" height="52">
+            <img class="main-header__logo-img" src="img/mobile/index/main-header-logo-icon.svg" width="34" height="38" alt="Логотип-иконка 'CAT-ENERGY'.">
+          </picture>
+        </div>
+        <div class="main-header__title">
+          <img class="main-header__title-img" src="img/mobile/index/main-header-logo-title.svg" width="101" height="18" alt="Логотип-заголовок 'CAT-ENERGY'.">
+        </div>
+      </a>
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <button class="main-nav__menu-opener" type="button">
+          <span class="visually-hidden">Открывает меню сайта.</span>
+        </button>
+        <div class="main-nav__wrapper">
+          <a class="main-nav__index-link main-nav__link" href="index.html">
+            <span class="main-nav__name">Главная</span>
+          </a>
+          <a class="main-nav__catalog-link main-nav__link" href="catalog.html">
+            <span class="main-nav__name">Каталог продукции</span>
+          </a>
+          <a class="main-nav__form-link main-nav__link main-nav__link--active" href="#">
+            <span class="main-nav__name">Подбор программы</span>
+          </a>
+        </div>
+      </nav>
+    </header>
+    <main class="form-main">
+      <section class="questionnaire">
+        <div class="questionnaire__title-wrapper center-positioner">
           <h1 class="questionnaire__title title">
             Подбор программы
           </h1>
           <p class="questionnaire__text">
             Заполните анкету, и мы подберем программу питания для вашего кота
           </p>
-          <form class="questionnaire__form form" action="https://echo.htmlacademy.ru/" method="post">
-            <fieldset class="form__characteristics form__fieldset">
-              <label class="form__name-text" for="form-name">
-                имя:*
+        </div>
+        <form class="questionnaire__form form" action="https://echo.htmlacademy.ru/" method="post">
+          <fieldset class="form__characteristics form__fieldset center-positioner">
+            <label class="form__name-text" for="form-name">
+              имя:*
+            </label>
+            <input class="form__name form__characteristics-input" id="form-name" type="text" name="Имя кота." placeholder="БАРСИК" required>
+            <label class="form__weight-text" for="form-weight">
+              Вес (кг):*
+            </label>
+            <input class="form__weight form__characteristics-input" id="form-weight" type="number" name="Вес кота." placeholder="7" required>
+            <label class="form__age-text" for="form-age">
+              Возраст (лет):
+            </label>
+            <input class="form__age form__characteristics-input" id="form-age" type="number" name="Возраст кота." placeholder="7">
+          </fieldset>
+          <fieldset class="form__goal form__fieldset center-positioner">
+            <legend class="visually-hidden">Цель программы.</legend>
+            <div class="form__goal-wrapper">
+              <label class="form__weight-loss-text form__radio-label" >
+                <input class="form__weight-loss form__radio"  type="radio" name="Цель: похудение." value="weight-loss" checked>
+                <span class="radio"></span>
+                похудение
               </label>
-              <input class="form__name form__characteristics-input" id="form-name" type="text" name="Имя кота." placeholder="БАРСИК" required>
-              <label class="form__weight-text" for="form-weight">
-                Вес (кг):*
+              <label class="form__weight-grow-text form__radio-label">
+                <input class="form__weight-grow form__radio" type="radio" name="Цель: набор массы." value="weight-grow">
+                <span class="radio"></span>
+                Набор массы
               </label>
-              <input class="form__weight form__characteristics-input" id="form-weight" type="number" name="Вес кота." placeholder="7" required>
-              <label class="form__age-text" for="form-age">
-                Возраст (лет):
+              <label class="form__unknown-text form__radio-label">
+                <input class="form__unknown form__radio" type="radio" name="Цель: не знаю." value="unknown">
+                <span class="radio"></span>
+                Не знаю (Нужен ваш совет)
               </label>
-              <input class="form__age form__characteristics-input" id="form-age" type="number" name="Возраст кота." placeholder="7">
-            </fieldset>
-            <fieldset class="form__goal form__fieldset">
-              <legend class="visually-hidden">Цель программы.</legend>
-              <div class="form__goal-wrapper">
-                <label class="form__weight-loss-text form__radio-label" >
-                  <input class="form__weight-loss form__radio"  type="radio" name="Цель: похудение." value="weight-loss" checked>
-                  <span class="radio"></span>
-                  похудение
-                </label>
-                <label class="form__weight-grow-text form__radio-label">
-                  <input class="form__weight-grow form__radio" type="radio" name="Цель: набор массы." value="weight-grow">
-                  <span class="radio"></span>
-                  Набор массы
-                </label>
-                <label class="form__unknown-text form__radio-label">
-                  <input class="form__unknown form__radio" type="radio" name="Цель: не знаю." value="unknown">
-                  <span class="radio"></span>
-                  Не знаю (Нужен ваш совет)
-                </label>
-              </div>
-            </fieldset>
-            <fieldset class="form__contacts form__fieldset">
+            </div>
+          </fieldset>
+          <fieldset class="form__contacts form__fieldset">
+            <div class="form__contacts-wrapper center-positioner">
               <h2 class="form__contacts-title">
                 Контактные данные (владельца кота)
               </h2>
@@ -99,15 +101,19 @@
                   <input class="form__tel form__contacts-input" type="tel" name="Телефон." placeholder="8 (960) 900-60-90" required>
                 </label>
               </div>
-            </fieldset>
-            <fieldset class="form__comments form__fieldset">
+            </div>
+          </fieldset>
+          <fieldset class="form__comments form__fieldset">
+            <div class="form__comments-wrapper center-positioner">
               <h2 class="form__comments-title">
                 Комментарий
               </h2>
               <label class="form__comments-name" for="form__comments"></label>
               <textarea class="form__comments-text" id="form__comments" name="comments" rows="5" cols="33">Расскажите обо всех повадках кота</textarea>
-            </fieldset>
-            <fieldset class="form__additional form__fieldset">
+            </div>
+          </fieldset>
+          <fieldset class="form__additional form__fieldset">
+            <div class="form__additional-content center-positioner">
               <h2 class="form__additional-title">
                 Дополнительно
               </h2>
@@ -133,80 +139,80 @@
                   витамины
                 </label>
               </div>
-            </fieldset>
-            <div class="form__submit-button">
-              <button class="form__button button" type="submit" name="submit-button">
-                отправить заявку
-              </button>
-              <p class="form__note">
-                * — Обязательные поля
-              </p>
             </div>
-          </form>
-        </section>
-        <section class="invite">
-          <div class="invite__description invite__description-grey invite-description">
-            <p class="invite-description__info info">
-              приглашаем к сотрудничеству дилеров!
+          </fieldset>
+          <div class="form__submit-button center-positioner">
+            <button class="form__button button" type="submit" name="submit-button">
+              отправить заявку
+            </button>
+            <p class="form__note">
+              * — Обязательные поля
             </p>
-            <address class="invite-description__address address">
-              ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span>
-            </address>
           </div>
-          <div class="invite__map invite__map-grey map">
-            <iframe class="map__image" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1652611588105!5m2!1sru!2sru" width="320" height="362" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-        </section>
-      </main>
-      <footer class="main-footer">
-        <div class="main-footer__logo">
-          <a href="index.html">
-            <span class="visually-hidden">название сайта "CAT-ENERGY".</span>
-            <svg class="main-footer__logo-title" width="128" height="24">
-              <use xlink:href="img/icons/sprite.svg#footer-title"></use>
+        </form>
+      </section>
+      <section class="invite">
+        <div class="invite__description invite__description-grey invite-description">
+          <p class="invite-description__info info">
+            приглашаем к сотрудничеству дилеров!
+          </p>
+          <address class="invite-description__address address">
+            ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span>
+          </address>
+        </div>
+        <div class="invite__map invite__map-grey map">
+          <iframe class="map__image" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1652611588105!5m2!1sru!2sru" width="320" height="362" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </section>
+    </main>
+    <footer class="main-footer">
+      <div class="main-footer__logo">
+        <a href="index.html">
+          <span class="visually-hidden">название сайта "CAT-ENERGY".</span>
+          <svg class="main-footer__logo-title" width="128" height="24">
+            <use xlink:href="img/icons/sprite.svg#footer-title"></use>
+          </svg>
+        </a>
+      </div>
+      <ul class="main-footer__contacts contacts">
+        <li class="main-footer__icon main-footer__vk">
+          <a class="main-footer__vk-link" href="https://vk.com/htmlacademy">
+            <span class="visually-hidden">ссылка на сайт vk.</span>
+            <svg class="main-footer__icon-svg" width="28" height="22">
+              <use xlink:href="img/icons/sprite.svg#footer-vk-icon"></use>
             </svg>
           </a>
-        </div>
-        <ul class="main-footer__contacts contacts">
-          <li class="main-footer__icon main-footer__vk">
-            <a class="main-footer__vk-link" href="https://vk.com/htmlacademy">
-              <span class="visually-hidden">ссылка на сайт vk.</span>
-              <svg class="main-footer__icon-svg" width="28" height="22">
-                <use xlink:href="img/icons/sprite.svg#footer-vk-icon"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="main-footer__icon main-footer__youtube">
-            <a class="main-footer__youtube-link" href="https://www.youtube.com/user/htmlacademyru">
-              <span class="visually-hidden">ссылка на сайт youtube.</span>
-              <svg class="main-footer__icon-svg" width="28" height="22">
-                <use xlink:href="img/icons/sprite.svg#footer-youtube-icon"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="main-footer__icon main-footer__tg">
-            <a class="main-footer__tg-link" href="tg://resolve?domain=htmlacademy">
-              <span class="visually-hidden">ссылка на сайт telegram.</span>
-              <svg class="main-footer__icon-svg" width="28" height="22">
-                <use xlink:href="img/icons/sprite.svg#footer-tg-icon"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
-        <a class="main-footer__references" href="https://htmlacademy.ru/intensive/adaptive">
-          <div class="main-footer__references-wrapper">
-            <svg class="main-footer__references-text" width="113" height="16">
-              <use xlink:href="img/icons/sprite.svg#footer-htmlcademy"></use>
+        </li>
+        <li class="main-footer__icon main-footer__youtube">
+          <a class="main-footer__youtube-link" href="https://www.youtube.com/user/htmlacademyru">
+            <span class="visually-hidden">ссылка на сайт youtube.</span>
+            <svg class="main-footer__icon-svg" width="28" height="22">
+              <use xlink:href="img/icons/sprite.svg#footer-youtube-icon"></use>
             </svg>
-            <div>
-              <svg class=" main-footer__references-svg" width="27" height="34">
-                <use xlink:href="img/icons/sprite.svg#footer-logo-html"></use>
-              </svg>
-            </div>
+          </a>
+        </li>
+        <li class="main-footer__icon main-footer__tg">
+          <a class="main-footer__tg-link" href="tg://resolve?domain=htmlacademy">
+            <span class="visually-hidden">ссылка на сайт telegram.</span>
+            <svg class="main-footer__icon-svg" width="28" height="22">
+              <use xlink:href="img/icons/sprite.svg#footer-tg-icon"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <a class="main-footer__references" href="https://htmlacademy.ru/intensive/adaptive">
+        <div class="main-footer__references-wrapper">
+          <svg class="main-footer__references-text" width="113" height="16">
+            <use xlink:href="img/icons/sprite.svg#footer-htmlcademy"></use>
+          </svg>
+          <div>
+            <svg class=" main-footer__references-svg" width="27" height="34">
+              <use xlink:href="img/icons/sprite.svg#footer-logo-html"></use>
+            </svg>
           </div>
-        </a>
-      </footer>
-    </div>
+        </div>
+      </a>
+    </footer>
     <script src="js/script.js"></script>
   </body>
 </html>

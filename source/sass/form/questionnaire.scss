@@ -1,19 +1,21 @@
 .questionnaire {
-  position: relative;
   width: 100%;
   padding-top: 27px;
-  padding-left: 20px;
-  padding-right: 20px;
   padding-bottom: 32px;
 
-  &::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    background-color: var(--grey5);
-    top: 0;
-    left: 0;
+
+  .questionnaire__title-wrapper {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: var(--grey5);
+      top: -27px;
+      left: 0;
+    }
   }
 
   .questionnaire__title {
@@ -41,12 +43,15 @@
 
   @include tablet-w () {
     padding-top: 65px;
-    padding-left: var(--tablet-form-l-padding);
-    padding-right: var(--tablet-form-r-padding);
     padding-bottom: 72px;
 
-    &::before {
-      content: none;
+    .questionnaire__title-wrapper {
+      padding-left: var(--tablet-form-l-padding);
+      padding-right: var(--tablet-form-r-padding);
+
+      &::before {
+        content: none;
+      }
     }
 
     .questionnaire__title {
@@ -66,9 +71,12 @@
 
   @include desktop-w () {
     padding-top: 77px;
-    padding-left: var(--desktop-padding);
-    padding-right: var(--desktop-padding);
     padding-bottom: 69px;
+
+    .questionnaire__title-wrapper {
+      padding-left: var(--desktop-padding);
+      padding-right: var(--desktop-padding);
+    }
 
     .questionnaire__title {
       margin-bottom: 57px;
@@ -82,7 +90,6 @@
     .questionnaire__form {
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
       flex-wrap: wrap;
       column-gap: 80px;
     }
