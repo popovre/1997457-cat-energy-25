@@ -12,34 +12,36 @@
   </head>
   <body>
     <header class="main-header">
-      <a class="main-header__logo-link" href="index.html">
-        <div class="main-header__logo">
-          <picture>
-            <source media="(min-width: 1440px)" srcset="img/desktop/index/main-header-logo-icon-desktop.svg" width="202" height="59">
-            <source media="(min-width: 768px)" srcset="img/tablet/index/main-header-logo-icon-tablet.svg" width="174" height="52">
-            <img class="main-header__logo-img" src="img/mobile/index/main-header-logo-icon.svg" width="34" height="38" alt="Логотип-иконка 'CAT-ENERGY'.">
-          </picture>
-        </div>
-        <div class="main-header__title">
-          <img class="main-header__title-img" src="img/mobile/index/main-header-logo-title.svg" width="101" height="18" alt="Логотип-заголовок 'CAT-ENERGY'.">
-        </div>
-      </a>
-      <nav class="main-nav main-nav--closed main-nav--nojs">
-        <button class="main-nav__menu-opener" type="button">
-          <span class="visually-hidden">Открывает меню сайта.</span>
-        </button>
-        <div class="main-nav__wrapper">
-          <a class="main-nav__index-link main-nav__link" href="index.html">
-            <span class="main-nav__name">Главная</span>
-          </a>
-          <a class="main-nav__catalog-link main-nav__link" href="catalog.html">
-            <span class="main-nav__name">Каталог продукции</span>
-          </a>
-          <a class="main-nav__form-link main-nav__link main-nav__link--active" href="#">
-            <span class="main-nav__name">Подбор программы</span>
-          </a>
-        </div>
-      </nav>
+      <div class="main-header__wrapper center-positioner">
+        <a class="main-header__logo-link" href="index.html">
+          <div class="main-header__logo">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/desktop/index/main-header-logo-icon-desktop.svg" width="202" height="59">
+              <source media="(min-width: 768px)" srcset="img/tablet/index/main-header-logo-icon-tablet.svg" width="174" height="52">
+              <img class="main-header__logo-img" src="img/mobile/index/main-header-logo-icon.svg" width="34" height="38" alt="Логотип-иконка 'CAT-ENERGY'.">
+            </picture>
+          </div>
+          <div class="main-header__title">
+            <img class="main-header__title-img" src="img/mobile/index/main-header-logo-title.svg" width="101" height="18" alt="Логотип-заголовок 'CAT-ENERGY'.">
+          </div>
+        </a>
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+          <button class="main-nav__menu-opener" type="button">
+            <span class="visually-hidden">Открывает меню сайта.</span>
+          </button>
+          <div class="main-nav__wrapper">
+            <a class="main-nav__index-link main-nav__link" href="index.html">
+              <span class="main-nav__name">Главная</span>
+            </a>
+            <a class="main-nav__catalog-link main-nav__link" href="catalog.html">
+              <span class="main-nav__name">Каталог продукции</span>
+            </a>
+            <a class="main-nav__form-link main-nav__link main-nav__link--active" href="#">
+              <span class="main-nav__name">Подбор программы</span>
+            </a>
+          </div>
+        </nav>
+      </div>
     </header>
     <main class="form-main">
       <section class="questionnaire">
@@ -166,52 +168,54 @@
       </section>
     </main>
     <footer class="main-footer">
-      <div class="main-footer__logo">
-        <a href="index.html">
-          <span class="visually-hidden">название сайта "CAT-ENERGY".</span>
-          <svg class="main-footer__logo-title" width="128" height="24">
-            <use xlink:href="img/icons/sprite.svg#footer-title"></use>
-          </svg>
+      <div class="main-footer__wrapper center-positioner">
+        <div class="main-footer__logo">
+          <a href="index.html">
+            <span class="visually-hidden">название сайта "CAT-ENERGY".</span>
+            <svg class="main-footer__logo-title" width="128" height="24">
+              <use xlink:href="img/icons/sprite.svg#footer-title"></use>
+            </svg>
+          </a>
+        </div>
+        <ul class="main-footer__contacts contacts">
+          <li class="main-footer__icon main-footer__vk">
+            <a class="main-footer__vk-link" href="https://vk.com/htmlacademy">
+              <span class="visually-hidden">ссылка на сайт vk.</span>
+              <svg class="main-footer__icon-svg" width="28" height="22">
+                <use xlink:href="img/icons/sprite.svg#footer-vk-icon"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="main-footer__icon main-footer__youtube">
+            <a class="main-footer__youtube-link" href="https://www.youtube.com/user/htmlacademyru">
+              <span class="visually-hidden">ссылка на сайт youtube.</span>
+              <svg class="main-footer__icon-svg" width="28" height="22">
+                <use xlink:href="img/icons/sprite.svg#footer-youtube-icon"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="main-footer__icon main-footer__tg">
+            <a class="main-footer__tg-link" href="tg://resolve?domain=htmlacademy">
+              <span class="visually-hidden">ссылка на сайт telegram.</span>
+              <svg class="main-footer__icon-svg" width="28" height="22">
+                <use xlink:href="img/icons/sprite.svg#footer-tg-icon"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <a class="main-footer__references" href="https://htmlacademy.ru/intensive/adaptive">
+          <div class="main-footer__references-wrapper">
+            <svg class="main-footer__references-text" width="113" height="16">
+              <use xlink:href="img/icons/sprite.svg#footer-htmlcademy"></use>
+            </svg>
+            <div>
+              <svg class=" main-footer__references-svg" width="27" height="34">
+                <use xlink:href="img/icons/sprite.svg#footer-logo-html"></use>
+              </svg>
+            </div>
+          </div>
         </a>
       </div>
-      <ul class="main-footer__contacts contacts">
-        <li class="main-footer__icon main-footer__vk">
-          <a class="main-footer__vk-link" href="https://vk.com/htmlacademy">
-            <span class="visually-hidden">ссылка на сайт vk.</span>
-            <svg class="main-footer__icon-svg" width="28" height="22">
-              <use xlink:href="img/icons/sprite.svg#footer-vk-icon"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="main-footer__icon main-footer__youtube">
-          <a class="main-footer__youtube-link" href="https://www.youtube.com/user/htmlacademyru">
-            <span class="visually-hidden">ссылка на сайт youtube.</span>
-            <svg class="main-footer__icon-svg" width="28" height="22">
-              <use xlink:href="img/icons/sprite.svg#footer-youtube-icon"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="main-footer__icon main-footer__tg">
-          <a class="main-footer__tg-link" href="tg://resolve?domain=htmlacademy">
-            <span class="visually-hidden">ссылка на сайт telegram.</span>
-            <svg class="main-footer__icon-svg" width="28" height="22">
-              <use xlink:href="img/icons/sprite.svg#footer-tg-icon"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
-      <a class="main-footer__references" href="https://htmlacademy.ru/intensive/adaptive">
-        <div class="main-footer__references-wrapper">
-          <svg class="main-footer__references-text" width="113" height="16">
-            <use xlink:href="img/icons/sprite.svg#footer-htmlcademy"></use>
-          </svg>
-          <div>
-            <svg class=" main-footer__references-svg" width="27" height="34">
-              <use xlink:href="img/icons/sprite.svg#footer-logo-html"></use>
-            </svg>
-          </div>
-        </div>
-      </a>
     </footer>
     <script src="js/script.js"></script>
   </body>

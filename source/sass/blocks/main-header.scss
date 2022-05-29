@@ -1,22 +1,26 @@
 .main-header {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  margin: 0 auto;
-  width: 100%;
-  flex-wrap: wrap;
-  min-height: 65px;
-  padding-top: 10px;
   color: var(--default-black);
   font-size: 18px;
   line-height: 1;
+
+  .main-header__wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 auto;
+    width: 100%;
+    flex-wrap: wrap;
+    min-height: 65px;
+    padding: 0;
+    padding-top: 10px;
+  }
 
   .main-header__logo-link {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    margin-left: var(--tablet-padding);
+    margin-left: var(--mobile-padding);
     margin-right: auto;
 
     &:hover {
@@ -41,10 +45,12 @@
 
 
   @include tablet-w () {
-    padding-top: 20px;
-    padding-left: var(--tablet-padding);
-    padding-right: var(--tablet-padding);
-    min-height: 76px;
+    .main-header__wrapper {
+      padding-top: 20px;
+      padding-left: var(--tablet-padding);
+      padding-right: var(--tablet-padding);
+      min-height: 76px;
+    }
 
     .main-header__logo-link {
       margin-left: 0;
@@ -67,10 +73,12 @@
   }
 
   @include desktop-w () {
-    padding-top: 53px;
-    padding-left: var(--desktop-padding);
-    padding-right: var(--desktop-padding);
-    min-height: 76px;
+    .main-header__wrapper {
+      padding-top: 53px;
+      padding-left: var(--desktop-padding);
+      padding-right: var(--desktop-padding);
+      min-height: 76px;
+    }
 
     .main-header__logo-link {
       margin-right: auto;
