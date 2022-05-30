@@ -144,19 +144,24 @@
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    width: 160px;
+    width: 180px;
+    word-wrap: break-word;
     line-height: 20px;
     text-align: center;
     color: var(--default-white);
+
+    span {
+      display: block;
+    }
   }
 
   @include tablet-w () {
     margin: 0;
-    padding-top: 68px;
+    padding-top: 64px;
     padding-bottom: 76px;
 
     &::before {
-      top: 91px;
+      top: 88px;
       right: 0;
     }
 
