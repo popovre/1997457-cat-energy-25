@@ -16,6 +16,10 @@
     text-transform: uppercase;
     color: var(--black2);
     width: 140px;
+
+    span {
+      display: block;
+    }
   }
 
   .invite-description__address {
@@ -55,7 +59,7 @@
   @include desktop-w () {
     padding-top: 60px;
     padding-left: 80px;
-    padding-right: 80px;
+    padding-right: 76px;
     width: 565px;
     min-height: 198px;
 

@@ -6,20 +6,18 @@
   .main-header__wrapper {
     position: relative;
     display: flex;
-    align-items: center;
     justify-content: flex-start;
     margin: 0 auto;
     width: 100%;
     flex-wrap: wrap;
     min-height: 65px;
     padding: 0;
-    padding-top: 10px;
+    padding-top: 8px;
   }
 
   .main-header__logo-link {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     margin-left: var(--mobile-padding);
     margin-right: auto;
 
@@ -41,12 +39,13 @@
   .main-header__title {
     width: 101px;
     height: 18px;
+    margin-top: 16px;
   }
 
 
   @include tablet-w () {
     .main-header__wrapper {
-      padding-top: 20px;
+      padding-top: 22px;
       padding-left: var(--tablet-padding);
       padding-right: var(--tablet-padding);
       min-height: 76px;

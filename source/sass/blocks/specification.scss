@@ -1,7 +1,7 @@
 .specification {
   width: 100%;
   padding-top: 20px;
-  padding-bottom: 49px;
+  padding-bottom: 52px;
 
   .specification__title {
     font-weight: 400;
@@ -10,6 +10,7 @@
     text-align: left;
     color: var(--default-black);
     margin-top: 0;
+    margin-bottom: 42px;
   }
 
   .specification__list {
@@ -77,7 +78,7 @@
   }
 
   .specification__item:not(:last-child) {
-    margin-bottom: 20px;
+    margin-bottom: 26px;
   }
 
   .specification__description {
@@ -85,7 +86,7 @@
   }
 
   @include tablet-w () {
-    padding-top: 45px;
+    padding-top: 43px;
     padding-bottom: 47px;
 
 
@@ -93,6 +94,7 @@
       font-size: 60px;
       line-height: 60px;
       text-align: left;
+      margin-bottom: 30px;
     }
 
     .specification__list {
@@ -115,10 +117,6 @@
         margin-bottom: 0;
       }
 
-      &:nth-child(odd) {
-        margin-right: auto;
-      }
-
       &::before {
         width: 80px;
         height: 80px;
@@ -130,19 +128,21 @@
         position: absolute;
         background-repeat: no-repeat;
         background-size: contain;
-        height: 280px;
-        top: 0;
-        right: 0;
+        height: 225px;
+        top: 40px;
+        right: -10px;
       }
     }
 
     .specification__item-function {
+      margin-right: 153px;
+
       &::before {
         background-image: url("../img/tablet/index/specification-function-tablet.png");
 
         @include retina () {
           background-image: url("../img/tablet/index/specification-function-tablet2x.png");
-          background-size: cover;
+          background-size: auto;
         }
       }
 
@@ -165,7 +165,7 @@
 
         @include retina () {
           background-image: url("../img/tablet/index/specification-structure-tablet2x.png");
-          background-size: cover;
+          background-size: auto;
         }
       }
 
@@ -182,12 +182,13 @@
     }
 
     .specification__item-replace {
+      margin-right: 138px;
       &::before {
         background-image: url("../img/tablet/index/specification-replace-tablet.png");
 
         @include retina () {
           background-image: url("../img/tablet/index/specification-replace-tablet2x.png");
-          background-size: cover;
+          background-size: auto;
         }
       }
 
@@ -209,7 +210,7 @@
 
         @include retina () {
           background-image: url("../img/tablet/index/specification-time-tablet2x.png");
-          background-size: cover;
+          background-size: auto;
         }
       }
 

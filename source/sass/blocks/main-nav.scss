@@ -22,7 +22,7 @@
     @include btnres();
 
     position: absolute;
-    top: -37px;
+    top: -42px;
     right: 20px;
     z-index: 3;
     display: block;
@@ -105,7 +105,7 @@
       top: auto;
       left: 1.5px;
       right: 1.5px;
-      bottom: -6px;
+      bottom: -8px;
       height: 2px;
       background-color: var(--green2);
       opacity: 0;
@@ -113,9 +113,9 @@
   }
 
   @include tablet-w () {
+    margin-top: 20px;
     min-height: auto;
-    position: relative;
-    top: auto;
+    position: static;
     width: auto;
 
     .main-nav__menu-opener {
@@ -140,7 +140,7 @@
     }
 
     .main-nav__index-link {
-      margin-right: 33px;
+      margin-right: 36px;
     }
 
     .main-nav__catalog-link {
@@ -149,6 +149,8 @@
   }
 
   @include desktop-w () {
+    margin-top: 18px;
+
     .main-nav__wrapper {
       font-weight: 400;
       font-size: 20px;

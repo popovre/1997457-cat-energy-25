@@ -1,7 +1,7 @@
 .example {
   width: 100%;
   padding-top: 25px;
-  padding-bottom: 40px;
+  padding-bottom: 45px;
   display: flex;
   flex-direction: column;
   background-color: var(--grey2);
@@ -56,6 +56,7 @@
   }
 
   .example__statistic-text {
+    text-transform: uppercase;
     font-family: var(--main-font);
     font-weight: 400;
     font-size: 24px;
@@ -68,7 +69,7 @@
     text-align: center;
     background: var(--grey2);
     color: var(--black1);
-    bottom: -14px;
+    bottom: -16px;
     left: 50%;
     transform: translateX(-50%);
     font-size: 12px;
@@ -127,7 +128,7 @@
     justify-content: center;
     width: 100%;
     align-items: center;
-    margin-top: 15px;
+    margin-top: 21px;
 
     span {
       font-family: var(--main-font);
@@ -151,7 +152,7 @@
     background-color: var(--default-white);
     border: 1px solid var(--grey3);
     border-radius: 6px;
-    margin: 0 13px;
+    margin: 0 18px;
 
     &::before {
       content: "";
@@ -171,7 +172,7 @@
 
   @include tablet-w () {
     padding-top: 43px;
-    padding-bottom: 55px;
+    padding-bottom: 60px;
     background-color: var(--default-white);
     position: relative;
 
@@ -243,9 +244,10 @@
       p {
         display: block;
         margin: 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
       }
     }
-
 
     .example__slider-list {
       display: flex;
@@ -257,6 +259,7 @@
     .example__slider-item {
       height: 511px;
       width: 592px;
+      margin-bottom: 28px;
     }
 
     .example__wrapper {
@@ -287,8 +290,8 @@
     }
 
     .example__toggle-wrapper {
+      margin-top: 0;
       position: relative;
-      margin-top: 25px;
 
       span {
         font-size: 20px;
@@ -318,7 +321,8 @@
       display: block;
       width: 426px;
       height: 6px;
-      margin: 0 13px;
+      margin: 0 20px;
+      margin-right: 26px;
       border-radius: 6px;
       background-color: var(--grey11);
     }
@@ -367,7 +371,7 @@
     grid-template-columns: 1fr auto;
 
     .example__title {
-      margin-bottom: 76px;
+      margin-bottom: 143px;
     }
 
     .example__text {
@@ -391,12 +395,16 @@
     .example__statistic-wrapper {
       width: auto;
       margin: 0;
-      margin-bottom: 60px;
+      margin-bottom: 50px;
     }
 
     .example__statistic {
       margin-bottom: 0;
       row-gap: 55px;
+    }
+
+    .example__cost-number {
+      margin-top: 10px;
     }
 
     .example__statistic-legend {
@@ -417,7 +425,11 @@
       margin: 0;
       padding: 0;
       min-height: 576px;
-      margin-top: -179px;
+      margin-top: -240px;
+    }
+
+    .example__slider-item {
+      margin-bottom: 20px;
     }
   }
 }

@@ -117,6 +117,9 @@
       flex-direction: row;
       flex-wrap: wrap;
       padding: 0 var(--tablet-padding);
+      align-items: flex-start;
+      padding-top: 45px;
+      min-height: 147px;
     }
 
     .main-footer__logo {
@@ -124,6 +127,7 @@
         content: none;
       }
 
+      padding-top: 20px;
       width: 128px;
       margin: 0;
       margin-right: 155px;
@@ -145,12 +149,20 @@
 
     .main-footer__references-wrapper {
       width: 163px;
+      align-items: flex-start;
+      padding-top: 15px;
+    }
+
+    .main-footer__references-text {
+      margin-top: 9px;
     }
   }
 
   @include desktop-w () {
     .main-footer__wrapper {
       padding: 0 var(--desktop-padding);
+      padding-top: 40px;
+      min-height: 149px;
     }
 
     .main-footer__logo {
