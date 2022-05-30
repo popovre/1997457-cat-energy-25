@@ -1,11 +1,12 @@
-@use "../mixins";
-
 .invite-description {
+  width: 100%;
+  max-width: 320px;
   display: flex;
-  padding: 26px 20px;
+  padding: 26px var(--mobile-padding);
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  margin: 0 auto;
 
   .invite-description__info {
     display: block;
@@ -15,6 +16,11 @@
     text-transform: uppercase;
     color: var(--black2);
     width: 140px;
+    word-wrap: break-word;
+
+    span {
+      display: block;
+    }
   }
 
   .invite-description__address {
@@ -23,12 +29,14 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
-    color: var(--black4);
+    color: var(--black1);
     width: 140px;
   }
 
-  @include mixins.tablet-w () {
-    padding: 56px 70px;
+  @include tablet-w () {
+    padding: 56px var(--tablet-form-l-padding);
+    min-height: 198px;
+    max-width: 768px;
 
     .invite-description__info {
       width: 172px;
@@ -43,21 +51,16 @@
       text-align: right;
 
       span {
-
         display: block;
         margin-top: 20px;
       }
     }
   }
 
-  @include mixins.tablet-w () {
-    padding: 0 var(--tablet-form-l-padding);
-    width: 100%;
-    min-height: 198px;
-  }
-
-  @include mixins.desktop-w () {
-    padding: 56px 80px;
+  @include desktop-w () {
+    padding-top: 60px;
+    padding-left: 80px;
+    padding-right: 76px;
     width: 565px;
     min-height: 198px;
 

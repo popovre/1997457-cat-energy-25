@@ -1,10 +1,7 @@
-@use "../mixins.scss";
-
 .example {
   width: 100%;
-  padding: 0 20px;
   padding-top: 25px;
-  padding-bottom: 40px;
+  padding-bottom: 45px;
   display: flex;
   flex-direction: column;
   background-color: var(--grey2);
@@ -59,7 +56,8 @@
   }
 
   .example__statistic-text {
-    font-family: 'Oswald';
+    text-transform: uppercase;
+    font-family: var(--main-font);
     font-weight: 400;
     font-size: 24px;
     line-height: 24px;
@@ -71,7 +69,7 @@
     text-align: center;
     background: var(--grey2);
     color: var(--black1);
-    bottom: -14px;
+    bottom: -16px;
     left: 50%;
     transform: translateX(-50%);
     font-size: 12px;
@@ -87,8 +85,8 @@
     color: var(--default-black);
     margin-top: 0;
     margin-bottom: 40px;
-    text-align: center;
     width: 100%;
+
     p {
       margin: 0;
       display: inline-block;
@@ -96,20 +94,33 @@
   }
 
   .example__slider-list {
-    position: relative;
+    width: 100%;
+
+    @include listres;
     padding: 0;
     margin: 0 auto;
   }
 
-  .slider-list__logo {
-    @include mixins.listres;
+  .example__slider-item {
+    position: relative;
     width: 100%;
     height: 232px;
   }
 
-  .slider-list__fat-img {
-    object-fit: cover;
-    width: 100%;
+  .example__wrapper {
+    position: absolute;
+    inset: 0;
+
+    &--inactive {
+      opacity: 0;
+    }
+  }
+
+  .example__slider-img {
+    display: block;
+    width: auto;
+    object-fit: contain;
+    margin: 0 auto;
   }
 
   .example__toggle-wrapper {
@@ -117,9 +128,10 @@
     justify-content: center;
     width: 100%;
     align-items: center;
-    margin-top: 15px;
+    margin-top: 21px;
+
     span {
-      font-family: 'Oswald';
+      font-family: var(--main-font);
       text-transform: uppercase;
       font-weight: 400;
       font-size: 16px;
@@ -128,19 +140,20 @@
   }
 
   .slider__toggle {
-    @include mixins.btnres;
+    @include btnres;
     cursor: pointer;
   }
 
   .slider__toggle-swap {
-    @include mixins.btnres;
+    @include btnres;
     position: relative;
     width: 85px;
     height: 14px;
     background-color: var(--default-white);
     border: 1px solid var(--grey3);
     border-radius: 6px;
-    margin: 0 13px;
+    margin: 0 18px;
+
     &::before {
       content: "";
       position: absolute;
@@ -157,11 +170,22 @@
     display: none;
   }
 
-  @include mixins.tablet-w () {
-    padding: 0 var(--tablet-padding);
+  @include tablet-w () {
     padding-top: 43px;
-    padding-bottom: 55px;
+    padding-bottom: 60px;
     background-color: var(--default-white);
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      height: 462px;
+      background-color: var(--grey2);
+      background-repeat: no-repeat;
+    }
 
     .example__title {
       font-weight: 400;
@@ -216,33 +240,59 @@
       text-align: right;
       font-size: 20px;
       line-height: 20px;
-      & p {
+
+      p {
         display: block;
         margin: 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
       }
     }
 
     .example__slider-list {
       display: flex;
       flex-direction: column;
+      width: 100%;
       align-items: center;
-      padding: 0;
-      margin: 0 auto;
-      width: 592px;
     }
 
-    .slider-list {
-      min-height: 576px;
-      margin-bottom: 0;
-    }
-
-    .slider-list__logo {
-      width: 592px;
+    .example__slider-item {
       height: 511px;
+      width: 592px;
+      margin-bottom: 28px;
+    }
+
+    .example__wrapper {
+      overflow: hidden;
+
+      &--inactive {
+        opacity: 1;
+      }
+    }
+
+    .example__slider-img {
+      max-width: none;
+      height: 511px;
+      width: 592px;
+    }
+
+    .example__wrapper-fat {
+      width: 50%;
+    }
+
+    .example__wrapper-skinny {
+      width: 50%;
+      left: auto;
+    }
+
+    .example__img-skinny {
+      float: right;
     }
 
     .example__toggle-wrapper {
-      margin-top: 25px;
+      margin-top: 0;
+      position: relative;
+
       span {
         font-size: 20px;
         line-height: 30px;
@@ -255,10 +305,12 @@
     }
 
     .slider__toggle span {
-      border-bottom: 1px dashed rgba(0,0,0,0.2);
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+
       &:hover {
-        border-bottom: 1px solid rgba(0,0,0,0.4);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.4);
       }
+
       &:active {
         border-bottom: none;
       }
@@ -269,23 +321,37 @@
       display: block;
       width: 426px;
       height: 6px;
-      margin: 0 13px;
+      margin: 0 20px;
+      margin-right: 26px;
       border-radius: 6px;
       background-color: var(--grey11);
+    }
+
+    .slider__toggle-round {
+      @include btnres;
+      position: absolute;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background-color: var(--default-white);
+      top: 50%;
+      left: 50%;
+      transform: translate(-40%, -50%);
+      box-shadow: 0 0.5px 1px 1px var(--grey3);
       cursor: pointer;
-      &::before {
-        content: "";
-        position: absolute;
-        width: 34px;
-        height: 34px;
-        border-radius: 50%;
-        background-color: var(--default-white);
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 2;
-        box-shadow: 0 0.5px 1px 1px var(--grey3);
+
+      &:hover {
+        box-shadow:
+          0 0.5px 1px 1px var(--grey3),
+          0 2px 3px 1px var(--grey3);
       }
+
+      &:active {
+        box-shadow:
+          0 2px 3px 1px var(--grey3),
+          0 0 0 1px var(--green2) inset;
+      }
+
       &::after {
         content: "";
         position: absolute;
@@ -296,19 +362,20 @@
         inset: 0;
         margin: 0 auto;
         top: calc(50% - 4px);
-        z-index: 2;
       }
     }
   }
 
-  @include mixins.desktop-w () {
-    padding: 0;
+  @include desktop-w () {
     padding-top: 43px;
     grid-template-columns: 1fr auto;
 
+    &::before {
+      background-color: var(--grey1);
+    }
+
     .example__title {
-      margin-left: var(--desktop-padding);
-      margin-bottom: 76px;
+      margin-bottom: 143px;
     }
 
     .example__text {
@@ -317,13 +384,12 @@
     }
 
     .example__content {
-      padding: 0 var(--desktop-padding);
-      background-color: var(--grey1);
       flex-direction: row;
       align-items: flex-start;
     }
 
     .example__abstract {
+      position: relative;
       margin: 0;
       width: 436px;
       flex-direction: column;
@@ -333,12 +399,16 @@
     .example__statistic-wrapper {
       width: auto;
       margin: 0;
-      margin-bottom: 60px;
+      margin-bottom: 50px;
     }
 
     .example__statistic {
       margin-bottom: 0;
       row-gap: 55px;
+    }
+
+    .example__cost-number {
+      margin-top: 10px;
     }
 
     .example__statistic-legend {
@@ -355,10 +425,15 @@
     }
 
     .example__slider-list {
+      width: auto;
       margin: 0;
       padding: 0;
       min-height: 576px;
-      margin-top: -179px;
+      margin-top: -240px;
+    }
+
+    .example__slider-item {
+      margin-bottom: 20px;
     }
   }
 }

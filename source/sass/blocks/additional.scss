@@ -1,32 +1,37 @@
-@use "../mixins.scss";
-
 .additional {
   position: relative;
   width: 100%;
-  padding: 0 var(--mobile-padding);
   display: flex;
   flex-direction: column;
-  padding-top: 26px;
+  padding-top: 24px;
   padding-bottom: 35px;
 
   &::before {
     content: "";
     position: absolute;
-    width: 53px;
+    width: 100%;
     height: 2px;
     background-color: var(--green2);
-    top: 42px;
+    top: 40px;
     right: 0;
   }
 
+  .additional__title-wrapper {
+    padding: 0;
+    margin-bottom: 35px;
+  }
+
   .additional__title {
+    width: 270px;
+    padding: 0 var(--mobile-padding);
+    position: relative;
     font-weight: 400;
     font-size: 24px;
     line-height: 1;
     text-align: left;
     margin: 0;
+    background-color: var(--default-white);
     color: var(--default-black);
-    margin-bottom: 35px;
   }
 
   .additional__card {
@@ -97,16 +102,19 @@
     position: relative;
     z-index: 0;
     background-image: url("../img/mobile/catalog/additional-background.webp");
+    background-position-y: 35px;
     background-repeat: no-repeat;
     width: 280px;
-    padding-top: 187px;
-    padding-bottom: 35px;
+    padding-top: 225px;
+    padding-bottom: 43px;
 
     &::before {
       content: "";
       position: absolute;
       background-color: var(--green1);
       inset: 0;
+      top: 35px;
+      bottom: 2px;
       z-index: 0;
     }
 
@@ -119,10 +127,10 @@
       height: 80px;
       inset: 0;
       margin: 0 auto;
-      top: 59px;
+      top: 96px;
     }
 
-    @include mixins.retina () {
+    @include retina () {
       background-image: url("../img/mobile/catalog/additional-background2x.webp");
       background-size: cover;
     }
@@ -136,39 +144,39 @@
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    width: 160px;
-    line-height: 1;
+    width: 180px;
+    word-wrap: break-word;
+    line-height: 20px;
     text-align: center;
     color: var(--default-white);
+
+    span {
+      display: block;
+    }
   }
 
-  @include mixins.tablet-w () {
+  @include tablet-w () {
     margin: 0;
-    padding: 0 var(--tablet-padding);
-    padding-top: 68px;
-    padding-bottom: 93px;
+    padding-top: 64px;
+    padding-bottom: 76px;
 
     &::before {
-      width: 328px;
-      top: 91px;
+      top: 88px;
       right: 0;
     }
 
-    &::after {
-      content: "";
-      position: absolute;
-      background-color: var(--green2);
-      height: 2px;
-      width: 30px;
-      top: 91px;
-      left: 0;
+    .additional__title-wrapper {
+      padding: 0 var(--tablet-padding);
+      margin-bottom: 80px;
     }
 
     .additional__title {
+      width: 415px;
+      padding-left: 35px;
+      padding-right: 35px;
       font-size: 36px;
       line-height: 36px;
       text-align: left;
-      margin-bottom: 80px;
     }
 
     .additional__content {
@@ -181,7 +189,7 @@
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
-      padding-bottom: 69px;
+      padding-bottom: 66px;
     }
 
     .additional__card {
@@ -212,6 +220,7 @@
       font-size: 16px;
       line-height: 20px;
       margin-bottom: 22px;
+      margin-top: 4px;
     }
 
     .additional__quantity {
@@ -229,6 +238,7 @@
     .additional__gift {
       background-image: url("../img/tablet/catalog/additional-background-tablet.webp");
       background-size: 707px 200px;
+      background-position-y: 0;
       margin: 0;
       width: 100%;
       padding-top: 71px;
@@ -236,6 +246,7 @@
       padding-left: 422px;
 
       &::before {
+        top: 0;
         width: 707px;
         height: 200px;
       }
@@ -246,7 +257,7 @@
         margin: 0;
       }
 
-      @include mixins.retina () {
+      @include retina () {
         background-image: url("../img/tablet/catalog/additional-background-tablet2x.webp");
       }
     }
@@ -260,24 +271,23 @@
     }
   }
 
-  @include mixins.desktop-w () {
+  @include desktop-w () {
     margin: 0;
-    padding: 0 var(--desktop-padding);
     padding-top: 76px;
     padding-bottom: 86px;
 
     &::before {
-      width: 957px;
-      top: 100px;
+      top: 96px;
     }
 
-    &::after {
-      width: 70px;
-      top: 100px;
+    .additional__title-wrapper {
+      padding: 0 70px;
+      margin-bottom: 78px;
     }
 
     .additional__title {
-      margin-bottom: 81px;
+      width: 420px;
+      padding: 0 40px;
     }
 
     .additional__content {
@@ -294,7 +304,7 @@
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
-      width: calc((869 / 1220) * 100%);
+      width: calc((895 / 1220) * 100%);
       margin-bottom: 0;
 
       &::after {
@@ -329,7 +339,13 @@
 
     .additional__composition {
       margin: 0;
-      margin-right: 38px;
+      margin-right: 40px;
+      padding-top: 4px;
+      min-width: 288px;
+    }
+
+    .additional__quantity {
+      margin-right: auto;
     }
 
     .additional-button {
@@ -346,7 +362,7 @@
       background-image: url("../img/desktop/catalog/gift-background-desktop.webp");
       background-size: 245px 289px;
 
-      @include mixins.retina () {
+      @include retina () {
         background-image: url("../img/desktop/catalog/gift-background-desktop2x.webp");
         background-size: cover;
       }
