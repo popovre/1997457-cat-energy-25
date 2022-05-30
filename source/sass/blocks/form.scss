@@ -161,7 +161,7 @@
       width: 100%;
       height: 2px;
       background-color: var(--green2);
-      top: 44px;
+      top: 42px;
       right: 0;
     }
   }
@@ -352,7 +352,7 @@
       width: 100%;
       height: 2px;
       background-color: var(--green2);
-      top: 40px;
+      top: 38px;
       right: 0;
     }
   }
@@ -372,7 +372,7 @@
     color: var(--default-black);
     background-color: var(--default-white);
     margin: 0;
-    margin-bottom: 34px;
+    margin-bottom: 38px;
     text-transform: none;
     padding-left: var(--mobile-padding);
   }
@@ -474,6 +474,7 @@
       padding-bottom: 0;
       margin-bottom: 72px;
       font-size: 20px;
+      row-gap: 20px;
       line-height: 30px;
       padding-left: var(--tablet-form-l-padding);
       padding-right: var(--tablet-form-r-padding);
@@ -540,7 +541,7 @@
       padding-left: 87px;
       align-items: center;
       column-gap: 20px;
-      row-gap: 26px;
+      row-gap: 23px;
     }
 
     .radio {
@@ -559,7 +560,7 @@
       &::after {
         width: 100%;
         right: 0;
-        top: 24px;
+        top: 22px;
       }
     }
 
@@ -581,6 +582,7 @@
     .form__contacts-content {
       row-gap: 20px;
       padding: 0 40px;
+      padding-right: 38px;
     }
 
     .form__contacts-text {
@@ -604,6 +606,7 @@
       font-size: 20px;
       line-height: 30px;
       text-transform: uppercase;
+      min-height: 52px;
     }
 
     .form__tel-text {
@@ -615,6 +618,7 @@
       font-size: 20px;
       line-height: 30px;
       text-transform: uppercase;
+      min-height: 52px;
     }
 
     .form__comments {
@@ -624,7 +628,7 @@
       &::after {
         width: 100%;
         right: 0;
-        top: 89px;
+        top: 86px;
       }
     }
 
@@ -656,13 +660,13 @@
     }
 
     .form__additional {
-      padding-top: 65px;
-      padding-bottom: 54px;
+      padding-top: 64px;
+      padding-bottom: 26px;
 
       &::after {
         width: 100%;
         right: 0;
-        top: 89px;
+        top: 85px;
       }
     }
 
@@ -676,7 +680,7 @@
       padding-right: 42px;
       font-size: 36px;
       line-height: 36px;
-      margin-bottom: 57px;
+      margin-bottom: 59px;
     }
 
     .form__additional-wrapper {
@@ -684,7 +688,7 @@
       width: calc((565 / 628) * 100%);
       display: grid;
       grid-template-columns: 221px 221px;
-      row-gap: 32px;
+      row-gap: 42px;
       column-gap: 124px;
       font-size: 20px;
       line-height: 30px;
@@ -707,7 +711,7 @@
 
     .form__button {
       margin: 0;
-      width: calc((282 / 565) * 100%);
+      width: 282px;
       min-height: 52px;
       font-size: 20px;
       line-height: 1;

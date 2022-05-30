@@ -113,7 +113,7 @@
 
   .products__parameters {
     margin: 0;
-    margin-top: 5px;
+    margin-top: 2px;
     margin-bottom: 9px;
     grid-column-start: 2;
     grid-column-end: 3;
@@ -228,7 +228,7 @@
       width: 30px;
       height: 2px;
       background-color: var(--grey7);
-      top: -48px;
+      top: -40px;
       left: calc((100% - 50%) - 15px);
     }
 
@@ -246,7 +246,7 @@
     text-align: center;
     color: var(--black1);
     margin: 0;
-    margin-bottom: 18px;
+    margin-bottom: 22px;
   }
 
   .products__more-button {
@@ -279,7 +279,7 @@
       line-height: 60px;
       margin: 0;
       min-width: 258px;
-      margin-bottom: 82px;
+      margin-bottom: 80px;
 
       &::before {
         content: none;
@@ -295,7 +295,7 @@
 
     .products__product-cell {
       padding: 0 36px;
-      padding-top: 8px;
+      padding-top: 2px;
       padding-bottom: 39px;
       min-height: 511px;
       background-color: var(--grey1);
@@ -343,6 +343,7 @@
       width: 161px;
       height: 172px;
       margin-top: 36px;
+      margin-bottom: 34px;
     }
 
     .products__chicken-1000 {
@@ -389,7 +390,7 @@
     .products__parameters {
       width: 100%;
       margin: 0;
-      margin-bottom: 33px;
+      margin-bottom: 44px;
       row-gap: 14px;
       font-size: 16px;
       line-height: 16px;
@@ -462,8 +463,9 @@
 
       &::before,
       &::after {
-        left: calc(50% - 20px);
-        width: 40px;
+        top: -80px;
+        left: calc(50% - 30px);
+        width: 60px;
       }
     }
 
@@ -512,10 +514,15 @@
       min-height: 100%;
     }
 
+    .products__image-wrapper {
+      margin-bottom: 46px;
+    }
+
     .products__chicken-500 {
       width: 161px;
       height: 172px;
       margin-top: 28px;
+      margin-bottom: 46;
     }
 
     .products__chicken-1000 {
@@ -533,35 +540,40 @@
     .products__fish-1000 {
       width: 172px;
       height: 196px;
-      margin-top: 0px;
+      margin-top: 2px;
+      margin-bottom: 48px;
     }
 
     .products__buckwheat-500 {
       width: 161px;
       height: 171px;
-      margin-top: 29px;
+      margin-top: 32px;
+      margin-bottom: 46px;
     }
 
     .products__buckwheat-1000 {
       width: 172px;
       height: 196px;
-      margin-top: 0px;
+      margin-top: 4px;
+      margin-bottom: 50px;
     }
 
     .products__rice-500 {
       width: 163px;
       height: 174px;
-      margin-top: 26px;
+      margin-top: 30px;
     }
 
     .products__name {
-      margin-bottom: 21px;
+      margin-bottom: 24px;
+      width: 145px;
     }
 
     .products__parameters {
-      width: calc((169 / 180) * 100%);
+      width: calc((160 / 180) * 100%);
       margin: 0 auto;
-      margin-bottom: 33px;
+      row-gap: 16px;
+      margin-bottom: 40px;
       justify-content: space-between;
     }
 
