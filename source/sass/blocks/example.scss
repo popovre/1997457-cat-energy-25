@@ -370,6 +370,10 @@
     padding-top: 43px;
     grid-template-columns: 1fr auto;
 
+    &::before {
+      background-color: var(--grey1);
+    }
+
     .example__title {
       margin-bottom: 143px;
     }
