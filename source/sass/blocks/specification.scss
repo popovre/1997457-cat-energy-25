@@ -42,37 +42,37 @@
   }
 
   .specification__item-function::before {
-    background-image: url("../img/mobile/index/specification-function.png");
+    background-image: url("../img/mobile/index/specification-function.webp");
 
     @include retina () {
-      background-image: url("../img/mobile/index/specification-function2x.png");
+      background-image: url("../img/mobile/index/specification-function2x.webp");
       background-size: cover;
     }
   }
 
   .specification__item-structure::before {
-    background-image: url("../img/mobile/index/specification-structure.png");
+    background-image: url("../img/mobile/index/specification-structure.webp");
 
     @include retina () {
-      background-image: url("../img/mobile/index/specification-structure2x.png");
+      background-image: url("../img/mobile/index/specification-structure2x.webp");
       background-size: cover;
     }
   }
 
   .specification__item-replace::before {
-    background-image: url("../img/mobile/index/specification-replace.png");
+    background-image: url("../img/mobile/index/specification-replace.webp");
 
     @include retina () {
-      background-image: url("../img/mobile/index/specification-replace2x.png");
+      background-image: url("../img/mobile/index/specification-replace2x.webp");
       background-size: cover;
     }
   }
 
   .specification__item-time::before {
-    background-image: url("../img/mobile/index/specification-time.png");
+    background-image: url("../img/mobile/index/specification-time.webp");
 
     @include retina () {
-      background-image: url("../img/mobile/index/specification-time2x.png");
+      background-image: url("../img/mobile/index/specification-time2x.webp");
       background-size: cover;
     }
   }
@@ -138,21 +138,21 @@
       margin-right: 153px;
 
       &::before {
-        background-image: url("../img/tablet/index/specification-function-tablet.png");
+        background-image: url("../img/tablet/index/specification-function-tablet.webp");
 
         @include retina () {
-          background-image: url("../img/tablet/index/specification-function-tablet2x.png");
-          background-size: auto;
+          background-image: url("../img/tablet/index/specification-function-tablet2x.webp");
+          background-size: cover;
         }
       }
 
       &::after {
-        background-image: url("../img/tablet/index/specification-1.png");
+        background-image: url("../img/tablet/index/specification-1.webp");
         width: 112px;
 
 
         @include retina () {
-          background-image: url("../img/tablet/index/specification-1-2x.png");
+          background-image: url("../img/tablet/index/specification-1-2x.webp");
         }
       }
       order: 0;
@@ -161,20 +161,20 @@
 
     .specification__item-structure {
       &::before {
-        background-image: url("../img/tablet/index/specification-structure-tablet.png");
+        background-image: url("../img/tablet/index/specification-structure-tablet.webp");
 
         @include retina () {
-          background-image: url("../img/tablet/index/specification-structure-tablet2x.png");
-          background-size: auto;
+          background-image: url("../img/tablet/index/specification-structure-tablet2x.webp");
+          background-size: cover;
         }
       }
 
       &::after {
-        background-image: url("../img/tablet/index/specification-2.png");
+        background-image: url("../img/tablet/index/specification-2.webp");
         width: 134px;
 
         @include retina () {
-          background-image: url("../img/tablet/index/specification-2-2x.png");
+          background-image: url("../img/tablet/index/specification-2-2x.webp");
         }
       }
       order: 1;
@@ -184,20 +184,20 @@
     .specification__item-replace {
       margin-right: 138px;
       &::before {
-        background-image: url("../img/tablet/index/specification-replace-tablet.png");
+        background-image: url("../img/tablet/index/specification-replace-tablet.webp");
 
         @include retina () {
-          background-image: url("../img/tablet/index/specification-replace-tablet2x.png");
-          background-size: auto;
+          background-image: url("../img/tablet/index/specification-replace-tablet2x.webp");
+          background-size: cover;
         }
       }
 
       &::after {
-        background-image: url("../img/tablet/index/specification-3.png");
+        background-image: url("../img/tablet/index/specification-3.webp");
         width: 134px;
 
         @include retina () {
-          background-image: url("../img/tablet/index/specification-3-2x.png");
+          background-image: url("../img/tablet/index/specification-3-2x.webp");
         }
       }
       order: 2;
@@ -206,20 +206,20 @@
 
     .specification__item-time {
       &::before {
-        background-image: url("../img/tablet/index/specification-time-tablet.png");
+        background-image: url("../img/tablet/index/specification-time-tablet.webp");
 
         @include retina () {
-          background-image: url("../img/tablet/index/specification-time-tablet2x.png");
-          background-size: auto;
+          background-image: url("../img/tablet/index/specification-time-tablet2x.webp");
+          background-size: cover;
         }
       }
 
       &::after {
-        background-image: url("../img/tablet/index/specification-4.png");
+        background-image: url("../img/tablet/index/specification-4.webp");
         width: 136px;
 
         @include retina () {
-          background-image: url("../img/tablet/index/specification-4-2x.png");
+          background-image: url("../img/tablet/index/specification-4-2x.webp");
         }
       }
       order: 3;
