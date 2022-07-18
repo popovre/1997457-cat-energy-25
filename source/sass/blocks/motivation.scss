@@ -22,108 +22,79 @@
       background-size: 100% auto;
     }
   }
+}
 
-  .motivation__wrapper {
-    position: relative;
-    width: 100%;
-    margin: 0 auto;
-    overflow: auto;
+.motivation__wrapper {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  overflow: auto;
 
-    &::after {
-      content: "";
-      position: absolute;
-      background-image: url("../img/mobile/index/motivation-background-food.png");
-      background-repeat: no-repeat;
-      background-position: center;
-      width: 280px;
-      height: 270px;
-      bottom: 43px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 0;
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/mobile/index/motivation-background-food.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 280px;
+    height: 270px;
+    bottom: 43px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
 
-      @include retina () {
-        background-image: url("../img/mobile/index/motivation-background-food2x.png");
-        background-size: 280px 270px;
-      }
-
-
-      @include tablet-w () {
-        background-image: url("../img/tablet/index/motivation-food-background-tablet.png");
-        width: 709px;
-        height: 609px;
-        bottom: 0;
-        z-index: 0;
-
-        @include retina () {
-          background-image: url("../img/tablet/index/motivation-food-background-tablet2x.png");
-          background-size: 709px 609px;
-        }
-      }
-
-
-      @include desktop-w () {
-        background-image: url("../img/desktop/index/motivation-food-background-desktop.png");
-        width: 552px;
-        height: 499px;
-        top: -82px;
-        right: 330px;
-        left: auto;
-        z-index: 1;
-        transform: translateX(0);
-
-        @include retina () {
-          background-image: url("../img/desktop/index/motivation-food-background-desktop2x.png");
-          background-size: 552px 499px;
-        }
-      }
+    @include retina () {
+      background-image: url("../img/mobile/index/motivation-background-food2x.png");
+      background-size: 280px 270px;
     }
   }
+}
 
-  .motivation__title {
-    margin: 0;
-    position: relative;
-    z-index: 1;
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 36px;
-    margin-bottom: 25px;
+.motivation__title {
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  margin-bottom: 25px;
+}
+
+.motivation__text {
+  display: block;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  margin-bottom: 302px;
+}
+
+.motivation__choose-button {
+  box-sizing: content-box;
+  width: 192px;
+  display: block;
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  padding: 7px 44px;
+  font-size: 14px;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-align: center;
+
+  &:hover {
+    background-color: var(--green3);
   }
 
-  .motivation__text {
-    display: block;
-    margin: 0;
-    position: relative;
-    z-index: 1;
-    font-size: 14px;
-    line-height: 14px;
-    text-transform: uppercase;
-    margin-bottom: 302px;
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
   }
+}
 
-  .motivation__choose-button {
-    box-sizing: content-box;
-    width: 192px;
-    display: block;
-    position: relative;
-    z-index: 1;
-    margin: 0 auto;
-    padding: 7px 44px;
-    font-size: 14px;
-    line-height: 26px;
-    text-transform: uppercase;
-    text-align: center;
-
-    &:hover {
-      background-color: var(--green3);
-    }
-
-    &:active {
-      color: rgba(255, 255, 255, 0.3);
-    }
-  }
-
-  @include tablet-w () {
+@include tablet-w () {
+  .motivation {
     padding-top: 63px;
     background-image: none;
     color: var(--default-black);
@@ -132,43 +103,60 @@
     &::before {
       content: none;
     }
+  }
 
-    .motivation__title {
-      position: relative;
-      z-index: 1;
-      font-weight: 400;
-      font-size: 60px;
-      line-height: 1;
-      margin-bottom: 41px;
-      width: 420px;
-      margin-left: 89px;
-      min-height: 120px;
-    }
+  .motivation__wrapper {
+    &::after {
+      background-image: url("../img/tablet/index/motivation-food-background-tablet.png");
+      width: 709px;
+      height: 609px;
+      bottom: 0;
+      z-index: 0;
 
-    .motivation__text {
-      position: static;
-      font-size: 20px;
-      line-height: 1;
-      text-transform: uppercase;
-      margin-left: 91px;
-      margin-bottom: 49px;
-    }
-
-    .motivation__choose-button {
-      padding: 14px 26px;
-      margin: 0;
-      margin-left: 91px;
-      margin-bottom: 526px;
-      font-size: 20px;
-      line-height: 26px;
-    }
-
-    .motivation__decor {
-      display: none;
+      @include retina () {
+        background-image: url("../img/tablet/index/motivation-food-background-tablet2x.png");
+        background-size: 709px 609px;
+      }
     }
   }
 
-  @include desktop-w () {
+  .motivation__title {
+    position: relative;
+    z-index: 1;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 1;
+    margin-bottom: 41px;
+    width: 420px;
+    margin-left: 89px;
+    min-height: 120px;
+  }
+
+  .motivation__text {
+    position: static;
+    font-size: 20px;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-left: 91px;
+    margin-bottom: 49px;
+  }
+
+  .motivation__choose-button {
+    padding: 14px 26px;
+    margin: 0;
+    margin-left: 91px;
+    margin-bottom: 526px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .motivation__decor {
+    display: none;
+  }
+}
+
+@include desktop-w () {
+  .motivation {
     padding-top: 111px;
     min-height: calc(694px - 114px);
 
@@ -189,26 +177,39 @@
         background-image: url("../img/desktop/index/motivation-background-desktop2x.png");
       }
     }
+  }
 
-    .motivation__wrapper {
-      overflow: visible;
-    }
+  .motivation__wrapper {
+    overflow: visible;
 
-    .motivation__title {
-      margin-left: 80px;
-    }
+    &::after {
+      background-image: url("../img/desktop/index/motivation-food-background-desktop.png");
+      width: 552px;
+      height: 499px;
+      top: -82px;
+      right: 330px;
+      left: auto;
+      z-index: 1;
+      transform: translateX(0);
 
-    .motivation__text {
-      margin-bottom: 52px;
-      margin-left: 80px;
-    }
-
-    .motivation__choose-button {
-      margin-bottom: 0;
-      margin-left: 80px;
+      @include retina () {
+        background-image: url("../img/desktop/index/motivation-food-background-desktop2x.png");
+        background-size: 552px 499px;
+      }
     }
   }
+
+  .motivation__title {
+    margin-left: 80px;
+  }
+
+  .motivation__text {
+    margin-bottom: 52px;
+    margin-left: 80px;
+  }
+
+  .motivation__choose-button {
+    margin-bottom: 0;
+    margin-left: 80px;
+  }
 }
-
-
-

@@ -56,7 +56,7 @@ return gulp.src('source/img/**/*.{png,jpg}')
 .pipe(gulp.dest('build/img'))
 }
 
-// WebP
+// WebP,jpg,png
 
 const createWebp = () => {
 return gulp.src('source/img/**/*.{png,jpg,webp}')
