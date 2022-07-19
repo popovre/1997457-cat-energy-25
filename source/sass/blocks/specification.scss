@@ -2,283 +2,287 @@
   width: 100%;
   padding-top: 20px;
   padding-bottom: 52px;
+}
+
+.specification__title {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+  text-align: left;
+  color: var(--default-black);
+  margin-top: 0;
+  margin-bottom: 42px;
+}
+
+.specification__list {
+  @include listres;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.specification__item {
+  position: relative;
+  padding-left: 80px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--black1);
+  font-family: var(--arial);
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 60px;
+    top: -3px;
+    left: 0;
+  }
+}
+
+.specification__item-function::before {
+  background-image: url("../img/mobile/index/specification-function.webp");
+
+  @include retina () {
+    background-image: url("../img/mobile/index/specification-function2x.webp");
+    background-size: cover;
+  }
+}
+
+.specification__item-structure::before {
+  background-image: url("../img/mobile/index/specification-structure.webp");
+
+  @include retina () {
+    background-image: url("../img/mobile/index/specification-structure2x.webp");
+    background-size: cover;
+  }
+}
+
+.specification__item-replace::before {
+  background-image: url("../img/mobile/index/specification-replace.webp");
+
+  @include retina () {
+    background-image: url("../img/mobile/index/specification-replace2x.webp");
+    background-size: cover;
+  }
+}
+
+.specification__item-time::before {
+  background-image: url("../img/mobile/index/specification-time.webp");
+
+  @include retina () {
+    background-image: url("../img/mobile/index/specification-time2x.webp");
+    background-size: cover;
+  }
+}
+
+.specification__item:not(:last-child) {
+  margin-bottom: 26px;
+}
+
+.specification__description {
+  margin: 0;
+}
+
+@include tablet-w () {
+  .specification {
+    padding-top: 43px;
+    padding-bottom: 47px;
+  }
 
   .specification__title {
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 40px;
+    font-size: 60px;
+    line-height: 60px;
     text-align: left;
-    color: var(--default-black);
-    margin-top: 0;
-    margin-bottom: 42px;
+    margin-bottom: 30px;
   }
 
   .specification__list {
-    @include listres;
-    display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: flex-start;
-    flex-wrap: wrap;
+    row-gap: 37px;
   }
 
   .specification__item {
-    position: relative;
-    padding-left: 80px;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 18px;
-    color: var(--black1);
-    font-family: var(--arial);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0;
+    padding-bottom: 57px;
+    min-height: 280px;
+    font-size: 16px;
+    line-height: 24px;
 
-    &::before {
-      content: "";
-      position: absolute;
-      background-repeat: no-repeat;
-      width: 60px;
-      height: 60px;
-      top: -3px;
-      left: 0;
-    }
-  }
-
-  .specification__item-function::before {
-    background-image: url("../img/mobile/index/specification-function.png");
-
-    @include retina () {
-      background-image: url("../img/mobile/index/specification-function2x.png");
-      background-size: cover;
-    }
-  }
-
-  .specification__item-structure::before {
-    background-image: url("../img/mobile/index/specification-structure.png");
-
-    @include retina () {
-      background-image: url("../img/mobile/index/specification-structure2x.png");
-      background-size: cover;
-    }
-  }
-
-  .specification__item-replace::before {
-    background-image: url("../img/mobile/index/specification-replace.png");
-
-    @include retina () {
-      background-image: url("../img/mobile/index/specification-replace2x.png");
-      background-size: cover;
-    }
-  }
-
-  .specification__item-time::before {
-    background-image: url("../img/mobile/index/specification-time.png");
-
-    @include retina () {
-      background-image: url("../img/mobile/index/specification-time2x.png");
-      background-size: cover;
-    }
-  }
-
-  .specification__item:not(:last-child) {
-    margin-bottom: 26px;
-  }
-
-  .specification__description {
-    margin: 0;
-  }
-
-  @include tablet-w () {
-    padding-top: 43px;
-    padding-bottom: 47px;
-
-
-    .specification__title {
-      font-size: 60px;
-      line-height: 60px;
-      text-align: left;
-      margin-bottom: 30px;
-    }
-
-    .specification__list {
-      flex-direction: row;
-      justify-content: flex-start;
-      row-gap: 37px;
-    }
-
-    .specification__item {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: 0;
-      padding-bottom: 57px;
-      min-height: 280px;
-      font-size: 16px;
-      line-height: 24px;
-
-      &:not(:last-child) {
-        margin-bottom: 0;
-      }
-
-      &::before {
-        width: 80px;
-        height: 80px;
-        top: 40px;
-      }
-
-      &::after {
-        content: "";
-        position: absolute;
-        background-repeat: no-repeat;
-        background-size: contain;
-        height: 225px;
-        top: 40px;
-        right: -10px;
-      }
-    }
-
-    .specification__item-function {
-      margin-right: 153px;
-
-      &::before {
-        background-image: url("../img/tablet/index/specification-function-tablet.png");
-
-        @include retina () {
-          background-image: url("../img/tablet/index/specification-function-tablet2x.png");
-          background-size: auto;
-        }
-      }
-
-      &::after {
-        background-image: url("../img/tablet/index/specification-1.png");
-        width: 112px;
-
-
-        @include retina () {
-          background-image: url("../img/tablet/index/specification-1-2x.png");
-        }
-      }
-      order: 0;
-      width: 230px;
-    }
-
-    .specification__item-structure {
-      &::before {
-        background-image: url("../img/tablet/index/specification-structure-tablet.png");
-
-        @include retina () {
-          background-image: url("../img/tablet/index/specification-structure-tablet2x.png");
-          background-size: auto;
-        }
-      }
-
-      &::after {
-        background-image: url("../img/tablet/index/specification-2.png");
-        width: 134px;
-
-        @include retina () {
-          background-image: url("../img/tablet/index/specification-2-2x.png");
-        }
-      }
-      order: 1;
-      width: 246px;
-    }
-
-    .specification__item-replace {
-      margin-right: 138px;
-      &::before {
-        background-image: url("../img/tablet/index/specification-replace-tablet.png");
-
-        @include retina () {
-          background-image: url("../img/tablet/index/specification-replace-tablet2x.png");
-          background-size: auto;
-        }
-      }
-
-      &::after {
-        background-image: url("../img/tablet/index/specification-3.png");
-        width: 134px;
-
-        @include retina () {
-          background-image: url("../img/tablet/index/specification-3-2x.png");
-        }
-      }
-      order: 2;
-      width: 247px;
-    }
-
-    .specification__item-time {
-      &::before {
-        background-image: url("../img/tablet/index/specification-time-tablet.png");
-
-        @include retina () {
-          background-image: url("../img/tablet/index/specification-time-tablet2x.png");
-          background-size: auto;
-        }
-      }
-
-      &::after {
-        background-image: url("../img/tablet/index/specification-4.png");
-        width: 136px;
-
-        @include retina () {
-          background-image: url("../img/tablet/index/specification-4-2x.png");
-        }
-      }
-      order: 3;
-      width: 249px;
-    }
-
-    .specification__description {
-      position: relative;
-      width: 245px;
-      z-index: 2;
-    }
-  }
-
-  @include desktop-w () {
-    padding-top: 71px;
-    padding-bottom: 26px;
-
-    .specification__title {
-      font-size: 60px;
-      line-height: 60px;
-      text-align: left;
-    }
-
-    .specification__list {
-      flex-direction: row;
-      justify-content: flex-start;
-    }
-
-    .specification__item {
-      min-height: 280px;
-    }
-
-    .specification__item:not(:last-child) {
+    &:not(:last-child) {
       margin-bottom: 0;
     }
 
-    .specification__item-function {
-      order: 0;
-      width: 230px;
-      margin-right: 94px;
+    &::before {
+      width: 80px;
+      height: 80px;
+      top: 40px;
     }
 
-    .specification__item-structure {
-      order: 1;
-      width: 246px;
-      margin-right: 80px;
+    &::after {
+      content: "";
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 225px;
+      top: 40px;
+      right: -10px;
+    }
+  }
+
+  .specification__item-function {
+    margin-right: 153px;
+
+    &::before {
+      background-image: url("../img/tablet/index/specification-function-tablet.webp");
+
+      @include retina () {
+        background-image: url("../img/tablet/index/specification-function-tablet2x.webp");
+        background-size: cover;
+      }
     }
 
-    .specification__item-replace {
-      order: 2;
-      width: 248px;
-      margin: 0;
-      margin-right: auto;
+    &::after {
+      background-image: url("../img/tablet/index/specification-1.webp");
+      width: 112px;
+
+
+      @include retina () {
+        background-image: url("../img/tablet/index/specification-1-2x.webp");
+      }
+    }
+    order: 0;
+    width: 230px;
+  }
+
+  .specification__item-structure {
+    &::before {
+      background-image: url("../img/tablet/index/specification-structure-tablet.webp");
+
+      @include retina () {
+        background-image: url("../img/tablet/index/specification-structure-tablet2x.webp");
+        background-size: cover;
+      }
     }
 
-    .specification__item-time {
-      order: 3;
-      width: 250px;
-      margin: 0;
+    &::after {
+      background-image: url("../img/tablet/index/specification-2.webp");
+      width: 134px;
+
+      @include retina () {
+        background-image: url("../img/tablet/index/specification-2-2x.webp");
+      }
     }
+    order: 1;
+    width: 246px;
+  }
+
+  .specification__item-replace {
+    margin-right: 138px;
+
+    &::before {
+      background-image: url("../img/tablet/index/specification-replace-tablet.webp");
+
+      @include retina () {
+        background-image: url("../img/tablet/index/specification-replace-tablet2x.webp");
+        background-size: cover;
+      }
+    }
+
+    &::after {
+      background-image: url("../img/tablet/index/specification-3.webp");
+      width: 134px;
+
+      @include retina () {
+        background-image: url("../img/tablet/index/specification-3-2x.webp");
+      }
+    }
+    order: 2;
+    width: 247px;
+  }
+
+  .specification__item-time {
+    &::before {
+      background-image: url("../img/tablet/index/specification-time-tablet.webp");
+
+      @include retina () {
+        background-image: url("../img/tablet/index/specification-time-tablet2x.webp");
+        background-size: cover;
+      }
+    }
+
+    &::after {
+      background-image: url("../img/tablet/index/specification-4.webp");
+      width: 136px;
+
+      @include retina () {
+        background-image: url("../img/tablet/index/specification-4-2x.webp");
+      }
+    }
+    order: 3;
+    width: 249px;
+  }
+
+  .specification__description {
+    position: relative;
+    width: 245px;
+    z-index: 2;
+  }
+}
+
+@include desktop-w () {
+  .specification {
+    padding-top: 71px;
+    padding-bottom: 26px;
+  }
+
+  .specification__title {
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+  }
+
+  .specification__list {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .specification__item {
+    min-height: 280px;
+  }
+
+  .specification__item:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .specification__item-function {
+    order: 0;
+    width: 230px;
+    margin-right: 94px;
+  }
+
+  .specification__item-structure {
+    order: 1;
+    width: 246px;
+    margin-right: 80px;
+  }
+
+  .specification__item-replace {
+    order: 2;
+    width: 248px;
+    margin: 0;
+    margin-right: auto;
+  }
+
+  .specification__item-time {
+    order: 3;
+    width: 250px;
+    margin: 0;
   }
 }
